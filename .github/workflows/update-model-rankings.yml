@@ -39,12 +39,12 @@ jobs:
           title: "chore: refresh model rankings"
           body: |
             自动定时更新：
-            - artifacts/rankings/MODEL_RANKING.md
-            - artifacts/rankings/MODEL_SCORES.json
-            - artifacts/rankings/MODEL_TOP3.md
+            - rankings/output/MODEL_RANKING.md
+            - rankings/output/MODEL_SCORES.json
+            - rankings/output/MODEL_TOP3.md
           branch: "automation/update-model-rankings"
           delete-branch: true
           add-paths: |
-            artifacts/rankings/MODEL_RANKING.md
-            artifacts/rankings/MODEL_SCORES.json
-            artifacts/rankings/MODEL_TOP3.md
+            rankings/output/MODEL_RANKING.md
+            rankings/output/MODEL_SCORES.json
+            rankings/output/MODEL_TOP3.md

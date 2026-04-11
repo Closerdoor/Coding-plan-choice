@@ -123,12 +123,12 @@ class TestAggregation(unittest.TestCase):
 
 class TestTop3FromJson(unittest.TestCase):
     def test_top3_renders_from_scores_json(self) -> None:
-        scores_path = REPO_ROOT / "artifacts" / "rankings" / "MODEL_SCORES.json"
+        scores_path = REPO_ROOT / "rankings" / "output" / "MODEL_SCORES.json"
         if not scores_path.exists():
             self.skipTest("MODEL_SCORES.json not found; run rankings.update first")
         payload = json.loads(scores_path.read_text(encoding="utf-8"))
         md = _render_top3_md(payload=payload)
-        out_path = REPO_ROOT / "artifacts" / "rankings" / "MODEL_TOP3.md"
+        out_path = REPO_ROOT / "rankings" / "output" / "MODEL_TOP3.md"
         if out_path.exists():
             on_disk = out_path.read_text(encoding="utf-8")
             self.assertEqual(_strip_generated_time(md), _strip_generated_time(on_disk))

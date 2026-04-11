@@ -12,7 +12,7 @@ from . import core
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-ARTIFACTS_DIR = REPO_ROOT / "artifacts" / "rankings"
+OUTPUT_DIR = REPO_ROOT / "rankings" / "output"
 
 
 def _render_top3_md(*, payload: Dict[str, Any]) -> str:
@@ -76,10 +76,10 @@ def _render_top3_md(*, payload: Dict[str, Any]) -> str:
 
 
 def run() -> None:
-    payload = core.load_scores_json(ARTIFACTS_DIR / "MODEL_SCORES.json")
+    payload = core.load_scores_json(OUTPUT_DIR / "MODEL_SCORES.json")
     md = _render_top3_md(payload=payload)
-    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
-    core.write_text(ARTIFACTS_DIR / "MODEL_TOP3.md", md)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    core.write_text(OUTPUT_DIR / "MODEL_TOP3.md", md)
 
 
 def main() -> int:
