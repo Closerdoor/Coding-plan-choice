@@ -5,3 +5,8 @@ for one vendor/package.
 """
 
 from __future__ import annotations
+
+from . import tencent_cloud_coding_plan
+
+
+__all__ = ["tencent_cloud_coding_plan"]

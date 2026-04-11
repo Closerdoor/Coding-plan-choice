@@ -1,0 +1,63 @@
+{
+  "generated_at_utc": "2026-04-11T15:34:44+00:00",
+  "warnings": [],
+  "vendors": [
+    {
+      "vendor_id": "tencent-cloud-coding-plan",
+      "company_name": "腾讯云",
+      "vendor_name": "腾讯云大模型 Coding Plan",
+      "official_source": "https://cloud.tencent.com/act/pro/codingplan",
+      "packages": [
+        {
+          "name": "lite套餐",
+          "price": "¥40/月",
+          "quota": "1200次请求/5小时；9000次请求/周；18000次请求/月",
+          "models_raw": [
+            "Tencent HY 2.0 Instruct",
+            "GLM-5",
+            "Kimi-K2.5",
+            "MiniMax-M2.5"
+          ],
+          "tools": [
+            "OpenClaw",
+            "OpenCode",
+            "Claude Code",
+            "Codex",
+            "Cursor"
+          ],
+          "access_method": "API Key",
+          "models_filtered": [
+            "GLM-5",
+            "Kimi-K2.5",
+            "MiniMax-M2.5"
+          ]
+        },
+        {
+          "name": "pro套餐",
+          "price": "¥200/月",
+          "quota": "6000次请求/5小时；45000次请求/周；90000次请求/月",
+          "models_raw": [
+            "Tencent HY 2.0 Instruct",
+            "GLM-5",
+            "Kimi-K2.5",
+            "MiniMax-M2.5"
+          ],
+          "tools": [
+            "OpenClaw",
+            "OpenCode",
+            "Claude Code",
+            "Codex",
+            "Cursor"
+          ],
+          "access_method": "API Key",
+          "models_filtered": [
+            "GLM-5",
+            "Kimi-K2.5",
+            "MiniMax-M2.5"
+          ]
+        }
+      ],
+      "updated_at_utc": "2026-04-11T15:34:44+00:00"
+    }
+  ]
+}
