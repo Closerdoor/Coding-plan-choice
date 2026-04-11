@@ -114,6 +114,14 @@ def _join_values(values: List[str]) -> str:
     return "；".join(values)
 
 
+def _render_price(package: Dict[str, object]) -> str:
+    base_price = str(package.get("price", "")).strip()
+    discount = str(package.get("discount", "")).strip()
+    if not discount:
+        return base_price
+    return f"{base_price}(优惠：{discount})"
+
+
 def _to_markdown_table(rows: List[List[str]]) -> str:
     if not rows:
         return ""
@@ -128,7 +136,22 @@ def _to_markdown_table(rows: List[List[str]]) -> str:
 def _render_vendor(vendor: Dict[str, object]) -> str:
     company_name = str(vendor.get("company_name", "")).strip()
     vendor_name = str(vendor.get("vendor_name", "")).strip()
-    official_source = str(vendor.get("official_source", "")).strip()
+    official_sources = vendor.get("official_sources")
+    source_lines: List[str] = []
+    if isinstance(official_sources, list):
+        cleaned_sources = [
+            item for item in official_sources if isinstance(item, str) and item.strip()
+        ]
+        if cleaned_sources:
+            source_lines.append(f"- 官方地址：{cleaned_sources[0]}")
+        if len(cleaned_sources) > 1:
+            source_lines.append(f"- 说明文档：{cleaned_sources[1]}")
+        for extra_source in cleaned_sources[2:]:
+            source_lines.append(f"- 补充来源：{extra_source}")
+    else:
+        official_source = str(vendor.get("official_source", "")).strip()
+        if official_source:
+            source_lines.append(f"- 官方地址：{official_source}")
     updated_at = str(vendor.get("updated_at_utc", "")).strip()
     packages = [
         package for package in vendor.get("packages", []) if isinstance(package, dict)
@@ -137,7 +160,7 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
 
     rows = [
         ["项目", *package_names],
-        ["价格", *[str(package.get("price", "")).strip() for package in packages]],
+        ["价格", *[_render_price(package) for package in packages]],
         ["用量", *[str(package.get("quota", "")).strip() for package in packages]],
         [
             "支持模型",
@@ -163,7 +186,7 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
         [
             f"## {company_name}｜{vendor_name}",
             "",
-            f"- 官方信息源：{official_source}",
+            *source_lines,
             f"- 最后更新时间（UTC）：{updated_at}",
             "",
             table,

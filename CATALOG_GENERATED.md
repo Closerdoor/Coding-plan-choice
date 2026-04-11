@@ -10,13 +10,14 @@
 
 ## 腾讯云｜腾讯云大模型 Coding Plan
 
-- 官方信息源：https://cloud.tencent.com/act/pro/codingplan
-- 最后更新时间（UTC）：2026-04-11T15:34:44+00:00
+- 官方地址：https://cloud.tencent.com/act/pro/codingplan
+- 说明文档：https://cloud.tencent.com/document/product/1823/130092
+- 最后更新时间（UTC）：2026-04-11T16:02:58+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
-| 价格 | ¥40/月 | ¥200/月 |
+| 价格 | ¥40/月(优惠：首月¥7.9/月) | ¥200/月(优惠：首月¥39.9/月) |
 | 用量 | 1200次请求/5小时；9000次请求/周；18000次请求/月 | 6000次请求/5小时；45000次请求/周；90000次请求/月 |
-| 支持模型 | GLM-5；Kimi-K2.5；MiniMax-M2.5 | GLM-5；Kimi-K2.5；MiniMax-M2.5 |
-| 支持工具 | OpenClaw；OpenCode；Claude Code；Codex；Cursor | OpenClaw；OpenCode；Claude Code；Codex；Cursor |
+| 支持模型 | MiniMax-M2.5；Kimi-K2.5；GLM-5 | MiniMax-M2.5；Kimi-K2.5；GLM-5 |
+| 支持工具 | OpenClaw；OpenCode；Claude Code；Codex；Cursor；CodeBuddy Code；Cline；Kilo CLI；Kilo Code | OpenClaw；OpenCode；Claude Code；Codex；Cursor；CodeBuddy Code；Cline；Kilo CLI；Kilo Code |
 | 使用方式 | API Key | API Key |

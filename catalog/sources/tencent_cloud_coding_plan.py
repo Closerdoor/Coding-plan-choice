@@ -6,6 +6,7 @@ catalog's normalized output.
 
 from __future__ import annotations
 
+import gzip
 import html
 import re
 import urllib.request
@@ -21,6 +22,29 @@ _PREFERRED_TOOL_ORDER = [
     "Claude Code",
     "Codex",
     "Cursor",
+]
+
+_DOCUMENT_MODEL_ORDER = [
+    "Auto",
+    "Tencent HY 2.0 Instruct",
+    "Tencent HY 2.0 Think",
+    "MiniMax-M2.5",
+    "Kimi-K2.5",
+    "GLM-5",
+    "Hunyuan-T1",
+    "Hunyuan-TurboS",
+]
+
+_DOCUMENT_TOOL_ORDER = [
+    "OpenClaw",
+    "CodeBuddy Code",
+    "Claude Code",
+    "OpenCode",
+    "Cline",
+    "Cursor",
+    "Codex",
+    "Kilo CLI",
+    "Kilo Code",
 ]
 
 
@@ -70,9 +94,18 @@ class _AnchorTextParser(HTMLParser):
 
 
 def _http_get(url: str, *, timeout_s: int = 60) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept-Encoding": "gzip",
+        },
+    )
     with urllib.request.urlopen(req, timeout=timeout_s) as response:
-        return response.read().decode("utf-8", "replace")
+        raw = response.read()
+        if response.headers.get("Content-Encoding", "").lower() == "gzip":
+            raw = gzip.decompress(raw)
+        return raw.decode("utf-8", "replace")
 
 
 def _html_to_text(raw_html: str) -> str:
@@ -144,25 +177,79 @@ def _extract_models(text: str) -> List[str]:
     ]
 
 
+def _extract_document_models(text: str) -> List[str]:
+    models = [name for name in _DOCUMENT_MODEL_ORDER if name in text]
+    if not models:
+        raise ValueError("failed to extract Tencent Cloud documented models")
+    return models
+
+
 def _extract_tools(raw_html: str) -> List[str]:
     anchors = set(_extract_anchor_texts(raw_html))
     return [tool for tool in _PREFERRED_TOOL_ORDER if tool in anchors]
 
 
-def fetch(config: Dict[str, str]) -> Dict[str, object]:
-    raw_html = _http_get(config["source_url"])
-    text = _html_to_text(raw_html)
+def _extract_document_tools(text: str) -> List[str]:
+    tools = [name for name in _DOCUMENT_TOOL_ORDER if name in text]
+    if not tools:
+        raise ValueError("failed to extract Tencent Cloud documented tools")
+    return tools
 
-    package_data = _extract_package_data(text)
-    models_raw = _extract_models(text)
-    tools = _extract_tools(raw_html)
-    if len(tools) != len(_PREFERRED_TOOL_ORDER):
-        raise ValueError("failed to extract Tencent Cloud supported tools")
+
+def _merge_unique(primary: List[str], secondary: List[str]) -> List[str]:
+    merged: List[str] = []
+    for value in [*primary, *secondary]:
+        if value not in merged:
+            merged.append(value)
+    return merged
+
+
+def _extract_discount_prices(text: str) -> Dict[str, str]:
+    compact = _compact_text(text)
+    patterns = {
+        "lite套餐": r"Lite套餐特惠价首月([0-9.]+)元/月",
+        "pro套餐": r"Pro套餐特惠价首月([0-9.]+)元/月",
+    }
+    discounts: Dict[str, str] = {}
+    for package_name, pattern in patterns.items():
+        match = re.search(pattern, compact)
+        if not match:
+            raise ValueError(
+                f"failed to extract Tencent Cloud discount for {package_name}"
+            )
+        discounts[package_name] = f"首月¥{match.group(1)}/月"
+    return discounts
+
+
+def fetch(config: Dict[str, str]) -> Dict[str, object]:
+    source_urls = config["source_urls"]
+    if len(source_urls) < 2:
+        raise ValueError(
+            "Tencent Cloud source_urls must include activity page and document page"
+        )
+
+    activity_html = _http_get(source_urls[0])
+    activity_text = _html_to_text(activity_html)
+    document_html = _http_get(source_urls[1])
+    document_text = _html_to_text(document_html)
+
+    package_data = _extract_package_data(activity_text)
+    activity_models = _extract_models(activity_text)
+    document_models = _extract_document_models(document_text)
+    models_raw = _merge_unique(document_models, activity_models)
+
+    activity_tools = _extract_tools(activity_html)
+    if len(activity_tools) != len(_PREFERRED_TOOL_ORDER):
+        raise ValueError("failed to extract Tencent Cloud marketing tools")
+    document_tools = _extract_document_tools(document_text)
+    tools = _merge_unique(activity_tools, document_tools)
+    discounts = _extract_discount_prices(document_text)
 
     packages = [
         {
             "name": "lite套餐",
             "price": package_data["lite套餐"]["price"],
+            "discount": discounts["lite套餐"],
             "quota": package_data["lite套餐"]["quota"],
             "models_raw": models_raw,
             "tools": tools,
@@ -171,6 +258,7 @@ def fetch(config: Dict[str, str]) -> Dict[str, object]:
         {
             "name": "pro套餐",
             "price": package_data["pro套餐"]["price"],
+            "discount": discounts["pro套餐"],
             "quota": package_data["pro套餐"]["quota"],
             "models_raw": models_raw,
             "tools": tools,
@@ -182,6 +270,6 @@ def fetch(config: Dict[str, str]) -> Dict[str, object]:
         "vendor_id": config["vendor_id"],
         "company_name": config["company_name"],
         "vendor_name": config["vendor_name"],
-        "official_source": config["source_url"],
+        "official_sources": source_urls,
         "packages": packages,
     }
