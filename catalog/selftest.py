@@ -1,4 +1,6 @@
-"""Self-tests for catalog generation (no network).
+"""Back-compat test entrypoint.
+
+The actual tests live under catalog/UTtest.
 
 Run:
   python -m catalog.selftest
@@ -8,12 +10,8 @@ from __future__ import annotations
 
 import unittest
 
-
-class TestPlaceholder(unittest.TestCase):
-    def test_placeholder(self) -> None:
-        # Real tests will be added alongside implementation.
-        self.assertTrue(True)
+from .UTtest import selftest as _suite
 
 
 if __name__ == "__main__":
-    raise SystemExit(unittest.main())
+    raise SystemExit(unittest.main(module=_suite))
