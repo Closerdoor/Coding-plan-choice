@@ -30,7 +30,7 @@ jobs:
         run: python -m rankings.update
 
       - name: Run selftests (no network)
-        run: python -m rankings.selftest
+        run: python -m unittest rankings.UTtest.test_rankings
 
       - name: Create pull request if changed
         uses: peter-evans/create-pull-request@v6

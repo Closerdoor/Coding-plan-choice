@@ -12,7 +12,7 @@
 ## 运行方式
 
 - 一键更新（会触网抓取榜单）：`python -m rankings.update`
-- 单元测试（不触网）：`python -m rankings.selftest`
+- 单元测试（不触网）：`python -m unittest rankings.UTtest.test_rankings`
 
 ## 数据源
 

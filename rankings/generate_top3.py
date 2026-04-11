@@ -1,4 +1,4 @@
-"""Generate artifacts/rankings/MODEL_TOP3.md from artifacts/rankings/MODEL_SCORES.json.
+"""Generate rankings/output/MODEL_TOP3.md from rankings/output/MODEL_SCORES.json.
 
 This step is intentionally no-network.
 """
@@ -6,13 +6,13 @@ This step is intentionally no-network.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from . import core
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = REPO_ROOT / "rankings" / "output"
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "rankings" / "output"
 
 
 def _render_top3_md(*, payload: Dict[str, Any]) -> str:
@@ -75,11 +75,12 @@ def _render_top3_md(*, payload: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def run() -> None:
-    payload = core.load_scores_json(OUTPUT_DIR / "MODEL_SCORES.json")
+def run(*, output_dir: Optional[Path] = None) -> None:
+    out = output_dir or DEFAULT_OUTPUT_DIR
+    payload = core.load_scores_json(out / "MODEL_SCORES.json")
     md = _render_top3_md(payload=payload)
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    core.write_text(OUTPUT_DIR / "MODEL_TOP3.md", md)
+    out.mkdir(parents=True, exist_ok=True)
+    core.write_text(out / "MODEL_TOP3.md", md)
 
 
 def main() -> int:

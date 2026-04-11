@@ -2,7 +2,7 @@
 
 These tests avoid network calls.
 Run:
-  python -m rankings.selftest
+  python -m unittest rankings.UTtest.test_rankings
 """
 
 from __future__ import annotations
@@ -24,7 +24,10 @@ from rankings.generate_top3 import _render_top3_md  # noqa: E402
 def _strip_generated_time(md: str) -> str:
     # Normalize timestamps to make comparisons stable.
     return re.sub(
-        r"^- 生成时间（UTC）：.*$", "- 生成时间（UTC）：<normalized>", md, flags=re.M
+        r"^- \u751f\u6210\u65f6\u95f4\uff08UTC\uff09\uff1a.*$",
+        "- \u751f\u6210\u65f6\u95f4\uff08UTC\uff09\uff1a<normalized>",
+        md,
+        flags=re.M,
     )
 
 
