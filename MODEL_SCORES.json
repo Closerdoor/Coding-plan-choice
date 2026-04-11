@@ -1,0 +1,967 @@
+{
+  "generated_at_utc": "2026-04-11T10:11:22+00:00",
+  "weights": {
+    "swebench": 0.3,
+    "livecodebench": 0.3,
+    "arena": 0.15,
+    "helm": 0.15,
+    "opencompass": 0.1
+  },
+  "filters": {
+    "exclude_name_patterns": [
+      "\\bdistill\\b",
+      "\\bquant\\b",
+      "\\bint4\\b",
+      "\\bint8\\b",
+      "\\b4bit\\b",
+      "\\b8bit\\b",
+      "\\bgguf\\b",
+      "\\bawq\\b",
+      "\\bgptq\\b",
+      "\\bmini\\b",
+      "\\bsmall\\b",
+      "\\blite\\b",
+      "\\btiny\\b",
+      "\\bimage\\b",
+      "\\bvideo\\b",
+      "\\bt2v\\b",
+      "\\bi2v\\b",
+      "\\bflux\\b",
+      "\\bsora\\b",
+      "\\bveo\\b",
+      "\\bseedance\\b",
+      "\\bdreamina\\b",
+      "\\bhunyuan-image\\b",
+      "\\bhunyuan-video\\b"
+    ],
+    "small_params_lt_b": 70.0
+  },
+  "warnings": [],
+  "models": [
+    {
+      "provider": "Google",
+      "model": "Gemini-2.5-Pro-06-05",
+      "model_join_key": "gemini25pro0605",
+      "total_score_0_1": 1.0,
+      "per_source_unit_scores": {
+        "livecodebench": 1.0
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-opus-4-5",
+      "model_join_key": "claudeopus45",
+      "total_score_0_1": 0.9873417721518989,
+      "per_source_unit_scores": {
+        "swebench": 0.9873417721518988
+      }
+    },
+    {
+      "provider": "ByteDance",
+      "model": "Doubao-Seed-1.6",
+      "model_join_key": "doubaoseed16",
+      "total_score_0_1": 0.9746835443037976,
+      "per_source_unit_scores": {
+        "swebench": 0.9746835443037974
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini-3-Pro-Preview",
+      "model_join_key": "gemini3propreview",
+      "total_score_0_1": 0.971518987341772,
+      "per_source_unit_scores": {
+        "swebench": 0.9620253164556962,
+        "opencompass": 1.0
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-4-5-opus",
+      "model_join_key": "claude45opus",
+      "total_score_0_1": 0.9493670886075949,
+      "per_source_unit_scores": {
+        "swebench": 0.9493670886075949
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-opus-4-5-20251101",
+      "model_join_key": "claudeopus4520251101",
+      "total_score_0_1": 0.9466666666666668,
+      "per_source_unit_scores": {
+        "swebench": 1.0,
+        "arena": 0.84
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini-2.5-Flash-04-17",
+      "model_join_key": "gemini25flash0417",
+      "total_score_0_1": 0.9375,
+      "per_source_unit_scores": {
+        "livecodebench": 0.9375
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5",
+      "model_join_key": "gpt5",
+      "total_score_0_1": 0.9367088607594937,
+      "per_source_unit_scores": {
+        "swebench": 0.9367088607594937
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-opus-4-6",
+      "model_join_key": "claudeopus46",
+      "total_score_0_1": 0.9156118143459916,
+      "per_source_unit_scores": {
+        "swebench": 0.8734177215189873,
+        "arena": 1.0
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.5-pro-06-17",
+      "model_join_key": "gemini25pro0617",
+      "total_score_0_1": 0.911392405063291,
+      "per_source_unit_scores": {
+        "swebench": 0.9113924050632911
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-3-flash-preview",
+      "model_join_key": "gemini3flashpreview",
+      "total_score_0_1": 0.8987341772151899,
+      "per_source_unit_scores": {
+        "swebench": 0.8987341772151899
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "DeepSeek-R1-0528",
+      "model_join_key": "deepseekr10528",
+      "total_score_0_1": 0.8750000000000001,
+      "per_source_unit_scores": {
+        "livecodebench": 0.875
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.5-pro-preview-06-05",
+      "model_join_key": "gemini25propreview0605",
+      "total_score_0_1": 0.8607594936708861,
+      "per_source_unit_scores": {
+        "swebench": 0.8607594936708861
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5",
+      "model_join_key": "claudesonnet45",
+      "total_score_0_1": 0.8481012658227848,
+      "per_source_unit_scores": {
+        "swebench": 0.8481012658227848
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-4-sonnet-20250514",
+      "model_join_key": "claude4sonnet20250514",
+      "total_score_0_1": 0.8354430379746836,
+      "per_source_unit_scores": {
+        "swebench": 0.8354430379746836
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "model_join_key": "gpt41",
+      "total_score_0_1": 0.8227848101265822,
+      "per_source_unit_scores": {
+        "swebench": 0.8227848101265822
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5-2025-08-07",
+      "model_join_key": "gpt520250807",
+      "total_score_0_1": 0.810126582278481,
+      "per_source_unit_scores": {
+        "swebench": 0.810126582278481
+      }
+    },
+    {
+      "provider": "Zhipu AI",
+      "model": "GLM-5",
+      "model_join_key": "glm5",
+      "total_score_0_1": 0.8009717427438948,
+      "per_source_unit_scores": {
+        "swebench": 0.7721518987341772,
+        "arena": 0.8,
+        "opencompass": 0.8888888888888888
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-4-opus-20250514",
+      "model_join_key": "claude4opus20250514",
+      "total_score_0_1": 0.7974683544303798,
+      "per_source_unit_scores": {
+        "swebench": 0.7974683544303798
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-3-flash",
+      "model_join_key": "gemini3flash",
+      "total_score_0_1": 0.7912236286919831,
+      "per_source_unit_scores": {
+        "swebench": 0.7468354430379747,
+        "arena": 0.88
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "GPT-5-2025-08-07 (high)",
+      "model_join_key": "gpt520250807high",
+      "total_score_0_1": 0.7777777777777778,
+      "per_source_unit_scores": {
+        "opencompass": 0.7777777777777778
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "GPT-4-Turbo-2024-04-09",
+      "model_join_key": "gpt4turbo20240409",
+      "total_score_0_1": 0.75,
+      "per_source_unit_scores": {
+        "livecodebench": 0.75
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5-2-codex",
+      "model_join_key": "gpt52codex",
+      "total_score_0_1": 0.7498734177215189,
+      "per_source_unit_scores": {
+        "swebench": 0.7848101265822784,
+        "arena": 0.6799999999999999
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.2-2025-12-11",
+      "model_join_key": "gpt5220251211",
+      "total_score_0_1": 0.7341772151898734,
+      "per_source_unit_scores": {
+        "swebench": 0.7341772151898734
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5-20250929",
+      "model_join_key": "claudesonnet4520250929",
+      "total_score_0_1": 0.7259071729957807,
+      "per_source_unit_scores": {
+        "swebench": 0.7088607594936709,
+        "arena": 0.76
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-3-pro",
+      "model_join_key": "gemini3pro",
+      "total_score_0_1": 0.7250632911392405,
+      "per_source_unit_scores": {
+        "swebench": 0.6075949367088608,
+        "arena": 0.96
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "openai/gpt-5-2025-08-07",
+      "model_join_key": "openaigpt520250807",
+      "total_score_0_1": 0.7215189873417722,
+      "per_source_unit_scores": {
+        "swebench": 0.7215189873417722
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5-2",
+      "model_join_key": "gpt52",
+      "total_score_0_1": 0.7063291139240506,
+      "per_source_unit_scores": {
+        "swebench": 0.759493670886076,
+        "arena": 0.6
+      }
+    },
+    {
+      "provider": "MiniMax",
+      "model": "minimax-m2.5",
+      "model_join_key": "minimaxm25",
+      "total_score_0_1": 0.6973839662447259,
+      "per_source_unit_scores": {
+        "swebench": 0.8860759493670887,
+        "arena": 0.31999999999999995
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "model_join_key": "gpt4o",
+      "total_score_0_1": 0.6962025316455696,
+      "per_source_unit_scores": {
+        "swebench": 0.6962025316455696
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "model_join_key": "claudesonnet420250514",
+      "total_score_0_1": 0.6960337552742616,
+      "per_source_unit_scores": {
+        "swebench": 0.9240506329113924,
+        "arena": 0.24
+      }
+    },
+    {
+      "provider": "Zhipu AI",
+      "model": "GLM-4.7",
+      "model_join_key": "glm47",
+      "total_score_0_1": 0.6853333333333333,
+      "per_source_unit_scores": {
+        "arena": 0.92,
+        "opencompass": 0.33333333333333337
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.5-pro",
+      "model_join_key": "gemini25pro",
+      "total_score_0_1": 0.6703797468354431,
+      "per_source_unit_scores": {
+        "swebench": 0.6455696202531646,
+        "arena": 0.72
+      }
+    },
+    {
+      "provider": "Alibaba",
+      "model": "Qwen3.5-397B-A17B",
+      "model_join_key": "qwen35397ba17b",
+      "total_score_0_1": 0.6666666666666667,
+      "per_source_unit_scores": {
+        "opencompass": 0.6666666666666667
+      }
+    },
+    {
+      "provider": "Moonshot AI",
+      "model": "Kimi-K2.5",
+      "model_join_key": "kimik25",
+      "total_score_0_1": 0.6325597749648382,
+      "per_source_unit_scores": {
+        "swebench": 0.6582278481012658,
+        "opencompass": 0.5555555555555556
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "O3 (High)",
+      "model_join_key": "o3high",
+      "total_score_0_1": 0.625,
+      "per_source_unit_scores": {
+        "livecodebench": 0.625
+      }
+    },
+    {
+      "provider": "Alibaba",
+      "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+      "model_join_key": "qwenqwen3coder480ba35binstruct",
+      "total_score_0_1": 0.620253164556962,
+      "per_source_unit_scores": {
+        "swebench": 0.620253164556962
+      }
+    },
+    {
+      "provider": "Moonshot AI",
+      "model": "kimi-k2-0905-preview",
+      "model_join_key": "kimik20905preview",
+      "total_score_0_1": 0.6156962025316456,
+      "per_source_unit_scores": {
+        "swebench": 0.6835443037974683,
+        "arena": 0.48
+      }
+    },
+    {
+      "provider": "MiniMax",
+      "model": "minimax-2.5",
+      "model_join_key": "minimax25",
+      "total_score_0_1": 0.5949367088607596,
+      "per_source_unit_scores": {
+        "swebench": 0.5949367088607596
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4.1-2025-04-14",
+      "model_join_key": "gpt4120250414",
+      "total_score_0_1": 0.5939240506329114,
+      "per_source_unit_scores": {
+        "swebench": 0.6708860759493671,
+        "arena": 0.43999999999999995
+      }
+    },
+    {
+      "provider": "Meta",
+      "model": "meta-llama/Llama-3.3-70B-Instruct",
+      "model_join_key": "metallamallama3370binstruct",
+      "total_score_0_1": 0.5822784810126582,
+      "per_source_unit_scores": {
+        "swebench": 0.5822784810126582
+      }
+    },
+    {
+      "provider": "Zhipu AI",
+      "model": "zai-org/GLM-4.6",
+      "model_join_key": "zaiorgglm46",
+      "total_score_0_1": 0.5696202531645569,
+      "per_source_unit_scores": {
+        "swebench": 0.5696202531645569
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.1-codex",
+      "model_join_key": "gpt51codex",
+      "total_score_0_1": 0.5677637130801688,
+      "per_source_unit_scores": {
+        "swebench": 0.5316455696202531,
+        "arena": 0.64
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "GPT-4O-2024-08-06",
+      "model_join_key": "gpt4o20240806",
+      "total_score_0_1": 0.5399525316455697,
+      "per_source_unit_scores": {
+        "livecodebench": 0.6875,
+        "swebench": 0.3924050632911392
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.1-2025-11-13",
+      "model_join_key": "gpt5120251113",
+      "total_score_0_1": 0.5189873417721519,
+      "per_source_unit_scores": {
+        "swebench": 0.5189873417721519
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "DeepSeek-V3.2",
+      "model_join_key": "deepseekv32",
+      "total_score_0_1": 0.5072445978775094,
+      "per_source_unit_scores": {
+        "swebench": 0.6329113924050633,
+        "arena": 0.52,
+        "opencompass": 0.11111111111111116
+      }
+    },
+    {
+      "provider": "Moonshot AI",
+      "model": "moonshot/kimi-k2-0711-preview",
+      "model_join_key": "moonshotkimik20711preview",
+      "total_score_0_1": 0.5063291139240507,
+      "per_source_unit_scores": {
+        "swebench": 0.5063291139240507
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "DeepSeek-V3",
+      "model_join_key": "deepseekv3",
+      "total_score_0_1": 0.5011867088607596,
+      "per_source_unit_scores": {
+        "livecodebench": 0.8125,
+        "swebench": 0.189873417721519
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude-3-Haiku",
+      "model_join_key": "claude3haiku",
+      "total_score_0_1": 0.5,
+      "per_source_unit_scores": {
+        "livecodebench": 0.5
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "o1-preview",
+      "model_join_key": "o1preview",
+      "total_score_0_1": 0.49367088607594933,
+      "per_source_unit_scores": {
+        "swebench": 0.49367088607594933
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "model_join_key": "claudehaiku4520251001",
+      "total_score_0_1": 0.49130801687763725,
+      "per_source_unit_scores": {
+        "swebench": 0.5569620253164558,
+        "arena": 0.36
+      }
+    },
+    {
+      "provider": "Zhipu AI",
+      "model": "zai-org/GLM-4.5",
+      "model_join_key": "zaiorgglm45",
+      "total_score_0_1": 0.4810126582278481,
+      "per_source_unit_scores": {
+        "swebench": 0.4810126582278481
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "o3-2025-04-16",
+      "model_join_key": "o320250416",
+      "total_score_0_1": 0.45670886075949374,
+      "per_source_unit_scores": {
+        "swebench": 0.40506329113924056,
+        "arena": 0.56
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "DeepSeek-V3.2-Speciale",
+      "model_join_key": "deepseekv32speciale",
+      "total_score_0_1": 0.4444444444444444,
+      "per_source_unit_scores": {
+        "opencompass": 0.4444444444444444
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude-Sonnet-4 (Thinking)",
+      "model_join_key": "claudesonnet4thinking",
+      "total_score_0_1": 0.43750000000000006,
+      "per_source_unit_scores": {
+        "livecodebench": 0.4375
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude-3.5-Sonnet-20241022",
+      "model_join_key": "claude35sonnet20241022",
+      "total_score_0_1": 0.4312784810126582,
+      "per_source_unit_scores": {
+        "livecodebench": 0.5625,
+        "swebench": 0.45569620253164556,
+        "arena": 0.12
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "deepseek-v3.2-reasoner",
+      "model_join_key": "deepseekv32reasoner",
+      "total_score_0_1": 0.43037974683544306,
+      "per_source_unit_scores": {
+        "swebench": 0.430379746835443
+      }
+    },
+    {
+      "provider": "Unknown",
+      "model": "agentica-org/DeepSWE-Preview",
+      "model_join_key": "agenticaorgdeepswepreview",
+      "total_score_0_1": 0.4177215189873418,
+      "per_source_unit_scores": {
+        "swebench": 0.4177215189873418
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-3-7-sonnet-20250219",
+      "model_join_key": "claude37sonnet20250219",
+      "total_score_0_1": 0.38953586497890297,
+      "per_source_unit_scores": {
+        "swebench": 0.5443037974683544,
+        "arena": 0.07999999999999996
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude-Opus-4 (Thinking)",
+      "model_join_key": "claudeopus4thinking",
+      "total_score_0_1": 0.375,
+      "per_source_unit_scores": {
+        "livecodebench": 0.375
+      }
+    },
+    {
+      "provider": "Zhipu AI",
+      "model": "glm-4.6",
+      "model_join_key": "glm46",
+      "total_score_0_1": 0.36708860759493667,
+      "per_source_unit_scores": {
+        "swebench": 0.36708860759493667
+      }
+    },
+    {
+      "provider": "Zhipu AI",
+      "model": "GLM-4.5",
+      "model_join_key": "glm45",
+      "total_score_0_1": 0.35443037974683544,
+      "per_source_unit_scores": {
+        "swebench": 0.35443037974683544
+      }
+    },
+    {
+      "provider": "Moonshot AI",
+      "model": "Kimi-K2-Thinking",
+      "model_join_key": "kimik2thinking",
+      "total_score_0_1": 0.3512658227848101,
+      "per_source_unit_scores": {
+        "swebench": 0.4683544303797469,
+        "opencompass": 0.0
+      }
+    },
+    {
+      "provider": "Mistral",
+      "model": "devstral-2512",
+      "model_join_key": "devstral2512",
+      "total_score_0_1": 0.3417721518987342,
+      "per_source_unit_scores": {
+        "swebench": 0.3417721518987342
+      }
+    },
+    {
+      "provider": "Moonshot AI",
+      "model": "Kimi-K2-Instruct",
+      "model_join_key": "kimik2instruct",
+      "total_score_0_1": 0.3291139240506329,
+      "per_source_unit_scores": {
+        "swebench": 0.3291139240506329
+      }
+    },
+    {
+      "provider": "Alibaba",
+      "model": "Qwen3-Coder-480B-A35B-Instruct",
+      "model_join_key": "qwen3coder480ba35binstruct",
+      "total_score_0_1": 0.319831223628692,
+      "per_source_unit_scores": {
+        "swebench": 0.379746835443038,
+        "arena": 0.19999999999999996
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.5-pro-preview-05-06",
+      "model_join_key": "gemini25propreview0506",
+      "total_score_0_1": 0.31645569620253167,
+      "per_source_unit_scores": {
+        "swebench": 0.31645569620253167
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude-Opus-4",
+      "model_join_key": "claudeopus4",
+      "total_score_0_1": 0.3125,
+      "per_source_unit_scores": {
+        "livecodebench": 0.3125
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "deepseek-reasoner",
+      "model_join_key": "deepseekreasoner",
+      "total_score_0_1": 0.30379746835443033,
+      "per_source_unit_scores": {
+        "swebench": 0.30379746835443033
+      }
+    },
+    {
+      "provider": "MiniMax",
+      "model": "minimax-m2",
+      "model_join_key": "minimaxm2",
+      "total_score_0_1": 0.2953586497890296,
+      "per_source_unit_scores": {
+        "swebench": 0.44303797468354433,
+        "arena": 0.0
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.0-flash-exp",
+      "model_join_key": "gemini20flashexp",
+      "total_score_0_1": 0.2911392405063291,
+      "per_source_unit_scores": {
+        "swebench": 0.2911392405063291
+      }
+    },
+    {
+      "provider": "Amazon",
+      "model": "amazon.nova-premier-v1:0",
+      "model_join_key": "amazonnovapremierv10",
+      "total_score_0_1": 0.2784810126582279,
+      "per_source_unit_scores": {
+        "swebench": 0.2784810126582279
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "DeepSeek-V3-0324",
+      "model_join_key": "deepseekv30324",
+      "total_score_0_1": 0.26582278481012656,
+      "per_source_unit_scores": {
+        "swebench": 0.26582278481012656
+      }
+    },
+    {
+      "provider": "StepFun",
+      "model": "Step-3.5-Flash",
+      "model_join_key": "step35flash",
+      "total_score_0_1": 0.2568888888888889,
+      "per_source_unit_scores": {
+        "arena": 0.28,
+        "opencompass": 0.2222222222222222
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-3.5-sonnet-latest",
+      "model_join_key": "claude35sonnetlatest",
+      "total_score_0_1": 0.25316455696202533,
+      "per_source_unit_scores": {
+        "swebench": 0.25316455696202533
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude-Sonnet-4",
+      "model_join_key": "claudesonnet4",
+      "total_score_0_1": 0.25,
+      "per_source_unit_scores": {
+        "livecodebench": 0.25
+      }
+    },
+    {
+      "provider": "Meta",
+      "model": "Llama3-SWE-RL-70B",
+      "model_join_key": "llama3swerl70b",
+      "total_score_0_1": 0.240506329113924,
+      "per_source_unit_scores": {
+        "swebench": 0.240506329113924
+      }
+    },
+    {
+      "provider": "Alibaba",
+      "model": "Qwen 2.5",
+      "model_join_key": "qwen25",
+      "total_score_0_1": 0.22784810126582275,
+      "per_source_unit_scores": {
+        "swebench": 0.22784810126582278
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.5-flash",
+      "model_join_key": "gemini25flash",
+      "total_score_0_1": 0.2261603375527426,
+      "per_source_unit_scores": {
+        "swebench": 0.1392405063291139,
+        "arena": 0.4
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-3-haiku-20240307",
+      "model_join_key": "claude3haiku20240307",
+      "total_score_0_1": 0.21518987341772156,
+      "per_source_unit_scores": {
+        "swebench": 0.21518987341772156
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4o-2024-05-13",
+      "model_join_key": "gpt4o20240513",
+      "total_score_0_1": 0.20253164556962022,
+      "per_source_unit_scores": {
+        "swebench": 0.20253164556962022
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini-2.5-Pro-05-06",
+      "model_join_key": "gemini25pro0506",
+      "total_score_0_1": 0.1875,
+      "per_source_unit_scores": {
+        "livecodebench": 0.1875
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-4-sonnet",
+      "model_join_key": "claude4sonnet",
+      "total_score_0_1": 0.17721518987341767,
+      "per_source_unit_scores": {
+        "swebench": 0.17721518987341767
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5-nano-2025-08-07",
+      "model_join_key": "gpt5nano20250807",
+      "total_score_0_1": 0.16455696202531644,
+      "per_source_unit_scores": {
+        "swebench": 0.16455696202531644
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "deepseek-chat",
+      "model_join_key": "deepseekchat",
+      "total_score_0_1": 0.15189873417721522,
+      "per_source_unit_scores": {
+        "swebench": 0.15189873417721522
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4-1106-preview",
+      "model_join_key": "gpt41106preview",
+      "total_score_0_1": 0.12658227848101267,
+      "per_source_unit_scores": {
+        "swebench": 0.12658227848101267
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini-2.5-Flash-05-20",
+      "model_join_key": "gemini25flash0520",
+      "total_score_0_1": 0.125,
+      "per_source_unit_scores": {
+        "livecodebench": 0.125
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4-0613",
+      "model_join_key": "gpt40613",
+      "total_score_0_1": 0.10126582278481011,
+      "per_source_unit_scores": {
+        "swebench": 0.10126582278481011
+      }
+    },
+    {
+      "provider": "Alibaba",
+      "model": "Qwen3-235B-A22B",
+      "model_join_key": "qwen3235ba22b",
+      "total_score_0_1": 0.09500000000000001,
+      "per_source_unit_scores": {
+        "livecodebench": 0.0625,
+        "arena": 0.16000000000000003
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-oss-120b",
+      "model_join_key": "gptoss120b",
+      "total_score_0_1": 0.08928270042194099,
+      "per_source_unit_scores": {
+        "swebench": 0.11392405063291144,
+        "arena": 0.040000000000000036
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4o-20241120",
+      "model_join_key": "gpt4o20241120",
+      "total_score_0_1": 0.08860759493670889,
+      "per_source_unit_scores": {
+        "swebench": 0.08860759493670889
+      }
+    },
+    {
+      "provider": "Meta",
+      "model": "llama-4-maverick-instruct",
+      "model_join_key": "llama4maverickinstruct",
+      "total_score_0_1": 0.07594936708860756,
+      "per_source_unit_scores": {
+        "swebench": 0.07594936708860756
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4-0125-preview",
+      "model_join_key": "gpt40125preview",
+      "total_score_0_1": 0.06329113924050633,
+      "per_source_unit_scores": {
+        "swebench": 0.06329113924050633
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-3-opus-20240229",
+      "model_join_key": "claude3opus20240229",
+      "total_score_0_1": 0.05063291139240511,
+      "per_source_unit_scores": {
+        "swebench": 0.05063291139240511
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.0-flash",
+      "model_join_key": "gemini20flash",
+      "total_score_0_1": 0.03797468354430378,
+      "per_source_unit_scores": {
+        "swebench": 0.03797468354430378
+      }
+    },
+    {
+      "provider": "Meta",
+      "model": "llama-4-scout-instruct",
+      "model_join_key": "llama4scoutinstruct",
+      "total_score_0_1": 0.025316455696202556,
+      "per_source_unit_scores": {
+        "swebench": 0.025316455696202556
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-2",
+      "model_join_key": "claude2",
+      "total_score_0_1": 0.012658227848101222,
+      "per_source_unit_scores": {
+        "swebench": 0.012658227848101222
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "XBai-o4-medium",
+      "model_join_key": "xbaio4medium",
+      "total_score_0_1": 0.0,
+      "per_source_unit_scores": {
+        "livecodebench": 0.0
+      }
+    },
+    {
+      "provider": "Unknown",
+      "model": "SWE-Llama",
+      "model_join_key": "swellama",
+      "total_score_0_1": 0.0,
+      "per_source_unit_scores": {
+        "swebench": 0.0
+      }
+    }
+  ]
+}
