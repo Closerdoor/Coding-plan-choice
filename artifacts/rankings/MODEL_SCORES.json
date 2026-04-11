@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-11T11:02:41+00:00",
+  "generated_at_utc": "2026-04-11T12:45:54+00:00",
   "weights": {
     "swebench": 0.3,
     "livecodebench": 0.3,
@@ -36,17 +36,10 @@
     ],
     "small_params_lt_b": 70.0
   },
-  "warnings": [],
+  "warnings": [
+    "source livecodebench: failed: URLError: <urlopen error [Errno 2] No such file or directory>"
+  ],
   "models": [
-    {
-      "provider": "Google",
-      "model": "Gemini-2.5-Pro-06-05",
-      "model_join_key": "gemini25pro0605",
-      "total_score_0_1": 1.0,
-      "per_source_unit_scores": {
-        "livecodebench": 1.0
-      }
-    },
     {
       "provider": "Anthropic",
       "model": "claude-opus-4-5",
@@ -88,19 +81,10 @@
       "provider": "Anthropic",
       "model": "claude-opus-4-5-20251101",
       "model_join_key": "claudeopus4520251101",
-      "total_score_0_1": 0.9466666666666668,
+      "total_score_0_1": 0.9444444444444445,
       "per_source_unit_scores": {
         "swebench": 1.0,
-        "arena": 0.84
-      }
-    },
-    {
-      "provider": "Google",
-      "model": "Gemini-2.5-Flash-04-17",
-      "model_join_key": "gemini25flash0417",
-      "total_score_0_1": 0.9375,
-      "per_source_unit_scores": {
-        "livecodebench": 0.9375
+        "arena": 0.8333333333333334
       }
     },
     {
@@ -138,15 +122,6 @@
       "total_score_0_1": 0.8987341772151899,
       "per_source_unit_scores": {
         "swebench": 0.8987341772151899
-      }
-    },
-    {
-      "provider": "DeepSeek",
-      "model": "DeepSeek-R1-0528",
-      "model_join_key": "deepseekr10528",
-      "total_score_0_1": 0.8750000000000001,
-      "per_source_unit_scores": {
-        "livecodebench": 0.875
       }
     },
     {
@@ -198,10 +173,10 @@
       "provider": "Zhipu AI",
       "model": "GLM-5",
       "model_join_key": "glm5",
-      "total_score_0_1": 0.8009717427438948,
+      "total_score_0_1": 0.7986990154711675,
       "per_source_unit_scores": {
         "swebench": 0.7721518987341772,
-        "arena": 0.8,
+        "arena": 0.7916666666666666,
         "opencompass": 0.8888888888888888
       }
     },
@@ -218,10 +193,10 @@
       "provider": "Google",
       "model": "gemini-3-flash",
       "model_join_key": "gemini3flash",
-      "total_score_0_1": 0.7912236286919831,
+      "total_score_0_1": 0.7895569620253166,
       "per_source_unit_scores": {
         "swebench": 0.7468354430379747,
-        "arena": 0.88
+        "arena": 0.875
       }
     },
     {
@@ -235,21 +210,12 @@
     },
     {
       "provider": "OpenAI",
-      "model": "GPT-4-Turbo-2024-04-09",
-      "model_join_key": "gpt4turbo20240409",
-      "total_score_0_1": 0.75,
-      "per_source_unit_scores": {
-        "livecodebench": 0.75
-      }
-    },
-    {
-      "provider": "OpenAI",
       "model": "gpt-5-2-codex",
       "model_join_key": "gpt52codex",
-      "total_score_0_1": 0.7498734177215189,
+      "total_score_0_1": 0.7454289732770747,
       "per_source_unit_scores": {
         "swebench": 0.7848101265822784,
-        "arena": 0.6799999999999999
+        "arena": 0.6666666666666667
       }
     },
     {
@@ -262,23 +228,23 @@
       }
     },
     {
-      "provider": "Anthropic",
-      "model": "claude-sonnet-4-5-20250929",
-      "model_join_key": "claudesonnet4520250929",
-      "total_score_0_1": 0.7259071729957807,
-      "per_source_unit_scores": {
-        "swebench": 0.7088607594936709,
-        "arena": 0.76
-      }
-    },
-    {
       "provider": "Google",
       "model": "gemini-3-pro",
       "model_join_key": "gemini3pro",
-      "total_score_0_1": 0.7250632911392405,
+      "total_score_0_1": 0.7245077355836851,
       "per_source_unit_scores": {
         "swebench": 0.6075949367088608,
-        "arena": 0.96
+        "arena": 0.9583333333333334
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-5-20250929",
+      "model_join_key": "claudesonnet4520250929",
+      "total_score_0_1": 0.7225738396624473,
+      "per_source_unit_scores": {
+        "swebench": 0.7088607594936709,
+        "arena": 0.75
       }
     },
     {
@@ -294,20 +260,10 @@
       "provider": "OpenAI",
       "model": "gpt-5-2",
       "model_join_key": "gpt52",
-      "total_score_0_1": 0.7063291139240506,
+      "total_score_0_1": 0.7007735583684951,
       "per_source_unit_scores": {
         "swebench": 0.759493670886076,
-        "arena": 0.6
-      }
-    },
-    {
-      "provider": "MiniMax",
-      "model": "minimax-m2.5",
-      "model_join_key": "minimaxm25",
-      "total_score_0_1": 0.6973839662447259,
-      "per_source_unit_scores": {
-        "swebench": 0.8860759493670887,
-        "arena": 0.31999999999999995
+        "arena": 0.5833333333333333
       }
     },
     {
@@ -320,33 +276,33 @@
       }
     },
     {
+      "provider": "MiniMax",
+      "model": "minimax-m2.5",
+      "model_join_key": "minimaxm25",
+      "total_score_0_1": 0.6879395218002815,
+      "per_source_unit_scores": {
+        "swebench": 0.8860759493670887,
+        "arena": 0.29166666666666663
+      }
+    },
+    {
       "provider": "Anthropic",
       "model": "claude-sonnet-4-20250514",
       "model_join_key": "claudesonnet420250514",
-      "total_score_0_1": 0.6960337552742616,
+      "total_score_0_1": 0.685478199718706,
       "per_source_unit_scores": {
         "swebench": 0.9240506329113924,
-        "arena": 0.24
+        "arena": 0.20833333333333337
       }
     },
     {
       "provider": "Zhipu AI",
       "model": "GLM-4.7",
       "model_join_key": "glm47",
-      "total_score_0_1": 0.6853333333333333,
+      "total_score_0_1": 0.6833333333333333,
       "per_source_unit_scores": {
-        "arena": 0.92,
+        "arena": 0.9166666666666666,
         "opencompass": 0.33333333333333337
-      }
-    },
-    {
-      "provider": "Google",
-      "model": "gemini-2.5-pro",
-      "model_join_key": "gemini25pro",
-      "total_score_0_1": 0.6703797468354431,
-      "per_source_unit_scores": {
-        "swebench": 0.6455696202531646,
-        "arena": 0.72
       }
     },
     {
@@ -359,6 +315,16 @@
       }
     },
     {
+      "provider": "Google",
+      "model": "gemini-2.5-pro",
+      "model_join_key": "gemini25pro",
+      "total_score_0_1": 0.6664908579465542,
+      "per_source_unit_scores": {
+        "swebench": 0.6455696202531646,
+        "arena": 0.7083333333333333
+      }
+    },
+    {
       "provider": "Moonshot AI",
       "model": "Kimi-K2.5",
       "model_join_key": "kimik25",
@@ -366,15 +332,6 @@
       "per_source_unit_scores": {
         "swebench": 0.6582278481012658,
         "opencompass": 0.5555555555555556
-      }
-    },
-    {
-      "provider": "OpenAI",
-      "model": "O3 (High)",
-      "model_join_key": "o3high",
-      "total_score_0_1": 0.625,
-      "per_source_unit_scores": {
-        "livecodebench": 0.625
       }
     },
     {
@@ -390,10 +347,10 @@
       "provider": "Moonshot AI",
       "model": "kimi-k2-0905-preview",
       "model_join_key": "kimik20905preview",
-      "total_score_0_1": 0.6156962025316456,
+      "total_score_0_1": 0.6084739803094233,
       "per_source_unit_scores": {
         "swebench": 0.6835443037974683,
-        "arena": 0.48
+        "arena": 0.45833333333333337
       }
     },
     {
@@ -409,10 +366,10 @@
       "provider": "OpenAI",
       "model": "gpt-4.1-2025-04-14",
       "model_join_key": "gpt4120250414",
-      "total_score_0_1": 0.5939240506329114,
+      "total_score_0_1": 0.5861462728551335,
       "per_source_unit_scores": {
         "swebench": 0.6708860759493671,
-        "arena": 0.43999999999999995
+        "arena": 0.41666666666666663
       }
     },
     {
@@ -437,20 +394,10 @@
       "provider": "OpenAI",
       "model": "gpt-5.1-codex",
       "model_join_key": "gpt51codex",
-      "total_score_0_1": 0.5677637130801688,
+      "total_score_0_1": 0.5627637130801687,
       "per_source_unit_scores": {
         "swebench": 0.5316455696202531,
-        "arena": 0.64
-      }
-    },
-    {
-      "provider": "OpenAI",
-      "model": "GPT-4O-2024-08-06",
-      "model_join_key": "gpt4o20240806",
-      "total_score_0_1": 0.5399525316455697,
-      "per_source_unit_scores": {
-        "livecodebench": 0.6875,
-        "swebench": 0.3924050632911392
+        "arena": 0.625
       }
     },
     {
@@ -460,17 +407,6 @@
       "total_score_0_1": 0.5189873417721519,
       "per_source_unit_scores": {
         "swebench": 0.5189873417721519
-      }
-    },
-    {
-      "provider": "DeepSeek",
-      "model": "DeepSeek-V3.2",
-      "model_join_key": "deepseekv32",
-      "total_score_0_1": 0.5072445978775094,
-      "per_source_unit_scores": {
-        "swebench": 0.6329113924050633,
-        "arena": 0.52,
-        "opencompass": 0.11111111111111116
       }
     },
     {
@@ -484,21 +420,13 @@
     },
     {
       "provider": "DeepSeek",
-      "model": "DeepSeek-V3",
-      "model_join_key": "deepseekv3",
-      "total_score_0_1": 0.5011867088607596,
+      "model": "DeepSeek-V3.2",
+      "model_join_key": "deepseekv32",
+      "total_score_0_1": 0.5017900524229639,
       "per_source_unit_scores": {
-        "livecodebench": 0.8125,
-        "swebench": 0.189873417721519
-      }
-    },
-    {
-      "provider": "Anthropic",
-      "model": "Claude-3-Haiku",
-      "model_join_key": "claude3haiku",
-      "total_score_0_1": 0.5,
-      "per_source_unit_scores": {
-        "livecodebench": 0.5
+        "swebench": 0.6329113924050633,
+        "arena": 0.5,
+        "opencompass": 0.11111111111111116
       }
     },
     {
@@ -514,10 +442,10 @@
       "provider": "Anthropic",
       "model": "claude-haiku-4-5-20251001",
       "model_join_key": "claudehaiku4520251001",
-      "total_score_0_1": 0.49130801687763725,
+      "total_score_0_1": 0.4824191279887484,
       "per_source_unit_scores": {
         "swebench": 0.5569620253164558,
-        "arena": 0.36
+        "arena": 0.33333333333333337
       }
     },
     {
@@ -533,10 +461,10 @@
       "provider": "OpenAI",
       "model": "o3-2025-04-16",
       "model_join_key": "o320250416",
-      "total_score_0_1": 0.45670886075949374,
+      "total_score_0_1": 0.4505977496483827,
       "per_source_unit_scores": {
         "swebench": 0.40506329113924056,
-        "arena": 0.56
+        "arena": 0.5416666666666667
       }
     },
     {
@@ -546,26 +474,6 @@
       "total_score_0_1": 0.4444444444444444,
       "per_source_unit_scores": {
         "opencompass": 0.4444444444444444
-      }
-    },
-    {
-      "provider": "Anthropic",
-      "model": "Claude-Sonnet-4 (Thinking)",
-      "model_join_key": "claudesonnet4thinking",
-      "total_score_0_1": 0.43750000000000006,
-      "per_source_unit_scores": {
-        "livecodebench": 0.4375
-      }
-    },
-    {
-      "provider": "Anthropic",
-      "model": "Claude-3.5-Sonnet-20241022",
-      "model_join_key": "claude35sonnet20241022",
-      "total_score_0_1": 0.4312784810126582,
-      "per_source_unit_scores": {
-        "livecodebench": 0.5625,
-        "swebench": 0.45569620253164556,
-        "arena": 0.12
       }
     },
     {
@@ -587,22 +495,22 @@
       }
     },
     {
-      "provider": "Anthropic",
-      "model": "claude-3-7-sonnet-20250219",
-      "model_join_key": "claude37sonnet20250219",
-      "total_score_0_1": 0.38953586497890297,
+      "provider": "OpenAI",
+      "model": "gpt-4o-2024-08-06",
+      "model_join_key": "gpt4o20240806",
+      "total_score_0_1": 0.3924050632911392,
       "per_source_unit_scores": {
-        "swebench": 0.5443037974683544,
-        "arena": 0.07999999999999996
+        "swebench": 0.3924050632911392
       }
     },
     {
       "provider": "Anthropic",
-      "model": "Claude-Opus-4 (Thinking)",
-      "model_join_key": "claudeopus4thinking",
-      "total_score_0_1": 0.375,
+      "model": "claude-3-7-sonnet-20250219",
+      "model_join_key": "claude37sonnet20250219",
+      "total_score_0_1": 0.39064697609001414,
       "per_source_unit_scores": {
-        "livecodebench": 0.375
+        "swebench": 0.5443037974683544,
+        "arena": 0.08333333333333337
       }
     },
     {
@@ -634,6 +542,16 @@
       }
     },
     {
+      "provider": "Anthropic",
+      "model": "claude-3-5-sonnet-20241022",
+      "model_join_key": "claude35sonnet20241022",
+      "total_score_0_1": 0.345464135021097,
+      "per_source_unit_scores": {
+        "swebench": 0.45569620253164556,
+        "arena": 0.125
+      }
+    },
+    {
       "provider": "Mistral",
       "model": "devstral-2512",
       "model_join_key": "devstral2512",
@@ -652,16 +570,6 @@
       }
     },
     {
-      "provider": "Alibaba",
-      "model": "Qwen3-Coder-480B-A35B-Instruct",
-      "model_join_key": "qwen3coder480ba35binstruct",
-      "total_score_0_1": 0.319831223628692,
-      "per_source_unit_scores": {
-        "swebench": 0.379746835443038,
-        "arena": 0.19999999999999996
-      }
-    },
-    {
       "provider": "Google",
       "model": "gemini-2.5-pro-preview-05-06",
       "model_join_key": "gemini25propreview0506",
@@ -671,12 +579,13 @@
       }
     },
     {
-      "provider": "Anthropic",
-      "model": "Claude-Opus-4",
-      "model_join_key": "claudeopus4",
-      "total_score_0_1": 0.3125,
+      "provider": "Alibaba",
+      "model": "Qwen3-Coder-480B-A35B-Instruct",
+      "model_join_key": "qwen3coder480ba35binstruct",
+      "total_score_0_1": 0.30872011251758086,
       "per_source_unit_scores": {
-        "livecodebench": 0.3125
+        "swebench": 0.379746835443038,
+        "arena": 0.16666666666666663
       }
     },
     {
@@ -726,16 +635,6 @@
       }
     },
     {
-      "provider": "StepFun",
-      "model": "Step-3.5-Flash",
-      "model_join_key": "step35flash",
-      "total_score_0_1": 0.2568888888888889,
-      "per_source_unit_scores": {
-        "arena": 0.28,
-        "opencompass": 0.2222222222222222
-      }
-    },
-    {
       "provider": "Anthropic",
       "model": "claude-3.5-sonnet-latest",
       "model_join_key": "claude35sonnetlatest",
@@ -745,21 +644,22 @@
       }
     },
     {
-      "provider": "Anthropic",
-      "model": "Claude-Sonnet-4",
-      "model_join_key": "claudesonnet4",
-      "total_score_0_1": 0.25,
-      "per_source_unit_scores": {
-        "livecodebench": 0.25
-      }
-    },
-    {
       "provider": "Meta",
       "model": "Llama3-SWE-RL-70B",
       "model_join_key": "llama3swerl70b",
       "total_score_0_1": 0.240506329113924,
       "per_source_unit_scores": {
         "swebench": 0.240506329113924
+      }
+    },
+    {
+      "provider": "StepFun",
+      "model": "Step-3.5-Flash",
+      "model_join_key": "step35flash",
+      "total_score_0_1": 0.23888888888888887,
+      "per_source_unit_scores": {
+        "arena": 0.25,
+        "opencompass": 0.2222222222222222
       }
     },
     {
@@ -775,10 +675,10 @@
       "provider": "Google",
       "model": "gemini-2.5-flash",
       "model_join_key": "gemini25flash",
-      "total_score_0_1": 0.2261603375527426,
+      "total_score_0_1": 0.21782700421940926,
       "per_source_unit_scores": {
         "swebench": 0.1392405063291139,
-        "arena": 0.4
+        "arena": 0.375
       }
     },
     {
@@ -800,12 +700,12 @@
       }
     },
     {
-      "provider": "Google",
-      "model": "Gemini-2.5-Pro-05-06",
-      "model_join_key": "gemini25pro0506",
-      "total_score_0_1": 0.1875,
+      "provider": "DeepSeek",
+      "model": "deepseek-v3",
+      "model_join_key": "deepseekv3",
+      "total_score_0_1": 0.189873417721519,
       "per_source_unit_scores": {
-        "livecodebench": 0.1875
+        "swebench": 0.189873417721519
       }
     },
     {
@@ -845,15 +745,6 @@
       }
     },
     {
-      "provider": "Google",
-      "model": "Gemini-2.5-Flash-05-20",
-      "model_join_key": "gemini25flash0520",
-      "total_score_0_1": 0.125,
-      "per_source_unit_scores": {
-        "livecodebench": 0.125
-      }
-    },
-    {
       "provider": "OpenAI",
       "model": "gpt-4-0613",
       "model_join_key": "gpt40613",
@@ -863,23 +754,13 @@
       }
     },
     {
-      "provider": "Alibaba",
-      "model": "Qwen3-235B-A22B",
-      "model_join_key": "qwen3235ba22b",
-      "total_score_0_1": 0.09500000000000001,
-      "per_source_unit_scores": {
-        "livecodebench": 0.0625,
-        "arena": 0.16000000000000003
-      }
-    },
-    {
       "provider": "OpenAI",
       "model": "gpt-oss-120b",
       "model_join_key": "gptoss120b",
-      "total_score_0_1": 0.08928270042194099,
+      "total_score_0_1": 0.0898382559774965,
       "per_source_unit_scores": {
         "swebench": 0.11392405063291144,
-        "arena": 0.040000000000000036
+        "arena": 0.04166666666666663
       }
     },
     {
@@ -943,15 +824,6 @@
       "total_score_0_1": 0.012658227848101222,
       "per_source_unit_scores": {
         "swebench": 0.012658227848101222
-      }
-    },
-    {
-      "provider": "OpenAI",
-      "model": "XBai-o4-medium",
-      "model_join_key": "xbaio4medium",
-      "total_score_0_1": 0.0,
-      "per_source_unit_scores": {
-        "livecodebench": 0.0
       }
     },
     {

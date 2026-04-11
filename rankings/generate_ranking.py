@@ -1,4 +1,4 @@
-"""Generate MODEL_RANKING.md and MODEL_SCORES.json.
+"""Generate ranking artifacts under artifacts/rankings.
 
 This is the only step that hits external network resources.
 """
@@ -8,11 +8,12 @@ from __future__ import annotations
 from pathlib import Path
 from typing import List
 
-from . import ranking_core as core
+from . import core
 from .sources import SOURCES
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+ARTIFACTS_DIR = REPO_ROOT / "artifacts" / "rankings"
 
 
 def run() -> List[str]:
@@ -52,9 +53,10 @@ def run() -> List[str]:
         display_by_key=display_by_key,
         warnings=warnings,
     )
-    core.write_text(REPO_ROOT / "MODEL_RANKING.md", md)
+    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
+    core.write_text(ARTIFACTS_DIR / "MODEL_RANKING.md", md)
     core.write_scores_json(
-        path=REPO_ROOT / "MODEL_SCORES.json",
+        path=ARTIFACTS_DIR / "MODEL_SCORES.json",
         total=total,
         per_source=per_source,
         display_by_key=display_by_key,

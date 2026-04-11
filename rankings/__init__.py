@@ -1,0 +1,1 @@
+"""Rankings package (stdlib-only)."""

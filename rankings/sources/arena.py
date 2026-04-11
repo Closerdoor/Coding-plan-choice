@@ -9,7 +9,7 @@ import json
 import re
 from typing import Any, Dict, List, Optional, Tuple
 
-from .. import ranking_core as core
+from .. import core
 
 
 SOURCE_NAME = "arena"

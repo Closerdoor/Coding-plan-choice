@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from typing import List
 
-from .. import ranking_core as core
+from .. import core
 
 
 SOURCE_NAME = "helm"

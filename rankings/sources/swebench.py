@@ -6,7 +6,7 @@ import json
 import re
 from typing import Dict, List, Tuple
 
-from .. import ranking_core as core
+from .. import core
 
 
 SOURCE_NAME = "swebench"

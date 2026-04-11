@@ -27,10 +27,10 @@ jobs:
           python-version: "3.10"
 
       - name: Generate ranking artifacts
-        run: python scripts/update_model_rankings.py
+        run: python -m rankings.update
 
       - name: Run selftests (no network)
-        run: python scripts/selftest_model_rankings.py
+        run: python -m rankings.selftest
 
       - name: Create pull request if changed
         uses: peter-evans/create-pull-request@v6
@@ -39,12 +39,12 @@ jobs:
           title: "chore: refresh model rankings"
           body: |
             自动定时更新：
-            - MODEL_RANKING.md
-            - MODEL_SCORES.json
-            - MODEL_TOP3.md
+            - artifacts/rankings/MODEL_RANKING.md
+            - artifacts/rankings/MODEL_SCORES.json
+            - artifacts/rankings/MODEL_TOP3.md
           branch: "automation/update-model-rankings"
           delete-branch: true
           add-paths: |
-            MODEL_RANKING.md
-            MODEL_SCORES.json
-            MODEL_TOP3.md
+            artifacts/rankings/MODEL_RANKING.md
+            artifacts/rankings/MODEL_SCORES.json
+            artifacts/rankings/MODEL_TOP3.md

@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from typing import Dict, List
 
-from .. import ranking_core as core
+from .. import core
 
 
 SOURCE_NAME = "livecodebench"

@@ -2,7 +2,7 @@
 
 These tests avoid network calls.
 Run:
-  python scripts/selftest_model_rankings.py
+  python -m rankings.selftest
 """
 
 from __future__ import annotations
@@ -17,8 +17,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from scripts import ranking_core as core  # noqa: E402
-from scripts.generate_model_top3 import _render_top3_md  # noqa: E402
+from rankings import core  # noqa: E402
+from rankings.generate_top3 import _render_top3_md  # noqa: E402
 
 
 def _strip_generated_time(md: str) -> str:
@@ -123,14 +123,12 @@ class TestAggregation(unittest.TestCase):
 
 class TestTop3FromJson(unittest.TestCase):
     def test_top3_renders_from_scores_json(self) -> None:
-        scores_path = REPO_ROOT / "MODEL_SCORES.json"
+        scores_path = REPO_ROOT / "artifacts" / "rankings" / "MODEL_SCORES.json"
         if not scores_path.exists():
-            self.skipTest(
-                "MODEL_SCORES.json not found; run update_model_rankings.py first"
-            )
+            self.skipTest("MODEL_SCORES.json not found; run rankings.update first")
         payload = json.loads(scores_path.read_text(encoding="utf-8"))
         md = _render_top3_md(payload=payload)
-        out_path = REPO_ROOT / "MODEL_TOP3.md"
+        out_path = REPO_ROOT / "artifacts" / "rankings" / "MODEL_TOP3.md"
         if out_path.exists():
             on_disk = out_path.read_text(encoding="utf-8")
             self.assertEqual(_strip_generated_time(md), _strip_generated_time(on_disk))
