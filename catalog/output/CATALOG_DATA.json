@@ -1,8 +1,7 @@
 {
-  "generated_at_utc": "2026-04-12T07:27:17+00:00",
+  "generated_at_utc": "2026-04-12T07:49:35+00:00",
   "warnings": [
-    "vendor xiaomi-mimo-token-plan: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.xiaomi_mimo_token_plan'",
-    "vendor openai-chatgpt: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.openai_chatgpt'"
+    "vendor xiaomi-mimo-token-plan: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.xiaomi_mimo_token_plan'"
   ],
   "vendors": [
     {
@@ -73,7 +72,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:25:10+00:00"
+      "updated_at_utc": "2026-04-12T07:49:19+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -139,7 +138,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:25:30+00:00"
+      "updated_at_utc": "2026-04-12T07:49:21+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -193,7 +192,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:25:49+00:00"
+      "updated_at_utc": "2026-04-12T07:49:22+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -288,7 +287,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:26:09+00:00"
+      "updated_at_utc": "2026-04-12T07:49:24+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
@@ -486,7 +485,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:26:22+00:00"
+      "updated_at_utc": "2026-04-12T07:49:27+00:00"
     },
     {
       "vendor_id": "aliyun-bailian-coding-plan",
@@ -532,7 +531,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:26:34+00:00"
+      "updated_at_utc": "2026-04-12T07:49:30+00:00"
     },
     {
       "vendor_id": "trae-intl",
@@ -628,7 +627,121 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:27:06+00:00"
+      "updated_at_utc": "2026-04-12T07:49:34+00:00"
+    },
+    {
+      "vendor_id": "openai-chatgpt",
+      "company_name": "OpenAI",
+      "plan_name": "ChatGPT",
+      "official_url": "https://help.openai.com/en/collections/3742473-chatgpt",
+      "source_urls": [
+        "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+        "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+        "https://help.openai.com/en/articles/11989085-what-is-chatgpt-go",
+        "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans",
+        "https://help.openai.com/en/articles/12642688-using-credits-for-flexible-usage-in-chatgpt-freegopluspro-sora"
+      ],
+      "packages": [
+        {
+          "name": "Free套餐",
+          "price": "$0/月",
+          "discount": "",
+          "quota": "GPT-5.2 五小时窗口内限量使用；工具使用有单独限额",
+          "models_raw": [
+            "GPT-5.2"
+          ],
+          "tools": [
+            "Web Search",
+            "File Uploads",
+            "Image Generation",
+            "GPTs"
+          ],
+          "access_method": "账号订阅（ChatGPT Web / App）",
+          "models_filtered": []
+        },
+        {
+          "name": "Go套餐",
+          "price": "价格以官方 pricing 页为准",
+          "discount": "",
+          "quota": "比 Free 更高的使用上限；包含 GPT-5.3 Instant 无限聊天访问（受滥用防护限制）",
+          "models_raw": [
+            "GPT-5.3 Instant",
+            "Thinking"
+          ],
+          "tools": [
+            "Image Generation",
+            "File Uploads",
+            "Advanced Data Analysis",
+            "Projects",
+            "Tasks",
+            "Custom GPTs",
+            "Memory"
+          ],
+          "access_method": "账号订阅（ChatGPT Web / App）",
+          "models_filtered": []
+        },
+        {
+          "name": "Plus套餐",
+          "price": "$20/月",
+          "discount": "",
+          "quota": "更高 GPT-5.3 使用上限；高级功能按套餐内 included usage 提供",
+          "models_raw": [
+            "GPT-5.3",
+            "Advanced reasoning models"
+          ],
+          "tools": [
+            "Voice",
+            "Image Generation",
+            "File Uploads",
+            "Deep Research",
+            "Custom GPTs",
+            "Codex",
+            "Sora"
+          ],
+          "access_method": "账号订阅（ChatGPT Web / App）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro $100套餐",
+          "price": "$100/月",
+          "discount": "",
+          "quota": "比 Plus 高 5x 使用上限；Codex 限额限时为 Plus 的 10x",
+          "models_raw": [
+            "GPT-5",
+            "Pro models"
+          ],
+          "tools": [
+            "Codex",
+            "Deep Research",
+            "Image Creation",
+            "Memory",
+            "File Uploads"
+          ],
+          "access_method": "账号订阅（ChatGPT Web / App）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro $200套餐",
+          "price": "$200/月",
+          "discount": "",
+          "quota": "比 Plus 高 20x 使用上限；GPT-5 与 legacy models 为 unlimited access（受使用政策与防护限制）",
+          "models_raw": [
+            "GPT-5",
+            "Legacy models",
+            "Pro models"
+          ],
+          "tools": [
+            "Codex",
+            "Deep Research",
+            "Image Creation",
+            "Memory",
+            "File Uploads"
+          ],
+          "access_method": "账号订阅（ChatGPT Web / App）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T07:49:34+00:00"
     },
     {
       "vendor_id": "cursor",
@@ -792,7 +905,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:27:16+00:00"
+      "updated_at_utc": "2026-04-12T07:49:35+00:00"
     },
     {
       "vendor_id": "kimi-ai",
@@ -867,7 +980,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:27:17+00:00"
+      "updated_at_utc": "2026-04-12T07:49:35+00:00"
     }
   ]
 }

@@ -11,7 +11,7 @@
 ## 腾讯｜腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
-- 最后更新时间（UTC）：2026-04-12T07:25:10+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:19+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 ## 字节跳动｜火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
-- 最后更新时间（UTC）：2026-04-12T07:25:30+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:21+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -37,7 +37,7 @@
 ## 百度｜百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
-- 最后更新时间（UTC）：2026-04-12T07:25:49+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:22+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -50,7 +50,7 @@
 ## 智谱AI｜GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
-- 最后更新时间（UTC）：2026-04-12T07:26:09+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:24+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@
 ## MiniMax｜MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
-- 最后更新时间（UTC）：2026-04-12T07:26:22+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:27+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@
 ## 阿里｜阿里云百炼Coding plan
 
 - 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
-- 最后更新时间（UTC）：2026-04-12T07:26:34+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:30+00:00
 
 | 项目 | pro套餐 |
 | --- | --- |
@@ -89,7 +89,7 @@
 ## 字节跳动｜TRAE国际版
 
 - 官方地址：https://trae.ai/pricing
-- 最后更新时间（UTC）：2026-04-12T07:27:06+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:34+00:00
 
 | 项目 | Lite套餐 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- | --- |
@@ -99,10 +99,23 @@
 | 支持工具 | TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) |
 | 使用方式 | 账号订阅（TRAE IDE / TRAE SOLO） | 账号订阅（TRAE IDE / TRAE SOLO） | 账号订阅（TRAE IDE / TRAE SOLO） | 账号订阅（TRAE IDE / TRAE SOLO） |
 
+## OpenAI｜ChatGPT
+
+- 官方地址：https://help.openai.com/en/collections/3742473-chatgpt
+- 最后更新时间（UTC）：2026-04-12T07:49:34+00:00
+
+| 项目 | Free套餐 | Go套餐 | Plus套餐 | Pro $100套餐 | Pro $200套餐 |
+| --- | --- | --- | --- | --- | --- |
+| 价格 | $0/月 | 价格以官方 pricing 页为准 | $20/月 | $100/月 | $200/月 |
+| 用量 | GPT-5.2 五小时窗口内限量使用；工具使用有单独限额 | 比 Free 更高的使用上限；包含 GPT-5.3 Instant 无限聊天访问（受滥用防护限制） | 更高 GPT-5.3 使用上限；高级功能按套餐内 included usage 提供 | 比 Plus 高 5x 使用上限；Codex 限额限时为 Plus 的 10x | 比 Plus 高 20x 使用上限；GPT-5 与 legacy models 为 unlimited access（受使用政策与防护限制） |
+| 支持模型 | GPT-5.2 | GPT-5.3 Instant；Thinking | GPT-5.3；Advanced reasoning models | GPT-5；Pro models | GPT-5；Legacy models；Pro models |
+| 支持工具 | Web Search；File Uploads；Image Generation；GPTs | Image Generation；File Uploads；Advanced Data Analysis；Projects；Tasks；Custom GPTs；Memory | Voice；Image Generation；File Uploads；Deep Research；Custom GPTs；Codex；Sora | Codex；Deep Research；Image Creation；Memory；File Uploads | Codex；Deep Research；Image Creation；Memory；File Uploads |
+| 使用方式 | 账号订阅（ChatGPT Web / App） | 账号订阅（ChatGPT Web / App） | 账号订阅（ChatGPT Web / App） | 账号订阅（ChatGPT Web / App） | 账号订阅（ChatGPT Web / App） |
+
 ## Anysphere｜Cursor
 
 - 官方地址：https://cursor.com/pricing
-- 最后更新时间（UTC）：2026-04-12T07:27:16+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:35+00:00
 
 | 项目 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- |
@@ -115,7 +128,7 @@
 ## 月之暗面｜Kimi AI
 
 - 官方地址：https://www.kimi.com/membership/pricing
-- 最后更新时间（UTC）：2026-04-12T07:27:17+00:00
+- 最后更新时间（UTC）：2026-04-12T07:49:35+00:00
 
 | 项目 | Andante套餐 | Moderato套餐 | Allegretto套餐 | Allegro套餐 |
 | --- | --- | --- | --- | --- |
