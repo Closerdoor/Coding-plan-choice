@@ -25,7 +25,7 @@ _TOOL_ORDER = [
 ]
 
 
-def _http_get(url: str, *, timeout_s: int = 90, retries: int = 3) -> str:
+def _http_get(url: str, *, timeout_s: int = 120, retries: int = 4) -> str:
     last_exc: Exception | None = None
     for attempt in range(retries):
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})

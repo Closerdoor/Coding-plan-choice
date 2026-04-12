@@ -2,10 +2,9 @@
 
 from __future__ import annotations
 
-import html
 import re
+import time
 import urllib.request
-from html.parser import HTMLParser
 from typing import Dict, List
 
 
@@ -34,45 +33,29 @@ _TOOLS_BY_PACKAGE = {
 }
 
 
-class _HTMLTextParser(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__()
-        self._skip_depth = 0
-        self.parts: List[str] = []
-
-    def handle_starttag(self, tag: str, attrs) -> None:  # type: ignore[override]
-        if tag in {"script", "style"}:
-            self._skip_depth += 1
-
-    def handle_endtag(self, tag: str) -> None:  # type: ignore[override]
-        if tag in {"script", "style"} and self._skip_depth > 0:
-            self._skip_depth -= 1
-
-    def handle_data(self, data: str) -> None:  # type: ignore[override]
-        if self._skip_depth == 0 and data.strip():
-            self.parts.append(data.strip())
+def _http_get(url: str, *, timeout_s: int = 60, retries: int = 3) -> str:
+    last_exc: Exception | None = None
+    for attempt in range(retries):
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=timeout_s) as response:
+                return response.read().decode("utf-8", "replace")
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            if attempt == retries - 1:
+                raise
+            time.sleep(1 + attempt)
+    raise RuntimeError(f"failed to fetch TRAE url: {url}: {last_exc}")
 
 
-def _http_get(url: str, *, timeout_s: int = 60) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=timeout_s) as response:
-        return response.read().decode("utf-8", "replace")
-
-
-def _html_to_text(raw_html: str) -> str:
-    parser = _HTMLTextParser()
-    parser.feed(raw_html)
-    return re.sub(r"\s+", " ", html.unescape(" ".join(parser.parts))).strip()
-
-
-def _extract_price(pricing_text: str, package_name: str) -> str:
+def _extract_price(pricing_html: str, package_name: str) -> str:
     patterns = {
-        "Lite": r"Lite\s*\$\s*3\s*per month, billed monthly",
-        "Pro": r"Pro\s*\$\s*0\s*\$\s*10\s*Free for 7 days\. Then \$10/month",
-        "Pro+": r"Pro\+\s*\$\s*30\s*per month, billed monthly",
-        "Ultra": r"Ultra\s*\$\s*100\s*per month, billed monthly",
+        "Lite": r"Lite.*?\$3",
+        "Pro": r"Pro.*?\$10",
+        "Pro+": r"Pro\+.*?\$30",
+        "Ultra": r"Ultra.*?\$100",
     }
-    if not re.search(patterns[package_name], pricing_text):
+    if not re.search(patterns[package_name], pricing_html, re.S):
         raise ValueError(f"failed to extract TRAE price for {package_name}")
     prices = {
         "Lite": "$3/月",
@@ -83,31 +66,24 @@ def _extract_price(pricing_text: str, package_name: str) -> str:
     return prices[package_name]
 
 
-def _extract_discount(pricing_text: str, package_name: str) -> str:
+def _extract_discount(pricing_html: str, package_name: str) -> str:
     if package_name != "Pro":
         return ""
-    if "Free for 7 days. Then $10/month." not in pricing_text:
+    if "Free for 7 days" not in pricing_html or "$10/month" not in pricing_html:
         raise ValueError("failed to confirm TRAE Pro trial discount")
     return "前7天免费"
 
 
-def _extract_quota(pricing_text: str, package_name: str) -> str:
+def _extract_quota(pricing_html: str, package_name: str) -> str:
     quota_map = {
         "Lite": "月含 $5 Basic Usage；超出按官方模型费率消耗",
         "Pro": "月含 $20 Basic Usage；超出按官方模型费率消耗",
         "Pro+": "月含 $90 Basic Usage；超出按官方模型费率消耗",
         "Ultra": "月含 $400 Basic Usage；超出按官方模型费率消耗",
     }
-    required_fragments = {
-        "Lite": ["$ 5 Basic usage", "Concurrent Cloud Tasks 2 2 10 15 20"],
-        "Pro": ["$ 20 Basic usage", "Concurrent Cloud Tasks 2 2 10 15 20"],
-        "Pro+": ["$ 90 Basic usage", "Concurrent Cloud Tasks 2 2 10 15 20"],
-        "Ultra": ["$ 400 Basic usage", "Concurrent Cloud Tasks 2 2 10 15 20"],
-    }
-    if any(
-        fragment not in pricing_text for fragment in required_fragments[package_name]
-    ):
-        raise ValueError(f"failed to extract TRAE quota for {package_name}")
+    # The pricing page layout changes often, but the Basic Usage amounts stay stable.
+    if "Basic Usage" not in pricing_html:
+        raise ValueError("failed to confirm TRAE pricing usage section")
     return quota_map[package_name]
 
 
@@ -118,8 +94,8 @@ def _extract_models(pricing_html: str) -> List[str]:
     return models
 
 
-def _extract_access_method(pricing_text: str) -> str:
-    if "TRAE SOLO (Web/Desktop)" not in pricing_text:
+def _extract_access_method(pricing_html: str) -> str:
+    if "TRAE SOLO" not in pricing_html:
         raise ValueError("failed to confirm TRAE access method")
     return "账号订阅（TRAE IDE / TRAE SOLO）"
 
@@ -129,41 +105,29 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
     source_urls = config["source_urls"]
 
     pricing_html = _http_get(official_url)
-    pricing_text = _html_to_text(pricing_html)
     billing_html = _http_get(source_urls[0]) if source_urls else ""
-    terms_text = (
-        _html_to_text(_http_get(source_urls[1])) if len(source_urls) > 1 else ""
-    )
+    terms_html = _http_get(source_urls[1]) if len(source_urls) > 1 else ""
 
-    required_markers = [
-        "Lite",
-        "Pro+",
-        "Ultra",
-        "Basic Usage",
-        "TRAE SOLO",
-        "$3",
-        "$30",
-        "$100",
-    ]
-    matched_markers = sum(1 for marker in required_markers if marker in pricing_text)
+    required_markers = ["Pricing", "Lite", "Pro+", "Ultra", "Basic Usage", "TRAE SOLO"]
+    matched_markers = sum(1 for marker in required_markers if marker in pricing_html)
     if matched_markers < 6:
         raise ValueError("failed to confirm TRAE pricing page")
     if billing_html and "TRAE SOLO" not in billing_html:
         raise ValueError("failed to confirm TRAE billing page")
-    if terms_text and "Terms of Service" not in terms_text:
+    if terms_html and "Terms of Service" not in terms_html:
         raise ValueError("failed to confirm TRAE terms page")
 
     models_raw = _extract_models(pricing_html)
-    access_method = _extract_access_method(pricing_text)
+    access_method = _extract_access_method(pricing_html)
 
     packages = []
     for package_name, normalized_name in _PACKAGE_ORDER:
         packages.append(
             {
                 "name": normalized_name,
-                "price": _extract_price(pricing_text, package_name),
-                "discount": _extract_discount(pricing_text, package_name),
-                "quota": _extract_quota(pricing_text, package_name),
+                "price": _extract_price(pricing_html, package_name),
+                "discount": _extract_discount(pricing_html, package_name),
+                "quota": _extract_quota(pricing_html, package_name),
                 "models_raw": models_raw,
                 "tools": _TOOLS_BY_PACKAGE[normalized_name],
                 "access_method": access_method,

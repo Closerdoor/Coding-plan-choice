@@ -42,6 +42,13 @@ _PLAN_FEATURES = {
     },
 }
 
+_TITLE_BY_LEVEL = {
+    "LEVEL_TRIAL": "Andante",
+    "LEVEL_BASIC": "Moderato",
+    "LEVEL_INTERMEDIATE": "Allegretto",
+    "LEVEL_ADVANCED": "Allegro",
+}
+
 
 def _http_get(url: str, *, timeout_s: int = 60) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -115,29 +122,10 @@ def _pick_monthly_goods_by_title(
     return monthly_by_title
 
 
-def _pick_monthly_goods_by_price(
-    goods: List[Dict[str, object]],
-) -> Dict[str, Dict[str, object]]:
-    monthly_by_price: Dict[str, Dict[str, object]] = {}
-    for item in goods:
-        if not isinstance(item, dict):
-            continue
-        billing_cycle = item.get("billingCycle")
-        if not isinstance(billing_cycle, dict):
-            continue
-        if billing_cycle.get("timeUnit") != "TIME_UNIT_MONTH":
-            continue
-        amounts = item.get("amounts")
-        if (
-            not isinstance(amounts, list)
-            or not amounts
-            or not isinstance(amounts[0], dict)
-        ):
-            continue
-        price_in_cents = amounts[0].get("priceInCents")
-        if isinstance(price_in_cents, str):
-            monthly_by_price[price_in_cents] = item
-    return monthly_by_price
+def _title_present_in_official_sources(
+    membership_html: str, pricing_bundle: str, title: str
+) -> bool:
+    return title in membership_html or title in pricing_bundle
 
 
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
@@ -161,28 +149,16 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
 
     monthly_by_level = _pick_monthly_goods(goods)
     monthly_by_title = _pick_monthly_goods_by_title(goods)
-    monthly_by_price = _pick_monthly_goods_by_price(goods)
-
-    title_by_level = {
-        "LEVEL_TRIAL": "Andante",
-        "LEVEL_BASIC": "Moderato",
-        "LEVEL_INTERMEDIATE": "Allegretto",
-        "LEVEL_ADVANCED": "Allegro",
-    }
-    price_by_level = {
-        "LEVEL_TRIAL": "4900",
-        "LEVEL_BASIC": "9900",
-        "LEVEL_INTERMEDIATE": "19900",
-        "LEVEL_ADVANCED": "69900",
-    }
 
     packages = []
     for level, normalized_name in _PACKAGE_ORDER:
         goods_item = monthly_by_level.get(level)
         if not goods_item:
-            goods_item = monthly_by_title.get(title_by_level[level])
-        if not goods_item:
-            goods_item = monthly_by_price.get(price_by_level[level])
+            title = _TITLE_BY_LEVEL[level]
+            if _title_present_in_official_sources(
+                membership_html, pricing_bundle, title
+            ):
+                goods_item = monthly_by_title.get(title)
         if not goods_item:
             raise ValueError(f"failed to find Kimi monthly goods for {level}")
         amounts = goods_item.get("amounts")
