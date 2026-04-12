@@ -9,11 +9,17 @@ from __future__ import annotations
 import copy
 import importlib
 import json
+import logging
 import os
 import re
+import socket
+import urllib.error
+import urllib.parse
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List
+from time import perf_counter
+from typing import Dict, List, Tuple
 
 from .catalog_config import AUTO_UPDATE_VENDOR_IDS, MANUAL_UPDATE_VENDOR_IDS, VENDORS
 
@@ -22,6 +28,15 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "catalog" / "output"
 DATA_PATH = OUTPUT_DIR / "CATALOG_DATA.json"
 GENERATED_MD_PATH = REPO_ROOT / "CATALOG_GENERATED.md"
+LOG_PATH = OUTPUT_DIR / "CATALOG_RUN.log"
+PREFLIGHT_PATH = OUTPUT_DIR / "CATALOG_PREFLIGHT.json"
+
+
+LOGGER = logging.getLogger("catalog.update")
+
+
+def _duration_ms(start_time: float) -> int:
+    return int((perf_counter() - start_time) * 1000)
 
 
 def _selected_vendor_ids() -> set[str] | None:
@@ -37,6 +52,95 @@ def _selected_vendor_ids() -> set[str] | None:
 
 def utc_now_iso() -> str:
     return datetime.now(tz=timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _configure_logging() -> None:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    LOGGER.setLevel(logging.INFO)
+    LOGGER.propagate = False
+    LOGGER.handlers.clear()
+    formatter = logging.Formatter("%(asctime)sZ %(levelname)s %(message)s")
+
+    file_handler = logging.FileHandler(LOG_PATH, encoding="utf-8", mode="w")
+    file_handler.setFormatter(formatter)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    LOGGER.addHandler(file_handler)
+    LOGGER.addHandler(stream_handler)
+
+
+def _all_urls_for_preflight(config: Dict[str, object]) -> List[str]:
+    urls: List[str] = []
+    official_url = config.get("official_url")
+    if isinstance(official_url, str) and official_url.strip():
+        urls.append(official_url.strip())
+    source_urls = config.get("source_urls", [])
+    if isinstance(source_urls, list):
+        urls.extend(
+            url.strip() for url in source_urls if isinstance(url, str) and url.strip()
+        )
+    return urls
+
+
+def _probe_url(url: str, *, timeout_s: int = 15) -> Dict[str, object]:
+    started = perf_counter()
+    parsed = urllib.parse.urlparse(url)
+    host = parsed.hostname
+    if not host:
+        return {
+            "url": url,
+            "ok": False,
+            "error": "invalid url",
+            "duration_ms": _duration_ms(started),
+        }
+    port = parsed.port or (443 if parsed.scheme == "https" else 80)
+    try:
+        with socket.create_connection((host, port), timeout=timeout_s):
+            return {
+                "url": url,
+                "ok": True,
+                "status": "tcp-ok",
+                "duration_ms": _duration_ms(started),
+            }
+    except OSError as exc:
+        return {
+            "url": url,
+            "ok": False,
+            "error": str(exc),
+            "duration_ms": _duration_ms(started),
+        }
+
+
+def _run_preflight(
+    configs: List[Dict[str, object]],
+) -> Tuple[Dict[str, List[Dict[str, object]]], List[str]]:
+    report: Dict[str, List[Dict[str, object]]] = {}
+    warnings: List[str] = []
+    for config in configs:
+        vendor_started = perf_counter()
+        vendor_id = str(config["vendor_id"])
+        checks = [_probe_url(url) for url in _all_urls_for_preflight(config)]
+        report[vendor_id] = checks
+        failures = [item for item in checks if not item.get("ok")]
+        if failures:
+            first_failure = failures[0]
+            warnings.append(
+                f"vendor {vendor_id}: preflight failed for {first_failure.get('url')}: {first_failure.get('error', first_failure.get('status', 'unknown'))}"
+            )
+            LOGGER.warning(
+                "Preflight failed for %s in %dms: %s",
+                vendor_id,
+                _duration_ms(vendor_started),
+                first_failure,
+            )
+        else:
+            LOGGER.info(
+                "Preflight ok for %s in %dms", vendor_id, _duration_ms(vendor_started)
+            )
+
+    _write_json(PREFLIGHT_PATH, report)
+    return report, warnings
 
 
 def _load_existing_payload() -> Dict[str, object]:
@@ -215,11 +319,26 @@ def _write_json(path: Path, payload: Dict[str, object]) -> None:
 
 
 def main() -> int:
+    run_started = perf_counter()
+    _configure_logging()
     existing_payload = _load_existing_payload()
     existing_vendors = _existing_vendors_by_id(existing_payload)
     selected_vendor_ids = _selected_vendor_ids()
-    warnings: List[str] = []
+    fetch_warnings: List[str] = []
     vendors: List[Dict[str, object]] = []
+
+    selected_configs = [
+        config
+        for config in VENDORS
+        if selected_vendor_ids is None or config["vendor_id"] in selected_vendor_ids
+    ]
+    LOGGER.info(
+        "Starting catalog update mode=%s vendors=%s",
+        os.environ.get("CATALOG_UPDATE_MODE", "all"),
+        [config["vendor_id"] for config in selected_configs],
+    )
+    _, preflight_warnings = _run_preflight(selected_configs)
+    LOGGER.info("Preflight finished with %d warnings", len(preflight_warnings))
 
     for config in VENDORS:
         vendor_id = config["vendor_id"]
@@ -227,11 +346,13 @@ def main() -> int:
             if vendor_id in existing_vendors:
                 vendors.append(existing_vendors[vendor_id])
             else:
-                warnings.append(
+                fetch_warnings.append(
                     f"vendor {vendor_id}: skipped by CATALOG_UPDATE_MODE with no previous data"
                 )
             continue
         try:
+            vendor_started = perf_counter()
+            LOGGER.info("Fetching vendor %s", vendor_id)
             module = importlib.import_module(config["source_module"])
             fetched = module.fetch(config)
             normalized = _normalize_vendor(fetched)
@@ -245,20 +366,31 @@ def main() -> int:
             else:
                 normalized["updated_at_utc"] = utc_now_iso()
             vendors.append(normalized)
+            LOGGER.info(
+                "Fetched vendor %s successfully in %dms",
+                vendor_id,
+                _duration_ms(vendor_started),
+            )
         except Exception as exc:
+            vendor_duration_ms = _duration_ms(vendor_started)
+            LOGGER.exception(
+                "Fetch failed for vendor %s in %dms",
+                vendor_id,
+                vendor_duration_ms,
+            )
             if vendor_id in existing_vendors:
                 vendors.append(existing_vendors[vendor_id])
-                warnings.append(
+                fetch_warnings.append(
                     f"vendor {vendor_id}: failed, kept previous data: {type(exc).__name__}: {exc}"
                 )
             else:
-                warnings.append(
+                fetch_warnings.append(
                     f"vendor {vendor_id}: failed with no previous data: {type(exc).__name__}: {exc}"
                 )
 
     payload = {
         "generated_at_utc": _generated_at_from_vendors(vendors, utc_now_iso()),
-        "warnings": warnings,
+        "warnings": fetch_warnings,
         "vendors": vendors,
     }
     if _payload_content(existing_payload) == _payload_content(payload):
@@ -269,6 +401,36 @@ def main() -> int:
     GENERATED_MD_PATH.write_text(
         _render_catalog_md(vendors), encoding="utf-8", newline="\n"
     )
+    LOGGER.info("Wrote preflight report to %s", PREFLIGHT_PATH)
+    LOGGER.info("Wrote catalog data to %s", DATA_PATH)
+    LOGGER.info("Wrote catalog markdown to %s", GENERATED_MD_PATH)
+    LOGGER.info(
+        "Finished catalog update with %d preflight warnings", len(preflight_warnings)
+    )
+    LOGGER.info("Finished catalog update with %d fetch warnings", len(fetch_warnings))
+    LOGGER.info("Total catalog update duration: %dms", _duration_ms(run_started))
+    logging.shutdown()
+    return 0
+
+
+def preflight_only() -> int:
+    run_started = perf_counter()
+    _configure_logging()
+    selected_vendor_ids = _selected_vendor_ids()
+    selected_configs = [
+        config
+        for config in VENDORS
+        if selected_vendor_ids is None or config["vendor_id"] in selected_vendor_ids
+    ]
+    LOGGER.info(
+        "Starting catalog preflight mode=%s vendors=%s",
+        os.environ.get("CATALOG_UPDATE_MODE", "all"),
+        [config["vendor_id"] for config in selected_configs],
+    )
+    _, warnings = _run_preflight(selected_configs)
+    LOGGER.info("Finished catalog preflight with %d warnings", len(warnings))
+    LOGGER.info("Total catalog preflight duration: %dms", _duration_ms(run_started))
+    logging.shutdown()
     return 0
 
 

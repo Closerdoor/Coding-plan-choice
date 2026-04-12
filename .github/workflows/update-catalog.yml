@@ -35,6 +35,16 @@ jobs:
       - name: Run selftests (no network)
         run: python -m unittest catalog.UTtest.selftest
 
+      - name: Upload catalog diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-auto-diagnostics
+          path: |
+            catalog/output/CATALOG_PREFLIGHT.json
+            catalog/output/CATALOG_RUN.log
+            catalog/output/CATALOG_DATA.json
+            CATALOG_GENERATED.md
+
       - name: Create pull request if changed
         uses: peter-evans/create-pull-request@v6
         with:
