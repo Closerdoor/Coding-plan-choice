@@ -1,6 +1,10 @@
 {
   "generated_at_utc": "2026-04-12T11:06:22+00:00",
-  "warnings": [],
+  "warnings": [
+    "vendor baidu-qianfan-coding-plan: failed, kept previous data: URLError: <urlopen error timed out>",
+    "vendor trae-intl: failed, kept previous data: ValueError: failed to confirm TRAE pricing page",
+    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi monthly goods for LEVEL_TRIAL"
+  ],
   "vendors": [
     {
       "vendor_id": "tencent-cloud-coding-plan",
