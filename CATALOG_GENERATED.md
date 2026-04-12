@@ -11,8 +11,7 @@
 ## 腾讯｜腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
-- 说明文档：https://cloud.tencent.com/document/product/1823/130092
-- 最后更新时间（UTC）：2026-04-12T04:56:03+00:00
+- 最后更新时间（UTC）：2026-04-12T05:00:52+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -25,8 +24,7 @@
 ## 字节跳动｜火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
-- 说明文档：https://www.volcengine.com/docs/82379/1925114?lang=zh
-- 最后更新时间（UTC）：2026-04-12T04:56:05+00:00
+- 最后更新时间（UTC）：2026-04-12T05:00:53+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -39,8 +37,7 @@
 ## 百度｜百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
-- 说明文档：https://cloud.baidu.com/doc/qianfan/s/imlg0beiu
-- 最后更新时间（UTC）：2026-04-12T04:56:06+00:00
+- 最后更新时间（UTC）：2026-04-12T05:00:54+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -53,10 +50,7 @@
 ## 智谱AI｜GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
-- 说明文档：https://docs.bigmodel.cn/cn/coding-plan/overview
-- 补充来源：https://docs.bigmodel.cn/cn/coding-plan/faq
-- 补充来源：https://docs.bigmodel.cn/cn/coding-plan/quick-start
-- 最后更新时间（UTC）：2026-04-12T04:56:08+00:00
+- 最后更新时间（UTC）：2026-04-12T05:00:56+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -69,10 +63,7 @@
 ## MiniMax｜MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
-- 说明文档：https://platform.minimaxi.com/docs/token-plan/intro
-- 补充来源：https://platform.minimaxi.com/docs/guides/pricing-token-plan
-- 补充来源：https://platform.minimaxi.com/docs/guides/text-ai-coding-tools
-- 最后更新时间（UTC）：2026-04-12T04:56:11+00:00
+- 最后更新时间（UTC）：2026-04-12T05:01:00+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -85,10 +76,7 @@
 ## 阿里｜阿里云百炼Coding plan
 
 - 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
-- 说明文档：https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio
-- 补充来源：https://help.aliyun.com/zh/model-studio/use-chat-client-or-development-tool/
-- 补充来源：https://help.aliyun.com/zh/model-studio/models
-- 最后更新时间（UTC）：2026-04-12T04:56:15+00:00
+- 最后更新时间（UTC）：2026-04-12T05:01:04+00:00
 
 | 项目 | pro套餐 |
 | --- | --- |

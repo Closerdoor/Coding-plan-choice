@@ -113,18 +113,9 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
     company_name = str(vendor.get("company_name", "")).strip()
     plan_name = str(vendor.get("plan_name", "")).strip()
     official_url = str(vendor.get("official_url", "")).strip()
-    source_urls = vendor.get("source_urls")
     source_lines: List[str] = []
     if official_url:
         source_lines.append(f"- 官方地址：{official_url}")
-    if isinstance(source_urls, list):
-        cleaned_sources = [
-            item for item in source_urls if isinstance(item, str) and item.strip()
-        ]
-        if cleaned_sources:
-            source_lines.append(f"- 说明文档：{cleaned_sources[0]}")
-        for extra_source in cleaned_sources[1:]:
-            source_lines.append(f"- 补充来源：{extra_source}")
     updated_at = str(vendor.get("updated_at_utc", "")).strip()
     packages = [
         package for package in vendor.get("packages", []) if isinstance(package, dict)
