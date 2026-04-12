@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List
 
-from .catalog_config import VENDORS
+from .catalog_config import AUTO_UPDATE_VENDOR_IDS, MANUAL_UPDATE_VENDOR_IDS, VENDORS
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -24,9 +24,15 @@ DATA_PATH = OUTPUT_DIR / "CATALOG_DATA.json"
 GENERATED_MD_PATH = REPO_ROOT / "CATALOG_GENERATED.md"
 
 
-def _skip_vendor_ids() -> set[str]:
-    raw = os.environ.get("CATALOG_SKIP_VENDOR_IDS", "")
-    return {item.strip() for item in raw.split(",") if item.strip()}
+def _selected_vendor_ids() -> set[str] | None:
+    mode = os.environ.get("CATALOG_UPDATE_MODE", "all").strip().lower()
+    if mode == "all":
+        return None
+    if mode == "auto":
+        return set(AUTO_UPDATE_VENDOR_IDS)
+    if mode == "manual":
+        return set(MANUAL_UPDATE_VENDOR_IDS)
+    raise ValueError(f"unsupported CATALOG_UPDATE_MODE: {mode}")
 
 
 def utc_now_iso() -> str:
@@ -190,18 +196,18 @@ def _write_json(path: Path, payload: Dict[str, object]) -> None:
 def main() -> int:
     existing_payload = _load_existing_payload()
     existing_vendors = _existing_vendors_by_id(existing_payload)
-    skip_vendor_ids = _skip_vendor_ids()
+    selected_vendor_ids = _selected_vendor_ids()
     warnings: List[str] = []
     vendors: List[Dict[str, object]] = []
 
     for config in VENDORS:
         vendor_id = config["vendor_id"]
-        if vendor_id in skip_vendor_ids:
+        if selected_vendor_ids is not None and vendor_id not in selected_vendor_ids:
             if vendor_id in existing_vendors:
                 vendors.append(existing_vendors[vendor_id])
             else:
                 warnings.append(
-                    f"vendor {vendor_id}: skipped by CATALOG_SKIP_VENDOR_IDS with no previous data"
+                    f"vendor {vendor_id}: skipped by CATALOG_UPDATE_MODE with no previous data"
                 )
             continue
         try:

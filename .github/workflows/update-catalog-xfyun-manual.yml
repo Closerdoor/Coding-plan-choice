@@ -1,25 +1,22 @@
-name: Update Catalog (3x Weekly)
+name: Update Catalog XFYun (Manual)
 
 on:
   workflow_dispatch: {}
-  schedule:
-    - cron: "0 2 * * 1"
-    - cron: "0 2 * * 3"
-    - cron: "0 2 * * 5"
 
 permissions:
   contents: write
   pull-requests: write
 
 concurrency:
-  group: update-catalog
+  group: update-catalog-xfyun-manual
   cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
     env:
-      CATALOG_UPDATE_MODE: auto
+      CATALOG_UPDATE_MODE: manual
+      XFYUN_SSO_SESSION_ID: ${{ secrets.XFYUN_SSO_SESSION_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,7 +26,14 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Generate catalog artifacts
+      - name: Validate XFYUN_SSO_SESSION_ID secret
+        run: |
+          if [ -z "$XFYUN_SSO_SESSION_ID" ]; then
+            echo "Missing required secret: XFYUN_SSO_SESSION_ID" >&2
+            exit 1
+          fi
+
+      - name: Generate manual catalog artifacts
         run: python -m catalog.update
 
       - name: Run selftests (no network)
@@ -38,15 +42,15 @@ jobs:
       - name: Create pull request if changed
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "chore: refresh catalog data"
-          title: "chore: refresh catalog data"
+          commit-message: "chore: refresh xfyun catalog data"
+          title: "chore: refresh xfyun catalog data"
           body: |
-            自动定时更新：
+            手动更新：
             - CATALOG_GENERATED.md
             - catalog/output/CATALOG_DATA.json
 
-            本次自动任务仅更新代码中 `AUTO_UPDATE_VENDOR_IDS` 列表内的厂商。
-          branch: "automation/update-catalog"
+            本次手动任务仅更新代码中 `MANUAL_UPDATE_VENDOR_IDS` 列表内的厂商。
+          branch: "automation/update-catalog-xfyun-manual"
           delete-branch: true
           add-paths: |
             CATALOG_GENERATED.md

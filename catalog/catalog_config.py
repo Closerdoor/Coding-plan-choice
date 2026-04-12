@@ -193,3 +193,25 @@ VENDORS = [
         "source_module": "catalog.sources.claude_code",
     },
 ]
+
+
+AUTO_UPDATE_VENDOR_IDS = [
+    "tencent-cloud-coding-plan",
+    "volcengine-coding-plan",
+    "baidu-qianfan-coding-plan",
+    "glm-coding-plan",
+    "minimax-token-plan",
+    "aliyun-bailian-coding-plan",
+    "xiaomi-mimo-token-plan",
+    "trae-intl",
+    "openai-chatgpt",
+    "cursor",
+    "kimi-ai",
+    "infini-ai-coding-plan",
+    "github-copilot",
+    "claude-code",
+]
+
+MANUAL_UPDATE_VENDOR_IDS = [
+    "xfyun-xingchen-coding-plan",
+]
