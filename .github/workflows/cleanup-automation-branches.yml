@@ -1,0 +1,29 @@
+name: Cleanup Automation Branches
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    if: >-
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'automation/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete merged automation branch
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const branch = context.payload.pull_request.head.ref;
+            core.info(`Deleting merged automation branch: ${branch}`);
+            await github.rest.git.deleteRef({
+              owner,
+              repo,
+              ref: `heads/${branch}`,
+            });

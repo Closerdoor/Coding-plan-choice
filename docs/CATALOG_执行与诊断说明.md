@@ -37,6 +37,7 @@
 - 自动更新 workflow 每次都会基于当前 `main` 创建新的唯一分支。
 - 手动讯飞 workflow 也会基于当前 `main` 创建新的唯一分支。
 - 这样可以避免复用旧的 automation 分支，导致历史失败产物再次进入新的 PR。
+- 已合并的 `automation/*` 分支会由 `Cleanup Automation Branches` workflow 自动删除，避免远端残留大量旧分支。
 
 ## 本地运行
 
