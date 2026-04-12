@@ -46,6 +46,22 @@ def _existing_vendors_by_id(payload: Dict[str, object]) -> Dict[str, Dict[str, o
 
 def _normalize_vendor(vendor: Dict[str, object]) -> Dict[str, object]:
     normalized = copy.deepcopy(vendor)
+    if "plan_name" not in normalized and isinstance(normalized.get("vendor_name"), str):
+        normalized["plan_name"] = normalized.get("vendor_name")
+    if "official_url" not in normalized:
+        official_sources = normalized.get("official_sources")
+        if isinstance(official_sources, list) and official_sources:
+            first_source = official_sources[0]
+            if isinstance(first_source, str) and first_source.strip():
+                normalized["official_url"] = first_source
+                normalized["source_urls"] = [
+                    item
+                    for item in official_sources[1:]
+                    if isinstance(item, str) and item.strip()
+                ]
+    if "source_urls" not in normalized:
+        normalized["source_urls"] = []
+
     packages = normalized.get("packages")
     if not isinstance(packages, list):
         normalized["packages"] = []
@@ -95,23 +111,20 @@ def _to_markdown_table(rows: List[List[str]]) -> str:
 
 def _render_vendor(vendor: Dict[str, object]) -> str:
     company_name = str(vendor.get("company_name", "")).strip()
-    vendor_name = str(vendor.get("vendor_name", "")).strip()
-    official_sources = vendor.get("official_sources")
+    plan_name = str(vendor.get("plan_name", "")).strip()
+    official_url = str(vendor.get("official_url", "")).strip()
+    source_urls = vendor.get("source_urls")
     source_lines: List[str] = []
-    if isinstance(official_sources, list):
+    if official_url:
+        source_lines.append(f"- 官方地址：{official_url}")
+    if isinstance(source_urls, list):
         cleaned_sources = [
-            item for item in official_sources if isinstance(item, str) and item.strip()
+            item for item in source_urls if isinstance(item, str) and item.strip()
         ]
         if cleaned_sources:
-            source_lines.append(f"- 官方地址：{cleaned_sources[0]}")
-        if len(cleaned_sources) > 1:
-            source_lines.append(f"- 说明文档：{cleaned_sources[1]}")
-        for extra_source in cleaned_sources[2:]:
+            source_lines.append(f"- 说明文档：{cleaned_sources[0]}")
+        for extra_source in cleaned_sources[1:]:
             source_lines.append(f"- 补充来源：{extra_source}")
-    else:
-        official_source = str(vendor.get("official_source", "")).strip()
-        if official_source:
-            source_lines.append(f"- 官方地址：{official_source}")
     updated_at = str(vendor.get("updated_at_utc", "")).strip()
     packages = [
         package for package in vendor.get("packages", []) if isinstance(package, dict)
@@ -139,7 +152,7 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
     table = _to_markdown_table(rows)
     return "\n".join(
         [
-            f"## {company_name}｜{vendor_name}",
+            f"## {company_name}|{plan_name}",
             "",
             *source_lines,
             f"- 最后更新时间（UTC）：{updated_at}",

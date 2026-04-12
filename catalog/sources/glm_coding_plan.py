@@ -153,16 +153,15 @@ def _extract_tools(*texts: str) -> List[str]:
 
 
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
+    official_url = config["official_url"]
     source_urls = config["source_urls"]
-    if len(source_urls) < 4:
-        raise ValueError(
-            "GLM source_urls must include activity page, overview, faq, and quick start"
-        )
+    if len(source_urls) < 3:
+        raise ValueError("GLM source_urls must include overview, faq, and quick start")
 
-    activity_html = _http_get(source_urls[0])
-    overview_text = _html_to_text(_http_get(source_urls[1]))
-    faq_text = _html_to_text(_http_get(source_urls[2]))
-    quickstart_text = _html_to_text(_http_get(source_urls[3]))
+    activity_html = _http_get(official_url)
+    overview_text = _html_to_text(_http_get(source_urls[0]))
+    faq_text = _html_to_text(_http_get(source_urls[1]))
+    quickstart_text = _html_to_text(_http_get(source_urls[2]))
     pricing_chunk = _load_pricing_chunk(activity_html)
 
     prices = _extract_month_prices(pricing_chunk)
@@ -187,7 +186,8 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
     return {
         "vendor_id": config["vendor_id"],
         "company_name": config["company_name"],
-        "vendor_name": config["vendor_name"],
-        "official_sources": source_urls,
+        "plan_name": config["plan_name"],
+        "official_url": official_url,
+        "source_urls": source_urls,
         "packages": packages,
     }

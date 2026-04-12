@@ -26,9 +26,9 @@ class TestCatalogRender(unittest.TestCase):
             {
                 "vendor_id": "tencent-cloud-coding-plan",
                 "company_name": "腾讯云",
-                "vendor_name": "腾讯云大模型 Coding Plan",
-                "official_sources": [
-                    "https://cloud.tencent.com/act/pro/codingplan",
+                "plan_name": "腾讯云大模型 Coding Plan",
+                "official_url": "https://cloud.tencent.com/act/pro/codingplan",
+                "source_urls": [
                     "https://cloud.tencent.com/document/product/1823/130092",
                 ],
                 "updated_at_utc": "2026-04-11T00:00:00+00:00",
@@ -106,7 +106,7 @@ class TestCatalogRender(unittest.TestCase):
             "\n"
             "---\n"
             "\n"
-            "## 腾讯云｜腾讯云大模型 Coding Plan\n"
+            "## 腾讯云|腾讯云大模型 Coding Plan\n"
             "\n"
             "- 官方地址：https://cloud.tencent.com/act/pro/codingplan\n"
             "- 说明文档：https://cloud.tencent.com/document/product/1823/130092\n"
@@ -130,9 +130,9 @@ class TestCatalogRender(unittest.TestCase):
             {
                 "vendor_id": "minimax-token-plan",
                 "company_name": "MiniMax",
-                "vendor_name": "MiniMax Token Plan",
-                "official_sources": [
-                    "https://platform.minimaxi.com/subscribe/token-plan",
+                "plan_name": "MiniMax Token Plan",
+                "official_url": "https://platform.minimaxi.com/subscribe/token-plan",
+                "source_urls": [
                     "https://platform.minimaxi.com/docs/token-plan/intro",
                     "https://platform.minimaxi.com/docs/guides/pricing-token-plan",
                     "https://platform.minimaxi.com/docs/guides/text-ai-coding-tools",
@@ -240,7 +240,7 @@ class TestCatalogRender(unittest.TestCase):
             "\n"
             "---\n"
             "\n"
-            "## MiniMax｜MiniMax Token Plan\n"
+            "## MiniMax|MiniMax Token Plan\n"
             "\n"
             "- 官方地址：https://platform.minimaxi.com/subscribe/token-plan\n"
             "- 说明文档：https://platform.minimaxi.com/docs/token-plan/intro\n"

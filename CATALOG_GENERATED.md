@@ -8,11 +8,11 @@
 
 ---
 
-## 腾讯云｜腾讯云大模型 Coding Plan
+## 腾讯云|腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
 - 说明文档：https://cloud.tencent.com/document/product/1823/130092
-- 最后更新时间（UTC）：2026-04-12T03:49:38+00:00
+- 最后更新时间（UTC）：2026-04-12T04:30:48+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -22,11 +22,11 @@
 | 支持工具 | OpenClaw；OpenCode；Claude Code；Codex；Cursor；CodeBuddy Code；Cline；Kilo CLI；Kilo Code | OpenClaw；OpenCode；Claude Code；Codex；Cursor；CodeBuddy Code；Cline；Kilo CLI；Kilo Code |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
 
-## 火山方舟｜火山方舟 Coding Plan
+## 火山方舟|火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
 - 说明文档：https://www.volcengine.com/docs/82379/1925114?lang=zh
-- 最后更新时间（UTC）：2026-04-12T03:49:40+00:00
+- 最后更新时间（UTC）：2026-04-12T04:31:19+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -36,11 +36,11 @@
 | 支持工具 | OpenClaw；Claude Code；Cursor；Cline；Codex CLI；Kilo Code；Roo Code；OpenCode | OpenClaw；Claude Code；Cursor；Cline；Codex CLI；Kilo Code；Roo Code；OpenCode |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
 
-## 百度千帆｜百度千帆 Coding Plan
+## 百度千帆|百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
 - 说明文档：https://cloud.baidu.com/doc/qianfan/s/imlg0beiu
-- 最后更新时间（UTC）：2026-04-12T03:49:40+00:00
+- 最后更新时间（UTC）：2026-04-12T04:31:38+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -50,13 +50,13 @@
 | 支持工具 | OpenClaw；Claude Code；Qwen Code；Cursor | OpenClaw；Claude Code；Qwen Code；Cursor |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
 
-## 智谱AI｜GLM Coding Plan
+## 智谱AI|GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
 - 说明文档：https://docs.bigmodel.cn/cn/coding-plan/overview
 - 补充来源：https://docs.bigmodel.cn/cn/coding-plan/faq
 - 补充来源：https://docs.bigmodel.cn/cn/coding-plan/quick-start
-- 最后更新时间（UTC）：2026-04-12T03:49:42+00:00
+- 最后更新时间（UTC）：2026-04-12T04:31:49+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -66,13 +66,13 @@
 | 支持工具 | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
 
-## MiniMax｜MiniMax Token Plan
+## MiniMax|MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
 - 说明文档：https://platform.minimaxi.com/docs/token-plan/intro
 - 补充来源：https://platform.minimaxi.com/docs/guides/pricing-token-plan
 - 补充来源：https://platform.minimaxi.com/docs/guides/text-ai-coding-tools
-- 最后更新时间（UTC）：2026-04-12T03:49:47+00:00
+- 最后更新时间（UTC）：2026-04-12T04:32:02+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |

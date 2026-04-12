@@ -260,16 +260,17 @@ def _validate_access_method(*texts: str) -> None:
 
 
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
+    official_url = config["official_url"]
     source_urls = config["source_urls"]
-    if len(source_urls) < 4:
+    if len(source_urls) < 3:
         raise ValueError(
-            "MiniMax source_urls must include activity, intro, pricing, and coding tools pages"
+            "MiniMax source_urls must include intro, pricing, and coding tools pages"
         )
 
-    activity_html = _http_get(source_urls[0])
-    intro_html = _http_get(source_urls[1])
-    pricing_html = _http_get(source_urls[2])
-    tools_doc_html = _http_get(source_urls[3])
+    activity_html = _http_get(official_url)
+    intro_html = _http_get(source_urls[0])
+    pricing_html = _http_get(source_urls[1])
+    tools_doc_html = _http_get(source_urls[2])
 
     if "token-plan" not in activity_html:
         raise ValueError("failed to confirm MiniMax activity page")
@@ -306,7 +307,8 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
     return {
         "vendor_id": config["vendor_id"],
         "company_name": config["company_name"],
-        "vendor_name": config["vendor_name"],
-        "official_sources": source_urls,
+        "plan_name": config["plan_name"],
+        "official_url": official_url,
+        "source_urls": source_urls,
         "packages": packages,
     }

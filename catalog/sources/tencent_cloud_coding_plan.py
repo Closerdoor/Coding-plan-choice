@@ -222,15 +222,14 @@ def _extract_discount_prices(text: str) -> Dict[str, str]:
 
 
 def fetch(config: Dict[str, str]) -> Dict[str, object]:
+    official_url = config["official_url"]
     source_urls = config["source_urls"]
-    if len(source_urls) < 2:
-        raise ValueError(
-            "Tencent Cloud source_urls must include activity page and document page"
-        )
+    if len(source_urls) < 1:
+        raise ValueError("Tencent Cloud source_urls must include document page")
 
-    activity_html = _http_get(source_urls[0])
+    activity_html = _http_get(official_url)
     activity_text = _html_to_text(activity_html)
-    document_html = _http_get(source_urls[1])
+    document_html = _http_get(source_urls[0])
     document_text = _html_to_text(document_html)
 
     package_data = _extract_package_data(activity_text)
@@ -269,7 +268,8 @@ def fetch(config: Dict[str, str]) -> Dict[str, object]:
     return {
         "vendor_id": config["vendor_id"],
         "company_name": config["company_name"],
-        "vendor_name": config["vendor_name"],
-        "official_sources": source_urls,
+        "plan_name": config["plan_name"],
+        "official_url": official_url,
+        "source_urls": source_urls,
         "packages": packages,
     }

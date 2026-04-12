@@ -169,9 +169,13 @@ def _extract_tools(activity_text: str, doc_text: str) -> List[str]:
 
 
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
+    official_url = config["official_url"]
     source_urls = config["source_urls"]
-    activity_html = _http_get(source_urls[0])
-    doc_html = _http_get(source_urls[1])
+    if len(source_urls) < 1:
+        raise ValueError("Volcengine source_urls must include document page")
+
+    activity_html = _http_get(official_url)
+    doc_html = _http_get(source_urls[0])
     bundle_url = _extract_bundle_url(activity_html)
     bundle_text = _http_get(bundle_url)
 
@@ -207,7 +211,8 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
     return {
         "vendor_id": config["vendor_id"],
         "company_name": config["company_name"],
-        "vendor_name": config["vendor_name"],
-        "official_sources": source_urls,
+        "plan_name": config["plan_name"],
+        "official_url": official_url,
+        "source_urls": source_urls,
         "packages": packages,
     }

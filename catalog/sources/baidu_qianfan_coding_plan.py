@@ -206,14 +206,13 @@ def _extract_tools(doc_html: str) -> List[str]:
 
 
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
+    official_url = config["official_url"]
     source_urls = config["source_urls"]
-    if len(source_urls) < 2:
-        raise ValueError(
-            "Baidu source_urls must include activity page and document page"
-        )
+    if len(source_urls) < 1:
+        raise ValueError("Baidu source_urls must include document page")
 
-    activity_payload = _load_activity_payload(source_urls[0])
-    doc_html = _load_doc_html(source_urls[1])
+    activity_payload = _load_activity_payload(official_url)
+    doc_html = _load_doc_html(source_urls[0])
     packages = _extract_packages(doc_html)
     discounts = _extract_discounts(activity_payload)
     models_raw = _extract_models(doc_html)
@@ -222,8 +221,9 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
     return {
         "vendor_id": config["vendor_id"],
         "company_name": config["company_name"],
-        "vendor_name": config["vendor_name"],
-        "official_sources": source_urls,
+        "plan_name": config["plan_name"],
+        "official_url": official_url,
+        "source_urls": source_urls,
         "packages": [
             {
                 "name": "lite套餐",
