@@ -1,8 +1,6 @@
 {
-  "generated_at_utc": "2026-04-12T14:18:52+00:00",
-  "warnings": [
-    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi monthly goods for LEVEL_TRIAL"
-  ],
+  "generated_at_utc": "2026-04-12T14:28:21+00:00",
+  "warnings": [],
   "vendors": [
     {
       "vendor_id": "tencent-cloud-coding-plan",
@@ -682,7 +680,7 @@
         {
           "name": "Pro套餐",
           "price": "$10/月",
-          "discount": "",
+          "discount": "前7天免费",
           "quota": "月含 $20 Basic Usage；超出按官方模型费率消耗",
           "models_raw": [
             "Gemini-2.5-Flash",
@@ -743,7 +741,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T14:18:52+00:00"
+      "updated_at_utc": "2026-04-12T14:28:21+00:00"
     },
     {
       "vendor_id": "openai-chatgpt",
