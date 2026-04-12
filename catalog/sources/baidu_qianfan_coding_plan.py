@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import time
 import urllib.request
 from typing import Dict, List
 
@@ -24,10 +25,19 @@ _TOOL_ORDER = [
 ]
 
 
-def _http_get(url: str, *, timeout_s: int = 60) -> str:
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=timeout_s) as response:
-        return response.read().decode("utf-8", "replace")
+def _http_get(url: str, *, timeout_s: int = 90, retries: int = 3) -> str:
+    last_exc: Exception | None = None
+    for attempt in range(retries):
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=timeout_s) as response:
+                return response.read().decode("utf-8", "replace")
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            if attempt == retries - 1:
+                raise
+            time.sleep(1 + attempt)
+    raise RuntimeError(f"failed to fetch Baidu url: {url}: {last_exc}")
 
 
 def _load_activity_payload(activity_url: str) -> Dict[str, object]:

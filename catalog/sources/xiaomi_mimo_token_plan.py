@@ -8,6 +8,7 @@ SPA bundle and docs.
 
 from __future__ import annotations
 
+import re
 import urllib.request
 from typing import Dict
 
@@ -64,6 +65,17 @@ def _http_get(url: str, *, timeout_s: int = 60) -> str:
         return response.read().decode("utf-8", "replace")
 
 
+def _resolve_bundle_url(official_url: str, fallback_url: str) -> str:
+    page_html = _http_get(official_url)
+    match = re.search(
+        r'href="(?P<bundle>main\.[a-f0-9]+\.chunk\.js)"\s+as="script"', page_html
+    )
+    if match:
+        bundle = match.group("bundle")
+        return f"https://platform.xiaomimimo.com/{bundle}"
+    return fallback_url
+
+
 def _validate_bundle(bundle_text: str) -> None:
     required_fragments = [
         "Xiaomi MiMo Token Plan",
@@ -104,7 +116,8 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
         )
 
     llms_text = _http_get(source_urls[0])
-    bundle_text = _http_get(source_urls[1])
+    bundle_url = _resolve_bundle_url(str(official_url), source_urls[1])
+    bundle_text = _http_get(bundle_url)
     pricing_text = _http_get(source_urls[2])
     openai_text = _http_get(source_urls[3])
     faq_text = _http_get(source_urls[4])

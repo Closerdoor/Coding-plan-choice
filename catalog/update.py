@@ -93,6 +93,27 @@ def _normalize_vendor(vendor: Dict[str, object]) -> Dict[str, object]:
     return normalized
 
 
+def _vendor_content(vendor: Dict[str, object]) -> Dict[str, object]:
+    content = copy.deepcopy(vendor)
+    content.pop("updated_at_utc", None)
+    return content
+
+
+def _payload_content(payload: Dict[str, object]) -> Dict[str, object]:
+    content = copy.deepcopy(payload)
+    content.pop("generated_at_utc", None)
+    return content
+
+
+def _generated_at_from_vendors(vendors: List[Dict[str, object]], fallback: str) -> str:
+    timestamps = []
+    for vendor in vendors:
+        updated_at = vendor.get("updated_at_utc")
+        if isinstance(updated_at, str) and updated_at.strip():
+            timestamps.append(updated_at)
+    return max(timestamps) if timestamps else fallback
+
+
 def _join_values(values: List[str]) -> str:
     return "；".join(values)
 
@@ -214,7 +235,15 @@ def main() -> int:
             module = importlib.import_module(config["source_module"])
             fetched = module.fetch(config)
             normalized = _normalize_vendor(fetched)
-            normalized["updated_at_utc"] = utc_now_iso()
+            previous_vendor = existing_vendors.get(vendor_id)
+            if previous_vendor and _vendor_content(previous_vendor) == _vendor_content(
+                normalized
+            ):
+                normalized["updated_at_utc"] = previous_vendor.get(
+                    "updated_at_utc", utc_now_iso()
+                )
+            else:
+                normalized["updated_at_utc"] = utc_now_iso()
             vendors.append(normalized)
         except Exception as exc:
             if vendor_id in existing_vendors:
@@ -228,10 +257,14 @@ def main() -> int:
                 )
 
     payload = {
-        "generated_at_utc": utc_now_iso(),
+        "generated_at_utc": _generated_at_from_vendors(vendors, utc_now_iso()),
         "warnings": warnings,
         "vendors": vendors,
     }
+    if _payload_content(existing_payload) == _payload_content(payload):
+        payload["generated_at_utc"] = existing_payload.get(
+            "generated_at_utc", payload["generated_at_utc"]
+        )
     _write_json(DATA_PATH, payload)
     GENERATED_MD_PATH.write_text(
         _render_catalog_md(vendors), encoding="utf-8", newline="\n"

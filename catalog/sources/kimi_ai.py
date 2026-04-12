@@ -90,6 +90,24 @@ def _pick_monthly_goods(goods: List[Dict[str, object]]) -> Dict[str, Dict[str, o
     return monthly_by_level
 
 
+def _pick_monthly_goods_by_title(
+    goods: List[Dict[str, object]],
+) -> Dict[str, Dict[str, object]]:
+    monthly_by_title: Dict[str, Dict[str, object]] = {}
+    for item in goods:
+        if not isinstance(item, dict):
+            continue
+        billing_cycle = item.get("billingCycle")
+        if not isinstance(billing_cycle, dict):
+            continue
+        if billing_cycle.get("timeUnit") != "TIME_UNIT_MONTH":
+            continue
+        title = item.get("title")
+        if isinstance(title, str) and title.strip():
+            monthly_by_title[title.strip()] = item
+    return monthly_by_title
+
+
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
     official_url = config["official_url"]
     source_urls = config["source_urls"]
@@ -110,10 +128,20 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
         raise ValueError("failed to load Kimi membership goods")
 
     monthly_by_level = _pick_monthly_goods(goods)
+    monthly_by_title = _pick_monthly_goods_by_title(goods)
+
+    title_by_level = {
+        "LEVEL_TRIAL": "Andante",
+        "LEVEL_BASIC": "Moderato",
+        "LEVEL_INTERMEDIATE": "Allegretto",
+        "LEVEL_ADVANCED": "Allegro",
+    }
 
     packages = []
     for level, normalized_name in _PACKAGE_ORDER:
         goods_item = monthly_by_level.get(level)
+        if not goods_item:
+            goods_item = monthly_by_title.get(title_by_level[level])
         if not goods_item:
             raise ValueError(f"failed to find Kimi monthly goods for {level}")
         amounts = goods_item.get("amounts")

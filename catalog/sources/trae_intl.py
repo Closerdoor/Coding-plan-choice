@@ -135,7 +135,9 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
         _html_to_text(_http_get(source_urls[1])) if len(source_urls) > 1 else ""
     )
 
-    if "Pricing" not in pricing_text or "Monthly Basic Usage" not in pricing_text:
+    required_markers = ["Pricing", "Lite", "Pro+", "Ultra", "Basic Usage", "TRAE SOLO"]
+    matched_markers = sum(1 for marker in required_markers if marker in pricing_text)
+    if matched_markers < 5:
         raise ValueError("failed to confirm TRAE pricing page")
     if billing_html and "TRAE SOLO" not in billing_html:
         raise ValueError("failed to confirm TRAE billing page")
