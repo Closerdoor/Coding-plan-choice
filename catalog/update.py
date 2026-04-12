@@ -9,6 +9,7 @@ from __future__ import annotations
 import copy
 import importlib
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,6 +22,11 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "catalog" / "output"
 DATA_PATH = OUTPUT_DIR / "CATALOG_DATA.json"
 GENERATED_MD_PATH = REPO_ROOT / "CATALOG_GENERATED.md"
+
+
+def _skip_vendor_ids() -> set[str]:
+    raw = os.environ.get("CATALOG_SKIP_VENDOR_IDS", "")
+    return {item.strip() for item in raw.split(",") if item.strip()}
 
 
 def utc_now_iso() -> str:
@@ -184,11 +190,20 @@ def _write_json(path: Path, payload: Dict[str, object]) -> None:
 def main() -> int:
     existing_payload = _load_existing_payload()
     existing_vendors = _existing_vendors_by_id(existing_payload)
+    skip_vendor_ids = _skip_vendor_ids()
     warnings: List[str] = []
     vendors: List[Dict[str, object]] = []
 
     for config in VENDORS:
         vendor_id = config["vendor_id"]
+        if vendor_id in skip_vendor_ids:
+            if vendor_id in existing_vendors:
+                vendors.append(existing_vendors[vendor_id])
+            else:
+                warnings.append(
+                    f"vendor {vendor_id}: skipped by CATALOG_SKIP_VENDOR_IDS with no previous data"
+                )
+            continue
         try:
             module = importlib.import_module(config["source_module"])
             fetched = module.fetch(config)

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-12T08:52:23+00:00",
+  "generated_at_utc": "2026-04-12T10:05:05+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -70,7 +70,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:51:58+00:00"
+      "updated_at_utc": "2026-04-12T10:01:52+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -136,7 +136,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:00+00:00"
+      "updated_at_utc": "2026-04-12T10:02:13+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -190,7 +190,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:01+00:00"
+      "updated_at_utc": "2026-04-12T10:02:32+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -285,7 +285,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:03+00:00"
+      "updated_at_utc": "2026-04-12T10:02:52+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
@@ -483,7 +483,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:06+00:00"
+      "updated_at_utc": "2026-04-12T10:03:07+00:00"
     },
     {
       "vendor_id": "aliyun-bailian-coding-plan",
@@ -529,7 +529,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:09+00:00"
+      "updated_at_utc": "2026-04-12T10:03:20+00:00"
     },
     {
       "vendor_id": "xiaomi-mimo-token-plan",
@@ -645,7 +645,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:10+00:00"
+      "updated_at_utc": "2026-04-12T10:03:30+00:00"
     },
     {
       "vendor_id": "trae-intl",
@@ -741,7 +741,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:14+00:00"
+      "updated_at_utc": "2026-04-12T10:04:02+00:00"
     },
     {
       "vendor_id": "openai-chatgpt",
@@ -855,7 +855,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:14+00:00"
+      "updated_at_utc": "2026-04-12T10:04:02+00:00"
     },
     {
       "vendor_id": "cursor",
@@ -1019,7 +1019,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:15+00:00"
+      "updated_at_utc": "2026-04-12T10:04:12+00:00"
     },
     {
       "vendor_id": "kimi-ai",
@@ -1094,7 +1094,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:15+00:00"
+      "updated_at_utc": "2026-04-12T10:04:31+00:00"
     },
     {
       "vendor_id": "xfyun-xingchen-coding-plan",
@@ -1107,11 +1107,62 @@
       ],
       "packages": [
         {
-          "name": "Coding Plan套餐",
-          "price": "价格以登录后官方套餐页为准",
+          "name": "无忧版套餐",
+          "price": "¥19/月",
+          "discount": "首单优惠后 ¥3.9/月",
+          "quota": "请求次数/不限",
+          "models_raw": [
+            "Qwen3.5-35B-A3B",
+            "Qwen3-Coder-Next-FP8",
+            "GLM-4.7-Flash"
+          ],
+          "tools": [
+            "HTTP API",
+            "WebSocket API"
+          ],
+          "access_method": "服务认证信息 + 接口地址（Http / WebSocket 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "专业版套餐",
+          "price": "¥39/月",
           "discount": "",
-          "quota": "官方静态文案可确认平台赠送 500w tokens + 2QPS；启用后付费后按实际调用实时扣费",
-          "models_raw": [],
+          "quota": "每 5 小时/1,200 次请求；每周/9,000 次请求；每月/18,000 次请求",
+          "models_raw": [
+            "Spark X2",
+            "GLM-5",
+            "MiniMax-M2.5",
+            "KIMI-K2.5",
+            "DeepSeek-V3.2",
+            "GLM-4.7-Flash",
+            "Qwen3.5-35B-A3B",
+            "Qwen3-Coder-Next-FP8",
+            "Qwen3.5-397B-A17B"
+          ],
+          "tools": [
+            "HTTP API",
+            "WebSocket API"
+          ],
+          "access_method": "服务认证信息 + 接口地址（Http / WebSocket 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "高效版套餐",
+          "price": "¥199/月",
+          "discount": "",
+          "quota": "每 5 小时/6,000 次请求；每周/45,000 次请求；每月/90,000 次请求",
+          "models_raw": [
+            "Spark X2",
+            "GLM-5",
+            "GLM-5.1",
+            "MiniMax-M2.5",
+            "KIMI-K2.5",
+            "DeepSeek-V3.2",
+            "GLM-4.7-Flash",
+            "Qwen3.5-35B-A3B",
+            "Qwen3-Coder-Next-FP8",
+            "Qwen3.5-397B-A17B"
+          ],
           "tools": [
             "HTTP API",
             "WebSocket API"
@@ -1120,7 +1171,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:16+00:00"
+      "updated_at_utc": "2026-04-12T10:04:40+00:00"
     },
     {
       "vendor_id": "infini-ai-coding-plan",
@@ -1198,7 +1249,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:17+00:00"
+      "updated_at_utc": "2026-04-12T10:04:51+00:00"
     },
     {
       "vendor_id": "github-copilot",
@@ -1293,7 +1344,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:17+00:00"
+      "updated_at_utc": "2026-04-12T10:04:51+00:00"
     },
     {
       "vendor_id": "claude-code",
@@ -1431,7 +1482,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:52:23+00:00"
+      "updated_at_utc": "2026-04-12T10:05:05+00:00"
     }
   ]
 }

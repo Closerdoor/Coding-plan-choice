@@ -11,7 +11,7 @@
 ## 腾讯｜腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
-- 最后更新时间（UTC）：2026-04-12T08:51:58+00:00
+- 最后更新时间（UTC）：2026-04-12T10:01:52+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 ## 字节跳动｜火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
-- 最后更新时间（UTC）：2026-04-12T08:52:00+00:00
+- 最后更新时间（UTC）：2026-04-12T10:02:13+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -37,7 +37,7 @@
 ## 百度｜百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
-- 最后更新时间（UTC）：2026-04-12T08:52:01+00:00
+- 最后更新时间（UTC）：2026-04-12T10:02:32+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -50,7 +50,7 @@
 ## 智谱AI｜GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
-- 最后更新时间（UTC）：2026-04-12T08:52:03+00:00
+- 最后更新时间（UTC）：2026-04-12T10:02:52+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@
 ## MiniMax｜MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
-- 最后更新时间（UTC）：2026-04-12T08:52:06+00:00
+- 最后更新时间（UTC）：2026-04-12T10:03:07+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@
 ## 阿里｜阿里云百炼Coding plan
 
 - 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
-- 最后更新时间（UTC）：2026-04-12T08:52:09+00:00
+- 最后更新时间（UTC）：2026-04-12T10:03:20+00:00
 
 | 项目 | pro套餐 |
 | --- | --- |
@@ -89,7 +89,7 @@
 ## 小米｜Xiaomi MiMo Token Plan
 
 - 官方地址：https://platform.xiaomimimo.com/#/token-plan
-- 最后更新时间（UTC）：2026-04-12T08:52:10+00:00
+- 最后更新时间（UTC）：2026-04-12T10:03:30+00:00
 
 | 项目 | Lite套餐 | Standard套餐 | Pro套餐 | Max套餐 |
 | --- | --- | --- | --- | --- |
@@ -102,7 +102,7 @@
 ## 字节跳动｜TRAE国际版
 
 - 官方地址：https://trae.ai/pricing
-- 最后更新时间（UTC）：2026-04-12T08:52:14+00:00
+- 最后更新时间（UTC）：2026-04-12T10:04:02+00:00
 
 | 项目 | Lite套餐 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- | --- |
@@ -115,7 +115,7 @@
 ## OpenAI｜ChatGPT
 
 - 官方地址：https://help.openai.com/en/collections/3742473-chatgpt
-- 最后更新时间（UTC）：2026-04-12T08:52:14+00:00
+- 最后更新时间（UTC）：2026-04-12T10:04:02+00:00
 
 | 项目 | Free套餐 | Go套餐 | Plus套餐 | Pro $100套餐 | Pro $200套餐 |
 | --- | --- | --- | --- | --- | --- |
@@ -128,7 +128,7 @@
 ## Anysphere｜Cursor
 
 - 官方地址：https://cursor.com/pricing
-- 最后更新时间（UTC）：2026-04-12T08:52:15+00:00
+- 最后更新时间（UTC）：2026-04-12T10:04:12+00:00
 
 | 项目 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- |
@@ -141,7 +141,7 @@
 ## 月之暗面｜Kimi AI
 
 - 官方地址：https://www.kimi.com/membership/pricing
-- 最后更新时间（UTC）：2026-04-12T08:52:15+00:00
+- 最后更新时间（UTC）：2026-04-12T10:04:31+00:00
 
 | 项目 | Andante套餐 | Moderato套餐 | Allegretto套餐 | Allegro套餐 |
 | --- | --- | --- | --- | --- |
@@ -154,20 +154,20 @@
 ## 科大讯飞｜讯飞星辰Coding Plan
 
 - 官方地址：https://maas.xfyun.cn/packageSubscription?from=packageSubscriptionOverlay
-- 最后更新时间（UTC）：2026-04-12T08:52:16+00:00
+- 最后更新时间（UTC）：2026-04-12T10:04:40+00:00
 
-| 项目 | Coding Plan套餐 |
-| --- | --- |
-| 价格 | 价格以登录后官方套餐页为准 |
-| 用量 | 官方静态文案可确认平台赠送 500w tokens + 2QPS；启用后付费后按实际调用实时扣费 |
-| 支持模型 |  |
-| 支持工具 | HTTP API；WebSocket API |
-| 使用方式 | 服务认证信息 + 接口地址（Http / WebSocket 协议） |
+| 项目 | 无忧版套餐 | 专业版套餐 | 高效版套餐 |
+| --- | --- | --- | --- |
+| 价格 | ¥19/月(优惠：首单优惠后 ¥3.9/月) | ¥39/月 | ¥199/月 |
+| 用量 | 请求次数/不限 | 每 5 小时/1,200 次请求；每周/9,000 次请求；每月/18,000 次请求 | 每 5 小时/6,000 次请求；每周/45,000 次请求；每月/90,000 次请求 |
+| 支持模型 | Qwen3.5-35B-A3B；Qwen3-Coder-Next-FP8；GLM-4.7-Flash | Spark X2；GLM-5；MiniMax-M2.5；KIMI-K2.5；DeepSeek-V3.2；GLM-4.7-Flash；Qwen3.5-35B-A3B；Qwen3-Coder-Next-FP8；Qwen3.5-397B-A17B | Spark X2；GLM-5；GLM-5.1；MiniMax-M2.5；KIMI-K2.5；DeepSeek-V3.2；GLM-4.7-Flash；Qwen3.5-35B-A3B；Qwen3-Coder-Next-FP8；Qwen3.5-397B-A17B |
+| 支持工具 | HTTP API；WebSocket API | HTTP API；WebSocket API | HTTP API；WebSocket API |
+| 使用方式 | 服务认证信息 + 接口地址（Http / WebSocket 协议） | 服务认证信息 + 接口地址（Http / WebSocket 协议） | 服务认证信息 + 接口地址（Http / WebSocket 协议） |
 
 ## 无问芯穹｜无问芯穹Coding Plan
 
 - 官方地址：https://docs.infini-ai.com/gen-studio-coding-plan/
-- 最后更新时间（UTC）：2026-04-12T08:52:17+00:00
+- 最后更新时间（UTC）：2026-04-12T10:04:51+00:00
 
 | 项目 | Lite套餐 | Pro套餐 |
 | --- | --- | --- |
@@ -180,7 +180,7 @@
 ## Microsoft｜GitHub Copilot
 
 - 官方地址：https://github.com/features/copilot/plans
-- 最后更新时间（UTC）：2026-04-12T08:52:17+00:00
+- 最后更新时间（UTC）：2026-04-12T10:04:51+00:00
 
 | 项目 | Free套餐 | Pro套餐 | Pro+套餐 |
 | --- | --- | --- | --- |
@@ -193,7 +193,7 @@
 ## Anthropic｜Claude Code
 
 - 官方地址：https://claude.com/pricing
-- 最后更新时间（UTC）：2026-04-12T08:52:23+00:00
+- 最后更新时间（UTC）：2026-04-12T10:05:05+00:00
 
 | 项目 | Pro套餐 | Max 5x套餐 | Max 20x套餐 | Team Standard Seat | Team Premium Seat | Enterprise Seat |
 | --- | --- | --- | --- | --- | --- | --- |
