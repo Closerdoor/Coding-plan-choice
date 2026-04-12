@@ -50,14 +50,14 @@ _TITLE_BY_LEVEL = {
 }
 
 
-def _http_get(url: str, *, timeout_s: int = 60) -> str:
+def _http_get(url: str, *, timeout_s: int = 15) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=timeout_s) as response:
         return response.read().decode("utf-8", "replace")
 
 
 def _http_post_json(
-    url: str, payload: Dict[str, object], *, timeout_s: int = 60, retries: int = 3
+    url: str, payload: Dict[str, object], *, timeout_s: int = 15, retries: int = 2
 ) -> Dict[str, object]:
     last_exc: Exception | None = None
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
@@ -167,10 +167,7 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
         goods_item = monthly_by_level.get(level)
         if not goods_item:
             title = _TITLE_BY_LEVEL[level]
-            if _title_present_in_official_sources(
-                membership_html, pricing_bundle, title
-            ):
-                goods_item = monthly_by_title.get(title)
+            goods_item = monthly_by_title.get(title)
         if not goods_item:
             for item in filtered_goods:
                 title = item.get("title")

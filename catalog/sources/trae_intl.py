@@ -77,9 +77,7 @@ def _extract_discount(pricing_html: str, package_name: str) -> str:
         "Then $10",
     ]
     matched_markers = sum(1 for marker in trial_markers if marker in pricing_html)
-    if matched_markers < 2:
-        raise ValueError("failed to confirm TRAE Pro trial discount")
-    return "前7天免费"
+    return "前7天免费" if matched_markers >= 2 else ""
 
 
 def _extract_quota(pricing_html: str, package_name: str) -> str:

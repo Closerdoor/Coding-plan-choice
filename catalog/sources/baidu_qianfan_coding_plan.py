@@ -25,7 +25,7 @@ _TOOL_ORDER = [
 ]
 
 
-def _http_get(url: str, *, timeout_s: int = 120, retries: int = 4) -> str:
+def _http_get(url: str, *, timeout_s: int = 15, retries: int = 2) -> str:
     last_exc: Exception | None = None
     for attempt in range(retries):
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -54,26 +54,10 @@ def _load_activity_payload(activity_url: str) -> Dict[str, object]:
 
 def _load_doc_html(doc_url: str) -> str:
     page_html = _http_get(doc_url)
-    match = re.search(
-        r'href="(?P<url>https://bce\.bdstatic\.com/p3m/bce-doc/online/qianfan/doc/qianfan/s/page-data/imlg0beiu/page-data\.json)"',
-        page_html,
-    )
-    page_data_url = (
-        match.group("url")
-        if match
-        else (
-            "https://bce.bdstatic.com/p3m/bce-doc/online/qianfan/doc/qianfan/s/page-data/imlg0beiu/page-data.json"
-        )
-    )
-    payload = json.loads(_http_get(page_data_url))
-    html = (
-        payload.get("result", {})
-        .get("data", {})
-        .get("markdownRemark", {})
-        .get("html", "")
-    )
+    article_match = re.search(r"<article[\s\S]*?</article>", page_html, re.I)
+    html = article_match.group(0) if article_match else page_html
     if not isinstance(html, str) or not html.strip():
-        raise ValueError("failed to locate Baidu doc HTML payload")
+        raise ValueError("failed to locate Baidu doc HTML content")
     return html
 
 
