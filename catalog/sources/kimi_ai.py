@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import time
 import urllib.request
 from typing import Dict, List
@@ -48,6 +49,9 @@ _TITLE_BY_LEVEL = {
     "LEVEL_INTERMEDIATE": "Allegretto",
     "LEVEL_ADVANCED": "Allegro",
 }
+
+
+LOGGER = logging.getLogger("catalog.update")
 
 
 def _http_get(url: str, *, timeout_s: int = 15) -> str:
@@ -158,23 +162,48 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
     monthly_by_level = _pick_monthly_goods(goods)
     monthly_by_title = _pick_monthly_goods_by_title(goods)
 
+    LOGGER.info(
+        "Kimi diagnostics: goods=%d monthly_by_level=%s monthly_by_title=%s",
+        len(goods),
+        sorted(monthly_by_level.keys()),
+        sorted(monthly_by_title.keys()),
+    )
+
     filtered_goods = [
         item for item in goods if isinstance(item, dict) and _has_monthly_variant(item)
     ]
+    LOGGER.info(
+        "Kimi diagnostics: monthly variant sample=%s",
+        [
+            {
+                "title": item.get("title"),
+                "membershipLevel": item.get("membershipLevel"),
+                "billingCycle": item.get("billingCycle"),
+            }
+            for item in filtered_goods[:6]
+        ],
+    )
 
     packages = []
     for level, normalized_name in _PACKAGE_ORDER:
         goods_item = monthly_by_level.get(level)
+        title = _TITLE_BY_LEVEL[level]
         if not goods_item:
-            title = _TITLE_BY_LEVEL[level]
             goods_item = monthly_by_title.get(title)
         if not goods_item:
             for item in filtered_goods:
-                title = item.get("title")
-                if isinstance(title, str) and title.strip() == _TITLE_BY_LEVEL[level]:
+                item_title = item.get("title")
+                if isinstance(item_title, str) and item_title.strip() == title:
                     goods_item = item
                     break
         if not goods_item:
+            LOGGER.warning(
+                "Kimi diagnostics: failed to match level=%s title=%s; available levels=%s titles=%s",
+                level,
+                title,
+                sorted(monthly_by_level.keys()),
+                sorted(monthly_by_title.keys()),
+            )
             raise ValueError(f"failed to find Kimi monthly goods for {level}")
         amounts = goods_item.get("amounts")
         if (

@@ -66,3 +66,5 @@ jobs:
           add-paths: |
             CATALOG_GENERATED.md
             catalog/output/CATALOG_DATA.json
+            catalog/output/CATALOG_PREFLIGHT.json
+            catalog/output/CATALOG_RUN.log

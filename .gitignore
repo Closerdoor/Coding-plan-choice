@@ -16,6 +16,3 @@ Thumbs.db
 # Local tooling caches
 .ruff_cache/
 
-# Generated catalog diagnostics
-catalog/output/CATALOG_PREFLIGHT.json
-catalog/output/CATALOG_RUN.log

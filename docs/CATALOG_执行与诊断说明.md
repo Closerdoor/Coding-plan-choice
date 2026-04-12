@@ -30,6 +30,8 @@
 1. `CATALOG_PREFLIGHT.json`
 2. `CATALOG_RUN.log`
 
+同时，这两个文件也会跟随 catalog 更新 PR 一起提交到仓库，便于直接在主分支回溯当次执行问题。
+
 ## PR 分支策略
 
 - 自动更新 workflow 每次都会基于当前 `main` 创建新的唯一分支。
