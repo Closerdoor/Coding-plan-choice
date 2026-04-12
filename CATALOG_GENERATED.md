@@ -154,7 +154,7 @@
 ## 科大讯飞｜讯飞星辰Coding Plan
 
 - 官方地址：https://maas.xfyun.cn/packageSubscription?from=packageSubscriptionOverlay
-- 最后更新时间（UTC）：2026-04-12T10:36:16+00:00
+- 最后更新时间（UTC）：2026-04-12T11:06:22+00:00
 
 | 项目 | 无忧版套餐 | 专业版套餐 | 高效版套餐 |
 | --- | --- | --- | --- |
