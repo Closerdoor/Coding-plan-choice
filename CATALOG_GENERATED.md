@@ -11,7 +11,7 @@
 ## 腾讯｜腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
-- 最后更新时间（UTC）：2026-04-12T07:02:45+00:00
+- 最后更新时间（UTC）：2026-04-12T07:25:10+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 ## 字节跳动｜火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
-- 最后更新时间（UTC）：2026-04-12T07:03:06+00:00
+- 最后更新时间（UTC）：2026-04-12T07:25:30+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -37,7 +37,7 @@
 ## 百度｜百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
-- 最后更新时间（UTC）：2026-04-12T07:03:25+00:00
+- 最后更新时间（UTC）：2026-04-12T07:25:49+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -50,7 +50,7 @@
 ## 智谱AI｜GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
-- 最后更新时间（UTC）：2026-04-12T07:03:44+00:00
+- 最后更新时间（UTC）：2026-04-12T07:26:09+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@
 ## MiniMax｜MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
-- 最后更新时间（UTC）：2026-04-12T07:04:01+00:00
+- 最后更新时间（UTC）：2026-04-12T07:26:22+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@
 ## 阿里｜阿里云百炼Coding plan
 
 - 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
-- 最后更新时间（UTC）：2026-04-12T07:04:15+00:00
+- 最后更新时间（UTC）：2026-04-12T07:26:34+00:00
 
 | 项目 | pro套餐 |
 | --- | --- |
@@ -89,7 +89,7 @@
 ## 字节跳动｜TRAE国际版
 
 - 官方地址：https://trae.ai/pricing
-- 最后更新时间（UTC）：2026-04-12T07:04:46+00:00
+- 最后更新时间（UTC）：2026-04-12T07:27:06+00:00
 
 | 项目 | Lite套餐 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- | --- |
@@ -102,7 +102,7 @@
 ## Anysphere｜Cursor
 
 - 官方地址：https://cursor.com/pricing
-- 最后更新时间（UTC）：2026-04-12T07:04:56+00:00
+- 最后更新时间（UTC）：2026-04-12T07:27:16+00:00
 
 | 项目 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- |
@@ -111,3 +111,16 @@
 | 支持模型 | Auto；Composer 2；Claude 4 Sonnet；Claude 4 Sonnet 1M；Claude 4.5 Haiku；Claude 4.5 Opus；Claude 4.5 Sonnet；Claude 4.6 Opus；Claude 4.6 Opus (Fast mode)；Claude 4.6 Sonnet；Composer 1；Composer 1.5；Gemini 2.5 Flash；Gemini 3 Flash；Gemini 3 Pro；Gemini 3 Pro Image Preview；Gemini 3.1 Pro；GPT-5；GPT-5 Fast；GPT-5 Mini；GPT-5-Codex；GPT-5.1 Codex；GPT-5.1 Codex Max；GPT-5.1 Codex Mini；GPT-5.2；GPT-5.2 Codex；GPT-5.3 Codex；GPT-5.4；GPT-5.4 Mini；GPT-5.4 Nano；Grok 4.20；Kimi K2.5 | Auto；Composer 2；Claude 4 Sonnet；Claude 4 Sonnet 1M；Claude 4.5 Haiku；Claude 4.5 Opus；Claude 4.5 Sonnet；Claude 4.6 Opus；Claude 4.6 Opus (Fast mode)；Claude 4.6 Sonnet；Composer 1；Composer 1.5；Gemini 2.5 Flash；Gemini 3 Flash；Gemini 3 Pro；Gemini 3 Pro Image Preview；Gemini 3.1 Pro；GPT-5；GPT-5 Fast；GPT-5 Mini；GPT-5-Codex；GPT-5.1 Codex；GPT-5.1 Codex Max；GPT-5.1 Codex Mini；GPT-5.2；GPT-5.2 Codex；GPT-5.3 Codex；GPT-5.4；GPT-5.4 Mini；GPT-5.4 Nano；Grok 4.20；Kimi K2.5 | Auto；Composer 2；Claude 4 Sonnet；Claude 4 Sonnet 1M；Claude 4.5 Haiku；Claude 4.5 Opus；Claude 4.5 Sonnet；Claude 4.6 Opus；Claude 4.6 Opus (Fast mode)；Claude 4.6 Sonnet；Composer 1；Composer 1.5；Gemini 2.5 Flash；Gemini 3 Flash；Gemini 3 Pro；Gemini 3 Pro Image Preview；Gemini 3.1 Pro；GPT-5；GPT-5 Fast；GPT-5 Mini；GPT-5-Codex；GPT-5.1 Codex；GPT-5.1 Codex Max；GPT-5.1 Codex Mini；GPT-5.2；GPT-5.2 Codex；GPT-5.3 Codex；GPT-5.4；GPT-5.4 Mini；GPT-5.4 Nano；Grok 4.20；Kimi K2.5 |
 | 支持工具 | Cursor Desktop；Cursor Web；Slack；GitHub；Linear；API | Cursor Desktop；Cursor Web；Slack；GitHub；Linear；API | Cursor Desktop；Cursor Web；Slack；GitHub；Linear；API |
 | 使用方式 | 账号订阅（Cursor 客户端 / Web） | 账号订阅（Cursor 客户端 / Web） | 账号订阅（Cursor 客户端 / Web） |
+
+## 月之暗面｜Kimi AI
+
+- 官方地址：https://www.kimi.com/membership/pricing
+- 最后更新时间（UTC）：2026-04-12T07:27:17+00:00
+
+| 项目 | Andante套餐 | Moderato套餐 | Allegretto套餐 | Allegro套餐 |
+| --- | --- | --- | --- | --- |
+| 价格 | ¥49/月 | ¥99/月 | ¥199/月 | ¥699/月 |
+| 用量 | 会员订阅权益，具体额度以官方会员页展示为准 | 会员订阅权益，具体额度以官方会员页展示为准 | 会员订阅权益，具体额度以官方会员页展示为准 | 会员订阅权益，具体额度以官方会员页展示为准 |
+| 支持模型 | Kimi | Kimi | Kimi | Kimi |
+| 支持工具 | Kimi Web；Kimi App | Kimi Web；Kimi App | Kimi Web；Kimi App | Kimi Web；Kimi App |
+| 使用方式 | 账号订阅（Kimi Web / App） | 账号订阅（Kimi Web / App） | 账号订阅（Kimi Web / App） | 账号订阅（Kimi Web / App） |

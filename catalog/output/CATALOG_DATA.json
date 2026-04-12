@@ -1,9 +1,8 @@
 {
-  "generated_at_utc": "2026-04-12T07:04:56+00:00",
+  "generated_at_utc": "2026-04-12T07:27:17+00:00",
   "warnings": [
     "vendor xiaomi-mimo-token-plan: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.xiaomi_mimo_token_plan'",
-    "vendor openai-chatgpt: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.openai_chatgpt'",
-    "vendor kimi-ai: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.kimi_ai'"
+    "vendor openai-chatgpt: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.openai_chatgpt'"
   ],
   "vendors": [
     {
@@ -74,7 +73,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:02:45+00:00"
+      "updated_at_utc": "2026-04-12T07:25:10+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -140,7 +139,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:03:06+00:00"
+      "updated_at_utc": "2026-04-12T07:25:30+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -194,7 +193,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:03:25+00:00"
+      "updated_at_utc": "2026-04-12T07:25:49+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -289,7 +288,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:03:44+00:00"
+      "updated_at_utc": "2026-04-12T07:26:09+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
@@ -487,7 +486,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:04:01+00:00"
+      "updated_at_utc": "2026-04-12T07:26:22+00:00"
     },
     {
       "vendor_id": "aliyun-bailian-coding-plan",
@@ -533,7 +532,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:04:15+00:00"
+      "updated_at_utc": "2026-04-12T07:26:34+00:00"
     },
     {
       "vendor_id": "trae-intl",
@@ -629,7 +628,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:04:46+00:00"
+      "updated_at_utc": "2026-04-12T07:27:06+00:00"
     },
     {
       "vendor_id": "cursor",
@@ -793,7 +792,82 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:04:56+00:00"
+      "updated_at_utc": "2026-04-12T07:27:16+00:00"
+    },
+    {
+      "vendor_id": "kimi-ai",
+      "company_name": "月之暗面",
+      "plan_name": "Kimi AI",
+      "official_url": "https://www.kimi.com/membership/pricing",
+      "source_urls": [
+        "https://www.kimi.com/membership/pricing",
+        "https://www.kimi.com/robots.txt",
+        "https://statics.moonshot.cn/kimi-web-seo/assets/Pricing-1vnxNQVp.js",
+        "https://www.kimi.com/apiv2/kimi.gateway.order.v1.GoodsService/ListGoods"
+      ],
+      "packages": [
+        {
+          "name": "Andante套餐",
+          "price": "¥49/月",
+          "discount": "",
+          "quota": "会员订阅权益，具体额度以官方会员页展示为准",
+          "models_raw": [
+            "Kimi"
+          ],
+          "tools": [
+            "Kimi Web",
+            "Kimi App"
+          ],
+          "access_method": "账号订阅（Kimi Web / App）",
+          "models_filtered": []
+        },
+        {
+          "name": "Moderato套餐",
+          "price": "¥99/月",
+          "discount": "",
+          "quota": "会员订阅权益，具体额度以官方会员页展示为准",
+          "models_raw": [
+            "Kimi"
+          ],
+          "tools": [
+            "Kimi Web",
+            "Kimi App"
+          ],
+          "access_method": "账号订阅（Kimi Web / App）",
+          "models_filtered": []
+        },
+        {
+          "name": "Allegretto套餐",
+          "price": "¥199/月",
+          "discount": "",
+          "quota": "会员订阅权益，具体额度以官方会员页展示为准",
+          "models_raw": [
+            "Kimi"
+          ],
+          "tools": [
+            "Kimi Web",
+            "Kimi App"
+          ],
+          "access_method": "账号订阅（Kimi Web / App）",
+          "models_filtered": []
+        },
+        {
+          "name": "Allegro套餐",
+          "price": "¥699/月",
+          "discount": "",
+          "quota": "会员订阅权益，具体额度以官方会员页展示为准",
+          "models_raw": [
+            "Kimi"
+          ],
+          "tools": [
+            "Kimi Web",
+            "Kimi App"
+          ],
+          "access_method": "账号订阅（Kimi Web / App）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T07:27:17+00:00"
     }
   ]
 }
