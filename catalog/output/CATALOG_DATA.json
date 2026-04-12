@@ -1,11 +1,6 @@
 {
-  "generated_at_utc": "2026-04-12T10:59:41+00:00",
-  "warnings": [
-    "vendor baidu-qianfan-coding-plan: failed, kept previous data: URLError: <urlopen error timed out>",
-    "vendor xiaomi-mimo-token-plan: failed, kept previous data: HTTPError: HTTP Error 404: Not Found",
-    "vendor trae-intl: failed, kept previous data: ValueError: failed to confirm TRAE pricing page",
-    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi monthly goods for LEVEL_TRIAL"
-  ],
+  "generated_at_utc": "2026-04-12T11:06:22+00:00",
+  "warnings": [],
   "vendors": [
     {
       "vendor_id": "tencent-cloud-coding-plan",
@@ -1176,7 +1171,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T10:36:16+00:00"
+      "updated_at_utc": "2026-04-12T11:06:22+00:00"
     },
     {
       "vendor_id": "infini-ai-coding-plan",
