@@ -180,7 +180,7 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
                 "quota": quotas[normalized_name],
                 "models_raw": models_raw,
                 "tools": tools,
-                "access_method": "API Key",
+                "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
             }
         )
 

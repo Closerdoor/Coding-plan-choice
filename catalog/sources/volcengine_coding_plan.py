@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import html
+import json
 import re
 import urllib.request
 from typing import Dict, List
@@ -42,6 +43,11 @@ _PRO_ANCHORS = [
     "configurationCode:'Coding_Plan_Pro_monthly'",
     "templateIndexKey:'ark_bd||d2a7m37ditkldl312h1g'",
 ]
+
+_PACKAGE_LABELS = {
+    "lite套餐": "中等强度的开发任务，适合大多数开发者。",
+    "pro套餐": "复杂项目开发，适合高强度工作的开发者。",
+}
 
 
 def _http_get(url: str, *, timeout_s: int = 60) -> str:
@@ -107,14 +113,30 @@ def _extract_price(block: str) -> Dict[str, str]:
     }
 
 
-def _extract_usage(block: str) -> str:
-    match = re.search(
-        r"title:'用量',rightContents:\[\[\{text:'(?P<usage>[^']+)'",
-        block,
+def _extract_doc_usage(doc_html: str, package_name: str) -> str:
+    package_label = _PACKAGE_LABELS[package_name]
+    text_parts = []
+    for match in re.finditer(r'\\"insert\\":\\"(?P<text>.*?)\\"', doc_html):
+        raw_text = match.group("text")
+        try:
+            text_parts.append(json.loads(f'"{raw_text}"'))
+        except json.JSONDecodeError:
+            continue
+    compact = "".join(text_parts).replace(" ", "")
+    pattern = re.compile(
+        rf"{re.escape(package_label)}.*?每5小时：最多约(?P<hour>[0-9,]+)次请求。"
+        rf".*?每周：最多约(?P<week>[0-9,]+)次请求。"
+        rf".*?每订阅月：最多约(?P<month>[0-9,]+)次请求。",
+        re.S,
     )
+    match = pattern.search(compact)
     if not match:
-        raise ValueError("failed to extract Volcengine usage description")
-    return match.group("usage").strip()
+        raise ValueError(f"failed to extract Volcengine quota for {package_name}")
+    return (
+        f"{match.group('hour').replace(',', '')}次请求/5小时；"
+        f"{match.group('week').replace(',', '')}次请求/周；"
+        f"{match.group('month').replace(',', '')}次请求/月"
+    )
 
 
 def _extract_activity_models(bundle_text: str) -> List[str]:
@@ -166,19 +188,19 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
             "name": "lite套餐",
             "price": lite_price["price"],
             "discount": lite_price["discount"],
-            "quota": _extract_usage(lite_block),
+            "quota": _extract_doc_usage(doc_html, "lite套餐"),
             "models_raw": models_raw,
             "tools": tools,
-            "access_method": "API Key",
+            "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
         },
         {
             "name": "pro套餐",
             "price": pro_price["price"],
             "discount": pro_price["discount"],
-            "quota": _extract_usage(pro_block),
+            "quota": _extract_doc_usage(doc_html, "pro套餐"),
             "models_raw": models_raw,
             "tools": tools,
-            "access_method": "API Key",
+            "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
         },
     ]
 

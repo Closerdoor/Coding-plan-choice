@@ -9,6 +9,7 @@ from __future__ import annotations
 import copy
 import importlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -118,6 +119,11 @@ def _render_price(package: Dict[str, object]) -> str:
     base_price = str(package.get("price", "")).strip()
     discount = str(package.get("discount", "")).strip()
     if not discount:
+        return base_price
+    normalized_base = re.sub(r"\s+", "", base_price)
+    normalized_discount = re.sub(r"\s+", "", discount)
+    normalized_discount = normalized_discount.removeprefix("首月")
+    if normalized_base == normalized_discount:
         return base_price
     return f"{base_price}(优惠：{discount})"
 

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-12T02:43:38+00:00",
+  "generated_at_utc": "2026-04-12T03:18:46+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -37,7 +37,7 @@
             "Kilo CLI",
             "Kilo Code"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "MiniMax-M2.5",
             "Kimi-K2.5",
@@ -70,7 +70,7 @@
             "Kilo CLI",
             "Kilo Code"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "MiniMax-M2.5",
             "Kimi-K2.5",
@@ -78,7 +78,7 @@
           ]
         }
       ],
-      "updated_at_utc": "2026-04-12T02:43:15+00:00"
+      "updated_at_utc": "2026-04-12T03:17:47+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -93,7 +93,7 @@
           "name": "lite套餐",
           "price": "¥40/月",
           "discount": "首月¥9.9/月",
-          "quota": "用量达 Claude Pro 的 3 倍",
+          "quota": "1200次请求/5小时；9000次请求/周；18000次请求/月",
           "models_raw": [
             "Auto",
             "Doubao-Seed-2.0-pro",
@@ -113,7 +113,7 @@
             "Roo Code",
             "OpenCode"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "MiniMax-M2.5",
             "Kimi-K2.5",
@@ -125,7 +125,7 @@
           "name": "pro套餐",
           "price": "¥200/月",
           "discount": "首月¥49.9/月",
-          "quota": "用量达 Claude Max（5x）的 3 倍，lite 套餐用量的5倍",
+          "quota": "6000次请求/5小时；45000次请求/周；90000次请求/月",
           "models_raw": [
             "Auto",
             "Doubao-Seed-2.0-pro",
@@ -145,7 +145,7 @@
             "Roo Code",
             "OpenCode"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "MiniMax-M2.5",
             "Kimi-K2.5",
@@ -154,7 +154,7 @@
           ]
         }
       ],
-      "updated_at_utc": "2026-04-12T02:43:17+00:00"
+      "updated_at_utc": "2026-04-12T03:18:07+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -183,7 +183,7 @@
             "Qwen Code",
             "Cursor"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "Kimi-K2.5",
             "DeepSeek-V3.2",
@@ -209,7 +209,7 @@
             "Qwen Code",
             "Cursor"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "Kimi-K2.5",
             "DeepSeek-V3.2",
@@ -218,7 +218,7 @@
           ]
         }
       ],
-      "updated_at_utc": "2026-04-12T02:43:18+00:00"
+      "updated_at_utc": "2026-04-12T03:18:26+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -255,7 +255,7 @@
             "TRAE",
             "CodeBuddy"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "GLM-4.7"
           ]
@@ -284,7 +284,7 @@
             "TRAE",
             "CodeBuddy"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "GLM-4.7"
           ]
@@ -313,13 +313,13 @@
             "TRAE",
             "CodeBuddy"
           ],
-          "access_method": "API Key",
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
           "models_filtered": [
             "GLM-4.7"
           ]
         }
       ],
-      "updated_at_utc": "2026-04-12T02:43:38+00:00"
+      "updated_at_utc": "2026-04-12T03:18:46+00:00"
     }
   ]
 }

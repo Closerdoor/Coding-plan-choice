@@ -253,7 +253,7 @@ def fetch(config: Dict[str, str]) -> Dict[str, object]:
             "quota": package_data["lite套餐"]["quota"],
             "models_raw": models_raw,
             "tools": tools,
-            "access_method": "API Key",
+            "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
         },
         {
             "name": "pro套餐",
@@ -262,7 +262,7 @@ def fetch(config: Dict[str, str]) -> Dict[str, object]:
             "quota": package_data["pro套餐"]["quota"],
             "models_raw": models_raw,
             "tools": tools,
-            "access_method": "API Key",
+            "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
         },
     ]
 
