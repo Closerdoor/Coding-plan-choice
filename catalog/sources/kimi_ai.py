@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import time
 import urllib.request
 from typing import Dict, List
 
@@ -49,21 +50,27 @@ def _http_get(url: str, *, timeout_s: int = 60) -> str:
 
 
 def _http_post_json(
-    url: str, payload: Dict[str, object], *, timeout_s: int = 60
+    url: str, payload: Dict[str, object], *, timeout_s: int = 60, retries: int = 3
 ) -> Dict[str, object]:
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-        headers={
-            "Content-Type": "application/json",
-            "X-Language": "zh-CN",
-            "x-msh-platform": "web",
-            "User-Agent": "Mozilla/5.0",
-        },
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=timeout_s) as response:
-        return json.loads(response.read().decode("utf-8", "replace"))
+    last_exc: Exception | None = None
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    headers = {
+        "Content-Type": "application/json",
+        "X-Language": "zh-CN",
+        "x-msh-platform": "web",
+        "User-Agent": "Mozilla/5.0",
+    }
+    for attempt in range(retries):
+        req = urllib.request.Request(url, data=body, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=timeout_s) as response:
+                return json.loads(response.read().decode("utf-8", "replace"))
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            if attempt == retries - 1:
+                raise
+            time.sleep(1 + attempt)
+    raise RuntimeError(f"failed to fetch Kimi goods: {last_exc}")
 
 
 def _format_cny(price_in_cents: str) -> str:
@@ -108,6 +115,31 @@ def _pick_monthly_goods_by_title(
     return monthly_by_title
 
 
+def _pick_monthly_goods_by_price(
+    goods: List[Dict[str, object]],
+) -> Dict[str, Dict[str, object]]:
+    monthly_by_price: Dict[str, Dict[str, object]] = {}
+    for item in goods:
+        if not isinstance(item, dict):
+            continue
+        billing_cycle = item.get("billingCycle")
+        if not isinstance(billing_cycle, dict):
+            continue
+        if billing_cycle.get("timeUnit") != "TIME_UNIT_MONTH":
+            continue
+        amounts = item.get("amounts")
+        if (
+            not isinstance(amounts, list)
+            or not amounts
+            or not isinstance(amounts[0], dict)
+        ):
+            continue
+        price_in_cents = amounts[0].get("priceInCents")
+        if isinstance(price_in_cents, str):
+            monthly_by_price[price_in_cents] = item
+    return monthly_by_price
+
+
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
     official_url = config["official_url"]
     source_urls = config["source_urls"]
@@ -129,6 +161,7 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
 
     monthly_by_level = _pick_monthly_goods(goods)
     monthly_by_title = _pick_monthly_goods_by_title(goods)
+    monthly_by_price = _pick_monthly_goods_by_price(goods)
 
     title_by_level = {
         "LEVEL_TRIAL": "Andante",
@@ -136,12 +169,20 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
         "LEVEL_INTERMEDIATE": "Allegretto",
         "LEVEL_ADVANCED": "Allegro",
     }
+    price_by_level = {
+        "LEVEL_TRIAL": "4900",
+        "LEVEL_BASIC": "9900",
+        "LEVEL_INTERMEDIATE": "19900",
+        "LEVEL_ADVANCED": "69900",
+    }
 
     packages = []
     for level, normalized_name in _PACKAGE_ORDER:
         goods_item = monthly_by_level.get(level)
         if not goods_item:
             goods_item = monthly_by_title.get(title_by_level[level])
+        if not goods_item:
+            goods_item = monthly_by_price.get(price_by_level[level])
         if not goods_item:
             raise ValueError(f"failed to find Kimi monthly goods for {level}")
         amounts = goods_item.get("amounts")
