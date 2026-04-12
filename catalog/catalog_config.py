@@ -28,4 +28,14 @@ VENDORS = [
         ],
         "source_module": "catalog.sources.volcengine_coding_plan",
     },
+    {
+        "vendor_id": "baidu-qianfan-coding-plan",
+        "company_name": "百度千帆",
+        "vendor_name": "百度千帆 Coding Plan",
+        "source_urls": [
+            "https://cloud.baidu.com/product/codingplan.html",
+            "https://cloud.baidu.com/doc/qianfan/s/imlg0beiu",
+        ],
+        "source_module": "catalog.sources.baidu_qianfan_coding_plan",
+    },
 ]

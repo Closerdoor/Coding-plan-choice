@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-11T16:36:34+00:00",
+  "generated_at_utc": "2026-04-12T02:21:04+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -78,7 +78,7 @@
           ]
         }
       ],
-      "updated_at_utc": "2026-04-11T16:36:23+00:00"
+      "updated_at_utc": "2026-04-12T02:20:56+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -154,7 +154,71 @@
           ]
         }
       ],
-      "updated_at_utc": "2026-04-11T16:36:34+00:00"
+      "updated_at_utc": "2026-04-12T02:21:04+00:00"
+    },
+    {
+      "vendor_id": "baidu-qianfan-coding-plan",
+      "company_name": "百度千帆",
+      "vendor_name": "百度千帆 Coding Plan",
+      "official_sources": [
+        "https://cloud.baidu.com/product/codingplan.html",
+        "https://cloud.baidu.com/doc/qianfan/s/imlg0beiu"
+      ],
+      "packages": [
+        {
+          "name": "lite套餐",
+          "price": "¥40/月",
+          "discount": "首月¥9.9/月",
+          "quota": "1200次请求/5小时；9000次请求/周；18000次请求/月",
+          "models_raw": [
+            "Kimi-K2.5",
+            "DeepSeek-V3.2",
+            "GLM-5",
+            "MiniMax-M2.5",
+            "ERNIE-4.5-Turbo-20260402"
+          ],
+          "tools": [
+            "OpenClaw",
+            "Claude Code",
+            "Qwen Code",
+            "Cursor"
+          ],
+          "access_method": "API Key",
+          "models_filtered": [
+            "Kimi-K2.5",
+            "DeepSeek-V3.2",
+            "GLM-5",
+            "MiniMax-M2.5"
+          ]
+        },
+        {
+          "name": "pro套餐",
+          "price": "¥200/月",
+          "discount": "首月¥49.9/月",
+          "quota": "6000次请求/5小时；45000次请求/周；90000次请求/月",
+          "models_raw": [
+            "Kimi-K2.5",
+            "DeepSeek-V3.2",
+            "GLM-5",
+            "MiniMax-M2.5",
+            "ERNIE-4.5-Turbo-20260402"
+          ],
+          "tools": [
+            "OpenClaw",
+            "Claude Code",
+            "Qwen Code",
+            "Cursor"
+          ],
+          "access_method": "API Key",
+          "models_filtered": [
+            "Kimi-K2.5",
+            "DeepSeek-V3.2",
+            "GLM-5",
+            "MiniMax-M2.5"
+          ]
+        }
+      ],
+      "updated_at_utc": "2026-04-12T02:21:04+00:00"
     }
   ]
 }
