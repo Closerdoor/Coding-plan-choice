@@ -11,7 +11,7 @@
 ## 腾讯｜腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
-- 最后更新时间（UTC）：2026-04-12T07:49:19+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:40+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 ## 字节跳动｜火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
-- 最后更新时间（UTC）：2026-04-12T07:49:21+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:42+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -37,7 +37,7 @@
 ## 百度｜百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
-- 最后更新时间（UTC）：2026-04-12T07:49:22+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:43+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -50,7 +50,7 @@
 ## 智谱AI｜GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
-- 最后更新时间（UTC）：2026-04-12T07:49:24+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:45+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@
 ## MiniMax｜MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
-- 最后更新时间（UTC）：2026-04-12T07:49:27+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:48+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@
 ## 阿里｜阿里云百炼Coding plan
 
 - 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
-- 最后更新时间（UTC）：2026-04-12T07:49:30+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:53+00:00
 
 | 项目 | pro套餐 |
 | --- | --- |
@@ -86,10 +86,23 @@
 | 支持工具 | OpenClaw；OpenCode；Claude Code；Cline；Cursor；Qwen Code；Qoder；Lingma；Kilo Code；Kilo CLI；Codex |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） |
 
+## 小米｜Xiaomi MiMo Token Plan
+
+- 官方地址：https://platform.xiaomimimo.com/#/token-plan
+- 最后更新时间（UTC）：2026-04-12T08:09:54+00:00
+
+| 项目 | Lite套餐 | Standard套餐 | Pro套餐 | Max套餐 |
+| --- | --- | --- | --- | --- |
+| 价格 | $6/月(优惠：首购88折) | $16/月(优惠：首购88折) | $50/月(优惠：首购88折) | $100/月(优惠：首购88折) |
+| 用量 | 60M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费 | 200M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费 | 700M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费 | 1600M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费 |
+| 支持模型 | MiMo-V2-Pro；MiMo-V2-Omni；MiMo-V2-TTS | MiMo-V2-Pro；MiMo-V2-Omni；MiMo-V2-TTS | MiMo-V2-Pro；MiMo-V2-Omni；MiMo-V2-TTS | MiMo-V2-Pro；MiMo-V2-Omni；MiMo-V2-TTS |
+| 支持工具 | OpenCode；Claude Code；OpenClaw；Cline；Kilo Code；Roo Code；Codex CLI；Zed；Cherry Studio；Qwen Code | OpenCode；Claude Code；OpenClaw；Cline；Kilo Code；Roo Code；Codex CLI；Zed；Cherry Studio；Qwen Code | OpenCode；Claude Code；OpenClaw；Cline；Kilo Code；Roo Code；Codex CLI；Zed；Cherry Studio；Qwen Code | OpenCode；Claude Code；OpenClaw；Cline；Kilo Code；Roo Code；Codex CLI；Zed；Cherry Studio；Qwen Code |
+| 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
+
 ## 字节跳动｜TRAE国际版
 
 - 官方地址：https://trae.ai/pricing
-- 最后更新时间（UTC）：2026-04-12T07:49:34+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:57+00:00
 
 | 项目 | Lite套餐 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- | --- |
@@ -102,7 +115,7 @@
 ## OpenAI｜ChatGPT
 
 - 官方地址：https://help.openai.com/en/collections/3742473-chatgpt
-- 最后更新时间（UTC）：2026-04-12T07:49:34+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:57+00:00
 
 | 项目 | Free套餐 | Go套餐 | Plus套餐 | Pro $100套餐 | Pro $200套餐 |
 | --- | --- | --- | --- | --- | --- |
@@ -115,7 +128,7 @@
 ## Anysphere｜Cursor
 
 - 官方地址：https://cursor.com/pricing
-- 最后更新时间（UTC）：2026-04-12T07:49:35+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:59+00:00
 
 | 项目 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- |
@@ -128,7 +141,7 @@
 ## 月之暗面｜Kimi AI
 
 - 官方地址：https://www.kimi.com/membership/pricing
-- 最后更新时间（UTC）：2026-04-12T07:49:35+00:00
+- 最后更新时间（UTC）：2026-04-12T08:09:59+00:00
 
 | 项目 | Andante套餐 | Moderato套餐 | Allegretto套餐 | Allegro套餐 |
 | --- | --- | --- | --- | --- |

@@ -78,10 +78,11 @@ VENDORS = [
         "vendor_id": "xiaomi-mimo-token-plan",
         "company_name": "小米",
         "plan_name": "Xiaomi MiMo Token Plan",
-        "official_url": "https://platform.xiaomimimo.com/docs/pricing.md",
+        "official_url": "https://platform.xiaomimimo.com/#/token-plan",
         "source_urls": [
-            "https://platform.xiaomimimo.com/#/token-plan",
             "https://platform.xiaomimimo.com/llms.txt",
+            "https://platform.xiaomimimo.com/main.3b886aad.chunk.js",
+            "https://platform.xiaomimimo.com/docs/pricing.md",
             "https://platform.xiaomimimo.com/docs/api/chat/openai-api.md",
             "https://platform.xiaomimimo.com/docs/faq.md",
         ],
@@ -136,5 +137,46 @@ VENDORS = [
             "https://www.kimi.com/apiv2/kimi.gateway.order.v1.GoodsService/ListGoods",
         ],
         "source_module": "catalog.sources.kimi_ai",
+    },
+    {
+        "vendor_id": "xfyun-xingchen-coding-plan",
+        "company_name": "科大讯飞",
+        "plan_name": "讯飞星辰Coding Plan",
+        "official_url": "https://maas.xfyun.cn/packageSubscription?from=packageSubscriptionOverlay",
+        "source_urls": [
+            "https://maas.xfyun.cn/packageSubscription?from=packageSubscriptionOverlay",
+        ],
+        "source_module": "catalog.sources.xfyun_xingchen_coding_plan",
+    },
+    {
+        "vendor_id": "infini-ai-coding-plan",
+        "company_name": "无问芯穹",
+        "plan_name": "无问芯穹Coding Plan",
+        "official_url": "https://cloud.infini-ai.com/platform/ai",
+        "source_urls": [
+            "https://cloud.infini-ai.com/platform/ai",
+            "https://docs.infini-ai.com/gen-studio-coding-plan/",
+        ],
+        "source_module": "catalog.sources.infini_ai_coding_plan",
+    },
+    {
+        "vendor_id": "github-copilot",
+        "company_name": "Microsoft",
+        "plan_name": "GitHub Copilot",
+        "official_url": "https://github.com/features/copilot/plans",
+        "source_urls": [
+            "https://github.com/features/copilot/plans",
+        ],
+        "source_module": "catalog.sources.github_copilot",
+    },
+    {
+        "vendor_id": "claude-code",
+        "company_name": "Anthropic",
+        "plan_name": "Claude Code",
+        "official_url": "https://claude.com/pricing",
+        "source_urls": [
+            "https://claude.com/pricing",
+        ],
+        "source_module": "catalog.sources.claude_code",
     },
 ]

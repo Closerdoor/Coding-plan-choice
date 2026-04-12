@@ -1,8 +1,6 @@
 {
-  "generated_at_utc": "2026-04-12T07:49:35+00:00",
-  "warnings": [
-    "vendor xiaomi-mimo-token-plan: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.xiaomi_mimo_token_plan'"
-  ],
+  "generated_at_utc": "2026-04-12T08:09:59+00:00",
+  "warnings": [],
   "vendors": [
     {
       "vendor_id": "tencent-cloud-coding-plan",
@@ -72,7 +70,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:19+00:00"
+      "updated_at_utc": "2026-04-12T08:09:40+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -138,7 +136,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:21+00:00"
+      "updated_at_utc": "2026-04-12T08:09:42+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -192,7 +190,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:22+00:00"
+      "updated_at_utc": "2026-04-12T08:09:43+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -287,7 +285,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:24+00:00"
+      "updated_at_utc": "2026-04-12T08:09:45+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
@@ -485,7 +483,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:27+00:00"
+      "updated_at_utc": "2026-04-12T08:09:48+00:00"
     },
     {
       "vendor_id": "aliyun-bailian-coding-plan",
@@ -531,7 +529,123 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:30+00:00"
+      "updated_at_utc": "2026-04-12T08:09:53+00:00"
+    },
+    {
+      "vendor_id": "xiaomi-mimo-token-plan",
+      "company_name": "小米",
+      "plan_name": "Xiaomi MiMo Token Plan",
+      "official_url": "https://platform.xiaomimimo.com/#/token-plan",
+      "source_urls": [
+        "https://platform.xiaomimimo.com/llms.txt",
+        "https://platform.xiaomimimo.com/main.3b886aad.chunk.js",
+        "https://platform.xiaomimimo.com/docs/pricing.md",
+        "https://platform.xiaomimimo.com/docs/api/chat/openai-api.md",
+        "https://platform.xiaomimimo.com/docs/faq.md"
+      ],
+      "packages": [
+        {
+          "name": "Lite套餐",
+          "price": "$6/月",
+          "discount": "首购88折",
+          "quota": "60M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费",
+          "models_raw": [
+            "MiMo-V2-Pro",
+            "MiMo-V2-Omni",
+            "MiMo-V2-TTS"
+          ],
+          "tools": [
+            "OpenCode",
+            "Claude Code",
+            "OpenClaw",
+            "Cline",
+            "Kilo Code",
+            "Roo Code",
+            "Codex CLI",
+            "Zed",
+            "Cherry Studio",
+            "Qwen Code"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "Standard套餐",
+          "price": "$16/月",
+          "discount": "首购88折",
+          "quota": "200M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费",
+          "models_raw": [
+            "MiMo-V2-Pro",
+            "MiMo-V2-Omni",
+            "MiMo-V2-TTS"
+          ],
+          "tools": [
+            "OpenCode",
+            "Claude Code",
+            "OpenClaw",
+            "Cline",
+            "Kilo Code",
+            "Roo Code",
+            "Codex CLI",
+            "Zed",
+            "Cherry Studio",
+            "Qwen Code"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro套餐",
+          "price": "$50/月",
+          "discount": "首购88折",
+          "quota": "700M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费",
+          "models_raw": [
+            "MiMo-V2-Pro",
+            "MiMo-V2-Omni",
+            "MiMo-V2-TTS"
+          ],
+          "tools": [
+            "OpenCode",
+            "Claude Code",
+            "OpenClaw",
+            "Cline",
+            "Kilo Code",
+            "Roo Code",
+            "Codex CLI",
+            "Zed",
+            "Cherry Studio",
+            "Qwen Code"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "Max套餐",
+          "price": "$100/月",
+          "discount": "首购88折",
+          "quota": "1600M Credits；MiMo-V2-Omni <256K 按1x消耗，MiMo-V2-Pro <256K 按2x消耗，256K-1M 按4x消耗；MiMo-V2-TTS 限时免费",
+          "models_raw": [
+            "MiMo-V2-Pro",
+            "MiMo-V2-Omni",
+            "MiMo-V2-TTS"
+          ],
+          "tools": [
+            "OpenCode",
+            "Claude Code",
+            "OpenClaw",
+            "Cline",
+            "Kilo Code",
+            "Roo Code",
+            "Codex CLI",
+            "Zed",
+            "Cherry Studio",
+            "Qwen Code"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T08:09:54+00:00"
     },
     {
       "vendor_id": "trae-intl",
@@ -627,7 +741,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:34+00:00"
+      "updated_at_utc": "2026-04-12T08:09:57+00:00"
     },
     {
       "vendor_id": "openai-chatgpt",
@@ -741,7 +855,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:34+00:00"
+      "updated_at_utc": "2026-04-12T08:09:57+00:00"
     },
     {
       "vendor_id": "cursor",
@@ -905,7 +1019,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:35+00:00"
+      "updated_at_utc": "2026-04-12T08:09:59+00:00"
     },
     {
       "vendor_id": "kimi-ai",
@@ -980,7 +1094,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T07:49:35+00:00"
+      "updated_at_utc": "2026-04-12T08:09:59+00:00"
     }
   ]
 }
