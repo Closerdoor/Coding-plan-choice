@@ -12,7 +12,7 @@
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
 - 说明文档：https://cloud.tencent.com/document/product/1823/130092
-- 最后更新时间（UTC）：2026-04-12T02:20:56+00:00
+- 最后更新时间（UTC）：2026-04-12T02:43:15+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -26,7 +26,7 @@
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
 - 说明文档：https://www.volcengine.com/docs/82379/1925114?lang=zh
-- 最后更新时间（UTC）：2026-04-12T02:21:04+00:00
+- 最后更新时间（UTC）：2026-04-12T02:43:17+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -40,7 +40,7 @@
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
 - 说明文档：https://cloud.baidu.com/doc/qianfan/s/imlg0beiu
-- 最后更新时间（UTC）：2026-04-12T02:21:04+00:00
+- 最后更新时间（UTC）：2026-04-12T02:43:18+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -49,3 +49,19 @@
 | 支持模型 | Kimi-K2.5；DeepSeek-V3.2；GLM-5；MiniMax-M2.5 | Kimi-K2.5；DeepSeek-V3.2；GLM-5；MiniMax-M2.5 |
 | 支持工具 | OpenClaw；Claude Code；Qwen Code；Cursor | OpenClaw；Claude Code；Qwen Code；Cursor |
 | 使用方式 | API Key | API Key |
+
+## 智谱AI｜GLM Coding Plan
+
+- 官方地址：https://bigmodel.cn/glm-coding
+- 说明文档：https://docs.bigmodel.cn/cn/coding-plan/overview
+- 补充来源：https://docs.bigmodel.cn/cn/coding-plan/faq
+- 补充来源：https://docs.bigmodel.cn/cn/coding-plan/quick-start
+- 最后更新时间（UTC）：2026-04-12T02:43:38+00:00
+
+| 项目 | lite套餐 | pro套餐 | max套餐 |
+| --- | --- | --- | --- |
+| 价格 | ¥49/月(优惠：首月¥49/月) | ¥149/月(优惠：首月¥149/月) | ¥469/月(优惠：首月¥469/月) |
+| 用量 | 80次prompts/5小时；400次prompts/周 | 400次prompts/5小时；2000次prompts/周 | 1600次prompts/5小时；8000次prompts/周 |
+| 支持模型 | GLM-4.7 | GLM-4.7 | GLM-4.7 |
+| 支持工具 | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy |
+| 使用方式 | API Key | API Key | API Key |

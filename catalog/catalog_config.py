@@ -38,4 +38,16 @@ VENDORS = [
         ],
         "source_module": "catalog.sources.baidu_qianfan_coding_plan",
     },
+    {
+        "vendor_id": "glm-coding-plan",
+        "company_name": "智谱AI",
+        "vendor_name": "GLM Coding Plan",
+        "source_urls": [
+            "https://bigmodel.cn/glm-coding",
+            "https://docs.bigmodel.cn/cn/coding-plan/overview",
+            "https://docs.bigmodel.cn/cn/coding-plan/faq",
+            "https://docs.bigmodel.cn/cn/coding-plan/quick-start",
+        ],
+        "source_module": "catalog.sources.glm_coding_plan",
+    },
 ]
