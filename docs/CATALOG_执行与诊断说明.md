@@ -30,6 +30,12 @@
 1. `CATALOG_PREFLIGHT.json`
 2. `CATALOG_RUN.log`
 
+## PR 分支策略
+
+- 自动更新 workflow 每次都会基于当前 `main` 创建新的唯一分支。
+- 手动讯飞 workflow 也会基于当前 `main` 创建新的唯一分支。
+- 这样可以避免复用旧的 automation 分支，导致历史失败产物再次进入新的 PR。
+
 ## 本地运行
 
 ```powershell

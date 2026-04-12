@@ -56,7 +56,8 @@ jobs:
             - catalog/output/CATALOG_DATA.json
 
             本次自动任务仅更新代码中 `AUTO_UPDATE_VENDOR_IDS` 列表内的厂商。
-          branch: "automation/update-catalog"
+          base: "main"
+          branch: "automation/update-catalog-${{ github.run_id }}"
           delete-branch: true
           add-paths: |
             CATALOG_GENERATED.md
