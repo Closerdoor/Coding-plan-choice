@@ -9,45 +9,11 @@ import urllib.request
 from typing import Dict, List
 
 
-_PACKAGE_ORDER = [
-    ("LEVEL_TRIAL", "Andante套餐"),
-    ("LEVEL_BASIC", "Moderato套餐"),
-    ("LEVEL_INTERMEDIATE", "Allegretto套餐"),
-    ("LEVEL_ADVANCED", "Allegro套餐"),
-]
-
 _PLAN_FEATURES = {
-    "Andante套餐": {
-        "models_raw": ["Kimi"],
-        "tools": ["Kimi Web", "Kimi App"],
-        "access_method": "账号订阅（Kimi Web / App）",
-        "quota": "会员订阅权益，具体额度以官方会员页展示为准",
-    },
-    "Moderato套餐": {
-        "models_raw": ["Kimi"],
-        "tools": ["Kimi Web", "Kimi App"],
-        "access_method": "账号订阅（Kimi Web / App）",
-        "quota": "会员订阅权益，具体额度以官方会员页展示为准",
-    },
-    "Allegretto套餐": {
-        "models_raw": ["Kimi"],
-        "tools": ["Kimi Web", "Kimi App"],
-        "access_method": "账号订阅（Kimi Web / App）",
-        "quota": "会员订阅权益，具体额度以官方会员页展示为准",
-    },
-    "Allegro套餐": {
-        "models_raw": ["Kimi"],
-        "tools": ["Kimi Web", "Kimi App"],
-        "access_method": "账号订阅（Kimi Web / App）",
-        "quota": "会员订阅权益，具体额度以官方会员页展示为准",
-    },
-}
-
-_TITLE_BY_LEVEL = {
-    "LEVEL_TRIAL": "Andante",
-    "LEVEL_BASIC": "Moderato",
-    "LEVEL_INTERMEDIATE": "Allegretto",
-    "LEVEL_ADVANCED": "Allegro",
+    "models_raw": ["Kimi"],
+    "tools": ["Kimi Web", "Kimi App"],
+    "access_method": "账号订阅（Kimi Web / App）",
+    "quota": "会员订阅权益，具体额度以官方会员页展示为准",
 }
 
 
@@ -126,6 +92,33 @@ def _pick_monthly_goods_by_title(
     return monthly_by_title
 
 
+def _monthly_paid_goods(goods: List[Dict[str, object]]) -> List[Dict[str, object]]:
+    paid_goods: List[Dict[str, object]] = []
+    for item in goods:
+        if not isinstance(item, dict) or not _has_monthly_variant(item):
+            continue
+        title = item.get("title")
+        amounts = item.get("amounts")
+        if not isinstance(title, str) or not title.strip():
+            continue
+        if (
+            not isinstance(amounts, list)
+            or not amounts
+            or not isinstance(amounts[0], dict)
+        ):
+            continue
+        amount = amounts[0]
+        price_in_cents = amount.get("priceInCents")
+        currency = amount.get("currency")
+        if currency != "CNY" or not isinstance(price_in_cents, str):
+            continue
+        if item.get("membershipLevel") == "LEVEL_FREE" or price_in_cents == "0":
+            continue
+        paid_goods.append(item)
+    paid_goods.sort(key=lambda item: int(item["amounts"][0]["priceInCents"]))
+    return paid_goods
+
+
 def _title_present_in_official_sources(
     membership_html: str, pricing_bundle: str, title: str
 ) -> bool:
@@ -184,50 +177,42 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
         ],
     )
 
+    paid_goods = _monthly_paid_goods(goods)
+    if not paid_goods:
+        LOGGER.warning(
+            "Kimi diagnostics: failed to find paid monthly goods; available levels=%s titles=%s",
+            sorted(monthly_by_level.keys()),
+            sorted(monthly_by_title.keys()),
+        )
+        raise ValueError("failed to find Kimi paid monthly goods")
+
     packages = []
-    for level, normalized_name in _PACKAGE_ORDER:
-        goods_item = monthly_by_level.get(level)
-        title = _TITLE_BY_LEVEL[level]
-        if not goods_item:
-            goods_item = monthly_by_title.get(title)
-        if not goods_item:
-            for item in filtered_goods:
-                item_title = item.get("title")
-                if isinstance(item_title, str) and item_title.strip() == title:
-                    goods_item = item
-                    break
-        if not goods_item:
-            LOGGER.warning(
-                "Kimi diagnostics: failed to match level=%s title=%s; available levels=%s titles=%s",
-                level,
-                title,
-                sorted(monthly_by_level.keys()),
-                sorted(monthly_by_title.keys()),
-            )
-            raise ValueError(f"failed to find Kimi monthly goods for {level}")
+    for goods_item in paid_goods:
         amounts = goods_item.get("amounts")
         if (
             not isinstance(amounts, list)
             or not amounts
             or not isinstance(amounts[0], dict)
         ):
-            raise ValueError(f"failed to find Kimi amount for {level}")
+            raise ValueError("failed to find Kimi amount for monthly goods")
         amount = amounts[0]
         price_in_cents = amount.get("priceInCents")
         currency = amount.get("currency")
         if currency != "CNY" or not isinstance(price_in_cents, str):
-            raise ValueError(f"failed to parse Kimi monthly price for {level}")
+            raise ValueError("failed to parse Kimi monthly price for monthly goods")
+        title = str(goods_item.get("title", "")).strip()
+        if not title:
+            raise ValueError("failed to find Kimi title for monthly goods")
 
-        features = _PLAN_FEATURES[normalized_name]
         packages.append(
             {
-                "name": normalized_name,
+                "name": f"{title}套餐",
                 "price": _format_cny(price_in_cents),
                 "discount": "",
-                "quota": features["quota"],
-                "models_raw": features["models_raw"],
-                "tools": features["tools"],
-                "access_method": features["access_method"],
+                "quota": _PLAN_FEATURES["quota"],
+                "models_raw": _PLAN_FEATURES["models_raw"],
+                "tools": _PLAN_FEATURES["tools"],
+                "access_method": _PLAN_FEATURES["access_method"],
             }
         )
 
