@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-12T03:37:56+00:00",
+  "generated_at_utc": "2026-04-12T03:49:47+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -70,7 +70,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:37:40+00:00"
+      "updated_at_utc": "2026-04-12T03:49:38+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -136,7 +136,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:37:52+00:00"
+      "updated_at_utc": "2026-04-12T03:49:40+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -190,7 +190,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:37:53+00:00"
+      "updated_at_utc": "2026-04-12T03:49:40+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -285,7 +285,205 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:37:56+00:00"
+      "updated_at_utc": "2026-04-12T03:49:42+00:00"
+    },
+    {
+      "vendor_id": "minimax-token-plan",
+      "company_name": "MiniMax",
+      "vendor_name": "MiniMax Token Plan",
+      "official_sources": [
+        "https://platform.minimaxi.com/subscribe/token-plan",
+        "https://platform.minimaxi.com/docs/token-plan/intro",
+        "https://platform.minimaxi.com/docs/guides/pricing-token-plan",
+        "https://platform.minimaxi.com/docs/guides/text-ai-coding-tools"
+      ],
+      "packages": [
+        {
+          "name": "starter套餐",
+          "price": "¥29/月",
+          "discount": "",
+          "quota": "M2.7：600次请求/5小时；Music-2.6：100首/天（限免）（每首<=5分钟）",
+          "models_raw": [
+            "M2.7",
+            "Music-2.6"
+          ],
+          "tools": [
+            "Claude Code",
+            "Cursor",
+            "TRAE",
+            "OpenCode",
+            "Kilo Code",
+            "OpenClaw",
+            "Hermes Agent",
+            "Cline",
+            "Roo Code",
+            "Grok CLI",
+            "Codex CLI",
+            "Droid",
+            "Zed",
+            "MonkeyCode"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "plus套餐",
+          "price": "¥49/月",
+          "discount": "",
+          "quota": "M2.7：1,500次请求/5小时；Speech 2.8：4,000字符/日；image-01：50张/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+          "models_raw": [
+            "M2.7",
+            "Speech 2.8",
+            "image-01",
+            "Music-2.6"
+          ],
+          "tools": [
+            "Claude Code",
+            "Cursor",
+            "TRAE",
+            "OpenCode",
+            "Kilo Code",
+            "OpenClaw",
+            "Hermes Agent",
+            "Cline",
+            "Roo Code",
+            "Grok CLI",
+            "Codex CLI",
+            "Droid",
+            "Zed",
+            "MonkeyCode"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "max套餐",
+          "price": "¥119/月",
+          "discount": "",
+          "quota": "M2.7：4,500次请求/5小时；Speech 2.8：11,000字符/日；image-01：120张/日；Hailuo-2.3-Fast 768P 6s：2个/日；Hailuo-2.3 768P 6s：2个/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+          "models_raw": [
+            "M2.7",
+            "Speech 2.8",
+            "image-01",
+            "Hailuo-2.3-Fast 768P 6s",
+            "Hailuo-2.3 768P 6s",
+            "Music-2.6"
+          ],
+          "tools": [
+            "Claude Code",
+            "Cursor",
+            "TRAE",
+            "OpenCode",
+            "Kilo Code",
+            "OpenClaw",
+            "Hermes Agent",
+            "Cline",
+            "Roo Code",
+            "Grok CLI",
+            "Codex CLI",
+            "Droid",
+            "Zed",
+            "MonkeyCode"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "plus-极速版",
+          "price": "¥98/月",
+          "discount": "",
+          "quota": "M2.7-highspeed：1,500次请求/5小时；Speech 2.8：9,000字符/日；image-01：100张/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+          "models_raw": [
+            "M2.7-highspeed",
+            "Speech 2.8",
+            "image-01",
+            "Music-2.6"
+          ],
+          "tools": [
+            "Claude Code",
+            "Cursor",
+            "TRAE",
+            "OpenCode",
+            "Kilo Code",
+            "OpenClaw",
+            "Hermes Agent",
+            "Cline",
+            "Roo Code",
+            "Grok CLI",
+            "Codex CLI",
+            "Droid",
+            "Zed",
+            "MonkeyCode"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "max-极速版",
+          "price": "¥199/月",
+          "discount": "",
+          "quota": "M2.7-highspeed：4,500次请求/5小时；Speech 2.8：19,000字符/日；image-01：200张/日；Hailuo-2.3-Fast 768P 6s：3个/日；Hailuo-2.3 768P 6s：3个/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+          "models_raw": [
+            "M2.7-highspeed",
+            "Speech 2.8",
+            "image-01",
+            "Hailuo-2.3-Fast 768P 6s",
+            "Hailuo-2.3 768P 6s",
+            "Music-2.6"
+          ],
+          "tools": [
+            "Claude Code",
+            "Cursor",
+            "TRAE",
+            "OpenCode",
+            "Kilo Code",
+            "OpenClaw",
+            "Hermes Agent",
+            "Cline",
+            "Roo Code",
+            "Grok CLI",
+            "Codex CLI",
+            "Droid",
+            "Zed",
+            "MonkeyCode"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "ultra-极速版",
+          "price": "¥899/月",
+          "discount": "",
+          "quota": "M2.7-highspeed：30,000次请求/5小时；Speech 2.8：50,000字符/日；image-01：800张/日；Hailuo-2.3-Fast 768P 6s：5个/日；Hailuo-2.3 768P 6s：5个/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+          "models_raw": [
+            "M2.7-highspeed",
+            "Speech 2.8",
+            "image-01",
+            "Hailuo-2.3-Fast 768P 6s",
+            "Hailuo-2.3 768P 6s",
+            "Music-2.6"
+          ],
+          "tools": [
+            "Claude Code",
+            "Cursor",
+            "TRAE",
+            "OpenCode",
+            "Kilo Code",
+            "OpenClaw",
+            "Hermes Agent",
+            "Cline",
+            "Roo Code",
+            "Grok CLI",
+            "Codex CLI",
+            "Droid",
+            "Zed",
+            "MonkeyCode"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T03:49:47+00:00"
     }
   ]
 }

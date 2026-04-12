@@ -50,4 +50,16 @@ VENDORS = [
         ],
         "source_module": "catalog.sources.glm_coding_plan",
     },
+    {
+        "vendor_id": "minimax-token-plan",
+        "company_name": "MiniMax",
+        "vendor_name": "MiniMax Token Plan",
+        "source_urls": [
+            "https://platform.minimaxi.com/subscribe/token-plan",
+            "https://platform.minimaxi.com/docs/token-plan/intro",
+            "https://platform.minimaxi.com/docs/guides/pricing-token-plan",
+            "https://platform.minimaxi.com/docs/guides/text-ai-coding-tools",
+        ],
+        "source_module": "catalog.sources.minimax_token_plan",
+    },
 ]

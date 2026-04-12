@@ -125,6 +125,142 @@ class TestCatalogRender(unittest.TestCase):
             _normalize_timestamp(update._render_catalog_md(vendors)), expected
         )
 
+    def test_render_matches_catalog_template_for_minimax(self) -> None:
+        vendors = [
+            {
+                "vendor_id": "minimax-token-plan",
+                "company_name": "MiniMax",
+                "vendor_name": "MiniMax Token Plan",
+                "official_sources": [
+                    "https://platform.minimaxi.com/subscribe/token-plan",
+                    "https://platform.minimaxi.com/docs/token-plan/intro",
+                    "https://platform.minimaxi.com/docs/guides/pricing-token-plan",
+                    "https://platform.minimaxi.com/docs/guides/text-ai-coding-tools",
+                ],
+                "updated_at_utc": "2026-04-12T00:00:00+00:00",
+                "packages": [
+                    {
+                        "name": "starter套餐",
+                        "price": "¥29/月",
+                        "discount": "",
+                        "quota": "M2.7：600次请求/5小时；Music-2.6：100首/天（限免）（每首<=5分钟）",
+                        "models_raw": ["M2.7", "Music-2.6"],
+                        "models_filtered": [],
+                        "tools": ["Claude Code", "Cursor", "TRAE", "OpenCode"],
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+                    },
+                    {
+                        "name": "plus套餐",
+                        "price": "¥49/月",
+                        "discount": "",
+                        "quota": "M2.7：1,500次请求/5小时；Speech 2.8：4,000字符/日；image-01：50张/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+                        "models_raw": ["M2.7", "Speech 2.8", "image-01", "Music-2.6"],
+                        "models_filtered": [],
+                        "tools": ["Claude Code", "Cursor", "TRAE", "OpenCode"],
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+                    },
+                    {
+                        "name": "max套餐",
+                        "price": "¥119/月",
+                        "discount": "",
+                        "quota": "M2.7：4,500次请求/5小时；Speech 2.8：11,000字符/日；image-01：120张/日；Hailuo-2.3-Fast 768P 6s：2个/日；Hailuo-2.3 768P 6s：2个/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+                        "models_raw": [
+                            "M2.7",
+                            "Speech 2.8",
+                            "image-01",
+                            "Hailuo-2.3-Fast 768P 6s",
+                            "Hailuo-2.3 768P 6s",
+                            "Music-2.6",
+                        ],
+                        "models_filtered": [],
+                        "tools": ["Claude Code", "Cursor", "TRAE", "OpenCode"],
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+                    },
+                    {
+                        "name": "plus-极速版",
+                        "price": "¥98/月",
+                        "discount": "",
+                        "quota": "M2.7-highspeed：1,500次请求/5小时；Speech 2.8：9,000字符/日；image-01：100张/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+                        "models_raw": [
+                            "M2.7-highspeed",
+                            "Speech 2.8",
+                            "image-01",
+                            "Music-2.6",
+                        ],
+                        "models_filtered": [],
+                        "tools": ["Claude Code", "Cursor", "TRAE", "OpenCode"],
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+                    },
+                    {
+                        "name": "max-极速版",
+                        "price": "¥199/月",
+                        "discount": "",
+                        "quota": "M2.7-highspeed：4,500次请求/5小时；Speech 2.8：19,000字符/日；image-01：200张/日；Hailuo-2.3-Fast 768P 6s：3个/日；Hailuo-2.3 768P 6s：3个/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+                        "models_raw": [
+                            "M2.7-highspeed",
+                            "Speech 2.8",
+                            "image-01",
+                            "Hailuo-2.3-Fast 768P 6s",
+                            "Hailuo-2.3 768P 6s",
+                            "Music-2.6",
+                        ],
+                        "models_filtered": [],
+                        "tools": ["Claude Code", "Cursor", "TRAE", "OpenCode"],
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+                    },
+                    {
+                        "name": "ultra-极速版",
+                        "price": "¥899/月",
+                        "discount": "",
+                        "quota": "M2.7-highspeed：30,000次请求/5小时；Speech 2.8：50,000字符/日；image-01：800张/日；Hailuo-2.3-Fast 768P 6s：5个/日；Hailuo-2.3 768P 6s：5个/日；Music-2.6：100首/天（限免）（每首<=5分钟）",
+                        "models_raw": [
+                            "M2.7-highspeed",
+                            "Speech 2.8",
+                            "image-01",
+                            "Hailuo-2.3-Fast 768P 6s",
+                            "Hailuo-2.3 768P 6s",
+                            "Music-2.6",
+                        ],
+                        "models_filtered": [],
+                        "tools": ["Claude Code", "Cursor", "TRAE", "OpenCode"],
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+                    },
+                ],
+            }
+        ]
+
+        expected = (
+            "# AI 模型与 Coding Plan 套餐汇总\n"
+            "\n"
+            "说明：\n"
+            "- 本文档用于集中展示各厂商的模型/套餐信息。\n"
+            "- 所有价格与用量信息以官方页面为准，并在条目中标注信息源链接。\n"
+            "- 币种按厂商原始币种展示（CN=CNY，US=USD）。\n"
+            "- 最后更新时间使用 UTC（由自动更新流程填写）。\n"
+            "\n"
+            "---\n"
+            "\n"
+            "## MiniMax｜MiniMax Token Plan\n"
+            "\n"
+            "- 官方地址：https://platform.minimaxi.com/subscribe/token-plan\n"
+            "- 说明文档：https://platform.minimaxi.com/docs/token-plan/intro\n"
+            "- 补充来源：https://platform.minimaxi.com/docs/guides/pricing-token-plan\n"
+            "- 补充来源：https://platform.minimaxi.com/docs/guides/text-ai-coding-tools\n"
+            "- 最后更新时间（UTC）：<normalized>\n"
+            "\n"
+            "| 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |\n"
+            "| --- | --- | --- | --- | --- | --- | --- |\n"
+            "| 价格 | ¥29/月 | ¥49/月 | ¥119/月 | ¥98/月 | ¥199/月 | ¥899/月 |\n"
+            "| 用量 | M2.7：600次请求/5小时；Music-2.6：100首/天（限免）（每首<=5分钟） | M2.7：1,500次请求/5小时；Speech 2.8：4,000字符/日；image-01：50张/日；Music-2.6：100首/天（限免）（每首<=5分钟） | M2.7：4,500次请求/5小时；Speech 2.8：11,000字符/日；image-01：120张/日；Hailuo-2.3-Fast 768P 6s：2个/日；Hailuo-2.3 768P 6s：2个/日；Music-2.6：100首/天（限免）（每首<=5分钟） | M2.7-highspeed：1,500次请求/5小时；Speech 2.8：9,000字符/日；image-01：100张/日；Music-2.6：100首/天（限免）（每首<=5分钟） | M2.7-highspeed：4,500次请求/5小时；Speech 2.8：19,000字符/日；image-01：200张/日；Hailuo-2.3-Fast 768P 6s：3个/日；Hailuo-2.3 768P 6s：3个/日；Music-2.6：100首/天（限免）（每首<=5分钟） | M2.7-highspeed：30,000次请求/5小时；Speech 2.8：50,000字符/日；image-01：800张/日；Hailuo-2.3-Fast 768P 6s：5个/日；Hailuo-2.3 768P 6s：5个/日；Music-2.6：100首/天（限免）（每首<=5分钟） |\n"
+            "| 支持模型 | M2.7；Music-2.6 | M2.7；Speech 2.8；image-01；Music-2.6 | M2.7；Speech 2.8；image-01；Hailuo-2.3-Fast 768P 6s；Hailuo-2.3 768P 6s；Music-2.6 | M2.7-highspeed；Speech 2.8；image-01；Music-2.6 | M2.7-highspeed；Speech 2.8；image-01；Hailuo-2.3-Fast 768P 6s；Hailuo-2.3 768P 6s；Music-2.6 | M2.7-highspeed；Speech 2.8；image-01；Hailuo-2.3-Fast 768P 6s；Hailuo-2.3 768P 6s；Music-2.6 |\n"
+            "| 支持工具 | Claude Code；Cursor；TRAE；OpenCode | Claude Code；Cursor；TRAE；OpenCode | Claude Code；Cursor；TRAE；OpenCode | Claude Code；Cursor；TRAE；OpenCode | Claude Code；Cursor；TRAE；OpenCode | Claude Code；Cursor；TRAE；OpenCode |\n"
+            "| 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |\n"
+        )
+
+        self.assertEqual(
+            _normalize_timestamp(update._render_catalog_md(vendors)), expected
+        )
+
 
 if __name__ == "__main__":
     raise SystemExit(unittest.main())
