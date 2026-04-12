@@ -42,7 +42,8 @@ jobs:
             - rankings/output/MODEL_RANKING.md
             - rankings/output/MODEL_SCORES.json
             - rankings/output/MODEL_TOP3.md
-          branch: "automation/update-model-rankings"
+          base: "main"
+          branch: "automation/update-model-rankings-${{ github.run_id }}"
           delete-branch: true
           add-paths: |
             rankings/output/MODEL_RANKING.md
