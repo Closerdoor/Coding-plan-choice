@@ -62,4 +62,16 @@ VENDORS = [
         ],
         "source_module": "catalog.sources.minimax_token_plan",
     },
+    {
+        "vendor_id": "aliyun-bailian-coding-plan",
+        "company_name": "阿里",
+        "plan_name": "阿里云百炼Coding plan",
+        "official_url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+        "source_urls": [
+            "https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio",
+            "https://help.aliyun.com/zh/model-studio/use-chat-client-or-development-tool/",
+            "https://help.aliyun.com/zh/model-studio/models",
+        ],
+        "source_module": "catalog.sources.aliyun_bailian_coding_plan",
+    },
 ]

@@ -12,7 +12,7 @@
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
 - 说明文档：https://cloud.tencent.com/document/product/1823/130092
-- 最后更新时间（UTC）：2026-04-12T04:36:59+00:00
+- 最后更新时间（UTC）：2026-04-12T04:56:03+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -26,7 +26,7 @@
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
 - 说明文档：https://www.volcengine.com/docs/82379/1925114?lang=zh
-- 最后更新时间（UTC）：2026-04-12T04:37:05+00:00
+- 最后更新时间（UTC）：2026-04-12T04:56:05+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -40,7 +40,7 @@
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
 - 说明文档：https://cloud.baidu.com/doc/qianfan/s/imlg0beiu
-- 最后更新时间（UTC）：2026-04-12T04:37:06+00:00
+- 最后更新时间（UTC）：2026-04-12T04:56:06+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -56,7 +56,7 @@
 - 说明文档：https://docs.bigmodel.cn/cn/coding-plan/overview
 - 补充来源：https://docs.bigmodel.cn/cn/coding-plan/faq
 - 补充来源：https://docs.bigmodel.cn/cn/coding-plan/quick-start
-- 最后更新时间（UTC）：2026-04-12T04:37:08+00:00
+- 最后更新时间（UTC）：2026-04-12T04:56:08+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@
 - 说明文档：https://platform.minimaxi.com/docs/token-plan/intro
 - 补充来源：https://platform.minimaxi.com/docs/guides/pricing-token-plan
 - 补充来源：https://platform.minimaxi.com/docs/guides/text-ai-coding-tools
-- 最后更新时间（UTC）：2026-04-12T04:37:13+00:00
+- 最后更新时间（UTC）：2026-04-12T04:56:11+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -81,3 +81,19 @@
 | 支持模型 | M2.7；Music-2.6 | M2.7；Speech 2.8；image-01；Music-2.6 | M2.7；Speech 2.8；image-01；Hailuo-2.3-Fast 768P 6s；Hailuo-2.3 768P 6s；Music-2.6 | M2.7-highspeed；Speech 2.8；image-01；Music-2.6 | M2.7-highspeed；Speech 2.8；image-01；Hailuo-2.3-Fast 768P 6s；Hailuo-2.3 768P 6s；Music-2.6 | M2.7-highspeed；Speech 2.8；image-01；Hailuo-2.3-Fast 768P 6s；Hailuo-2.3 768P 6s；Music-2.6 |
 | 支持工具 | Claude Code；Cursor；TRAE；OpenCode；Kilo Code；OpenClaw；Hermes Agent；Cline；Roo Code；Grok CLI；Codex CLI；Droid；Zed；MonkeyCode | Claude Code；Cursor；TRAE；OpenCode；Kilo Code；OpenClaw；Hermes Agent；Cline；Roo Code；Grok CLI；Codex CLI；Droid；Zed；MonkeyCode | Claude Code；Cursor；TRAE；OpenCode；Kilo Code；OpenClaw；Hermes Agent；Cline；Roo Code；Grok CLI；Codex CLI；Droid；Zed；MonkeyCode | Claude Code；Cursor；TRAE；OpenCode；Kilo Code；OpenClaw；Hermes Agent；Cline；Roo Code；Grok CLI；Codex CLI；Droid；Zed；MonkeyCode | Claude Code；Cursor；TRAE；OpenCode；Kilo Code；OpenClaw；Hermes Agent；Cline；Roo Code；Grok CLI；Codex CLI；Droid；Zed；MonkeyCode | Claude Code；Cursor；TRAE；OpenCode；Kilo Code；OpenClaw；Hermes Agent；Cline；Roo Code；Grok CLI；Codex CLI；Droid；Zed；MonkeyCode |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
+
+## 阿里｜阿里云百炼Coding plan
+
+- 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
+- 说明文档：https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio
+- 补充来源：https://help.aliyun.com/zh/model-studio/use-chat-client-or-development-tool/
+- 补充来源：https://help.aliyun.com/zh/model-studio/models
+- 最后更新时间（UTC）：2026-04-12T04:56:15+00:00
+
+| 项目 | pro套餐 |
+| --- | --- |
+| 价格 | ¥200/月 |
+| 用量 | 6000次请求/5小时；45000次请求/周；90000次请求/月 |
+| 支持模型 | Qwen3.6-Plus；Kimi-K2.5；GLM-5；MiniMax-M2.5；Qwen3.5-Plus；Qwen3-Max-2026-01-23；Qwen3-Coder-Next；Qwen3-Coder-Plus；GLM-4.7 |
+| 支持工具 | OpenClaw；OpenCode；Claude Code；Cline；Cursor；Qwen Code；Qoder；Lingma；Kilo Code；Kilo CLI；Codex |
+| 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） |

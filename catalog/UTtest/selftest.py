@@ -261,6 +261,88 @@ class TestCatalogRender(unittest.TestCase):
             _normalize_timestamp(update._render_catalog_md(vendors)), expected
         )
 
+    def test_render_matches_catalog_template_for_aliyun(self) -> None:
+        vendors = [
+            {
+                "vendor_id": "aliyun-bailian-coding-plan",
+                "company_name": "阿里",
+                "plan_name": "阿里云百炼Coding plan",
+                "official_url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+                "source_urls": [
+                    "https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio",
+                    "https://help.aliyun.com/zh/model-studio/use-chat-client-or-development-tool/",
+                    "https://help.aliyun.com/zh/model-studio/models",
+                ],
+                "updated_at_utc": "2026-04-12T00:00:00+00:00",
+                "packages": [
+                    {
+                        "name": "pro套餐",
+                        "price": "¥200/月",
+                        "discount": "",
+                        "quota": "6000次请求/5小时；45000次请求/周；90000次请求/月",
+                        "models_raw": [
+                            "Qwen3.6-Plus",
+                            "Kimi-K2.5",
+                            "GLM-5",
+                            "MiniMax-M2.5",
+                            "Qwen3.5-Plus",
+                            "Qwen3-Max-2026-01-23",
+                            "Qwen3-Coder-Next",
+                            "Qwen3-Coder-Plus",
+                            "GLM-4.7",
+                        ],
+                        "models_filtered": [],
+                        "tools": [
+                            "OpenClaw",
+                            "OpenCode",
+                            "Claude Code",
+                            "Cline",
+                            "Cursor",
+                            "Qwen Code",
+                            "Qoder",
+                            "Lingma",
+                            "Kilo Code",
+                            "Kilo CLI",
+                            "Codex",
+                        ],
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+                    }
+                ],
+            }
+        ]
+
+        expected = (
+            "# AI 模型与 Coding Plan 套餐汇总\n"
+            "\n"
+            "说明：\n"
+            "- 本文档用于集中展示各厂商的模型/套餐信息。\n"
+            "- 所有价格与用量信息以官方页面为准，并在条目中标注信息源链接。\n"
+            "- 币种按厂商原始币种展示（CN=CNY，US=USD）。\n"
+            "- 最后更新时间使用 UTC（由自动更新流程填写）。\n"
+            "\n"
+            "---\n"
+            "\n"
+            "## 阿里｜阿里云百炼Coding plan\n"
+            "\n"
+            "- 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan\n"
+            "- 说明文档：https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio\n"
+            "- 补充来源：https://help.aliyun.com/zh/model-studio/use-chat-client-or-development-tool/\n"
+            "- 补充来源：https://help.aliyun.com/zh/model-studio/models\n"
+            "- 最后更新时间（UTC）：<normalized>\n"
+            "\n"
+            "| 项目 | pro套餐 |\n"
+            "| --- | --- |\n"
+            "| 价格 | ¥200/月 |\n"
+            "| 用量 | 6000次请求/5小时；45000次请求/周；90000次请求/月 |\n"
+            "| 支持模型 | Qwen3.6-Plus；Kimi-K2.5；GLM-5；MiniMax-M2.5；Qwen3.5-Plus；Qwen3-Max-2026-01-23；Qwen3-Coder-Next；Qwen3-Coder-Plus；GLM-4.7 |\n"
+            "| 支持工具 | OpenClaw；OpenCode；Claude Code；Cline；Cursor；Qwen Code；Qoder；Lingma；Kilo Code；Kilo CLI；Codex |\n"
+            "| 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） |\n"
+        )
+
+        self.assertEqual(
+            _normalize_timestamp(update._render_catalog_md(vendors)), expected
+        )
+
 
 if __name__ == "__main__":
     raise SystemExit(unittest.main())

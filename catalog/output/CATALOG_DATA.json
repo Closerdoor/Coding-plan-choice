@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-12T04:37:13+00:00",
+  "generated_at_utc": "2026-04-12T04:56:15+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -70,7 +70,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T04:36:59+00:00"
+      "updated_at_utc": "2026-04-12T04:56:03+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -136,7 +136,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T04:37:05+00:00"
+      "updated_at_utc": "2026-04-12T04:56:05+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -190,7 +190,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T04:37:06+00:00"
+      "updated_at_utc": "2026-04-12T04:56:06+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -285,7 +285,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T04:37:08+00:00"
+      "updated_at_utc": "2026-04-12T04:56:08+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
@@ -483,7 +483,53 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T04:37:13+00:00"
+      "updated_at_utc": "2026-04-12T04:56:11+00:00"
+    },
+    {
+      "vendor_id": "aliyun-bailian-coding-plan",
+      "company_name": "阿里",
+      "plan_name": "阿里云百炼Coding plan",
+      "official_url": "https://help.aliyun.com/zh/model-studio/coding-plan",
+      "source_urls": [
+        "https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio",
+        "https://help.aliyun.com/zh/model-studio/use-chat-client-or-development-tool/",
+        "https://help.aliyun.com/zh/model-studio/models"
+      ],
+      "packages": [
+        {
+          "name": "pro套餐",
+          "price": "¥200/月",
+          "discount": "",
+          "quota": "6000次请求/5小时；45000次请求/周；90000次请求/月",
+          "models_raw": [
+            "Qwen3.6-Plus",
+            "Kimi-K2.5",
+            "GLM-5",
+            "MiniMax-M2.5",
+            "Qwen3.5-Plus",
+            "Qwen3-Max-2026-01-23",
+            "Qwen3-Coder-Next",
+            "Qwen3-Coder-Plus",
+            "GLM-4.7"
+          ],
+          "tools": [
+            "OpenClaw",
+            "OpenCode",
+            "Claude Code",
+            "Cline",
+            "Cursor",
+            "Qwen Code",
+            "Qoder",
+            "Lingma",
+            "Kilo Code",
+            "Kilo CLI",
+            "Codex"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T04:56:15+00:00"
     }
   ]
 }
