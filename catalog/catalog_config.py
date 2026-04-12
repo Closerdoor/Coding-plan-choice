@@ -17,5 +17,15 @@ VENDORS = [
             "https://cloud.tencent.com/document/product/1823/130092",
         ],
         "source_module": "catalog.sources.tencent_cloud_coding_plan",
-    }
+    },
+    {
+        "vendor_id": "volcengine-coding-plan",
+        "company_name": "火山方舟",
+        "vendor_name": "火山方舟 Coding Plan",
+        "source_urls": [
+            "https://www.volcengine.com/activity/codingplan",
+            "https://www.volcengine.com/docs/82379/1925114?lang=zh",
+        ],
+        "source_module": "catalog.sources.volcengine_coding_plan",
+    },
 ]

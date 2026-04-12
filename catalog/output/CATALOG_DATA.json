@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-11T16:02:58+00:00",
+  "generated_at_utc": "2026-04-11T16:36:34+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -78,7 +78,83 @@
           ]
         }
       ],
-      "updated_at_utc": "2026-04-11T16:02:58+00:00"
+      "updated_at_utc": "2026-04-11T16:36:23+00:00"
+    },
+    {
+      "vendor_id": "volcengine-coding-plan",
+      "company_name": "火山方舟",
+      "vendor_name": "火山方舟 Coding Plan",
+      "official_sources": [
+        "https://www.volcengine.com/activity/codingplan",
+        "https://www.volcengine.com/docs/82379/1925114?lang=zh"
+      ],
+      "packages": [
+        {
+          "name": "lite套餐",
+          "price": "¥40/月",
+          "discount": "首月¥9.9/月",
+          "quota": "用量达 Claude Pro 的 3 倍",
+          "models_raw": [
+            "Auto",
+            "Doubao-Seed-2.0-pro",
+            "Doubao-Seed-Code",
+            "MiniMax-M2.5",
+            "Kimi-K2.5",
+            "GLM-4.7",
+            "DeepSeek-V3.2"
+          ],
+          "tools": [
+            "OpenClaw",
+            "Claude Code",
+            "Cursor",
+            "Cline",
+            "Codex CLI",
+            "Kilo Code",
+            "Roo Code",
+            "OpenCode"
+          ],
+          "access_method": "API Key",
+          "models_filtered": [
+            "MiniMax-M2.5",
+            "Kimi-K2.5",
+            "GLM-4.7",
+            "DeepSeek-V3.2"
+          ]
+        },
+        {
+          "name": "pro套餐",
+          "price": "¥200/月",
+          "discount": "首月¥49.9/月",
+          "quota": "用量达 Claude Max（5x）的 3 倍，lite 套餐用量的5倍",
+          "models_raw": [
+            "Auto",
+            "Doubao-Seed-2.0-pro",
+            "Doubao-Seed-Code",
+            "MiniMax-M2.5",
+            "Kimi-K2.5",
+            "GLM-4.7",
+            "DeepSeek-V3.2"
+          ],
+          "tools": [
+            "OpenClaw",
+            "Claude Code",
+            "Cursor",
+            "Cline",
+            "Codex CLI",
+            "Kilo Code",
+            "Roo Code",
+            "OpenCode"
+          ],
+          "access_method": "API Key",
+          "models_filtered": [
+            "MiniMax-M2.5",
+            "Kimi-K2.5",
+            "GLM-4.7",
+            "DeepSeek-V3.2"
+          ]
+        }
+      ],
+      "updated_at_utc": "2026-04-11T16:36:34+00:00"
     }
   ]
 }
