@@ -69,7 +69,15 @@ def _extract_price(pricing_html: str, package_name: str) -> str:
 def _extract_discount(pricing_html: str, package_name: str) -> str:
     if package_name != "Pro":
         return ""
-    if "Free for 7 days" not in pricing_html or "$10/month" not in pricing_html:
+    trial_markers = [
+        "Free for 7 days",
+        "7 days",
+        "$10/month",
+        "$10 per month",
+        "Then $10",
+    ]
+    matched_markers = sum(1 for marker in trial_markers if marker in pricing_html)
+    if matched_markers < 2:
         raise ValueError("failed to confirm TRAE Pro trial discount")
     return "前7天免费"
 

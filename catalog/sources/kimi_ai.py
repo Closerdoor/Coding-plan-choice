@@ -128,6 +128,14 @@ def _title_present_in_official_sources(
     return title in membership_html or title in pricing_bundle
 
 
+def _has_monthly_variant(item: Dict[str, object]) -> bool:
+    billing_cycle = item.get("billingCycle")
+    return (
+        isinstance(billing_cycle, dict)
+        and billing_cycle.get("timeUnit") == "TIME_UNIT_MONTH"
+    )
+
+
 def fetch(config: Dict[str, object]) -> Dict[str, object]:
     official_url = config["official_url"]
     source_urls = config["source_urls"]
@@ -150,6 +158,10 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
     monthly_by_level = _pick_monthly_goods(goods)
     monthly_by_title = _pick_monthly_goods_by_title(goods)
 
+    filtered_goods = [
+        item for item in goods if isinstance(item, dict) and _has_monthly_variant(item)
+    ]
+
     packages = []
     for level, normalized_name in _PACKAGE_ORDER:
         goods_item = monthly_by_level.get(level)
@@ -159,6 +171,12 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
                 membership_html, pricing_bundle, title
             ):
                 goods_item = monthly_by_title.get(title)
+        if not goods_item:
+            for item in filtered_goods:
+                title = item.get("title")
+                if isinstance(title, str) and title.strip() == _TITLE_BY_LEVEL[level]:
+                    goods_item = item
+                    break
         if not goods_item:
             raise ValueError(f"failed to find Kimi monthly goods for {level}")
         amounts = goods_item.get("amounts")
