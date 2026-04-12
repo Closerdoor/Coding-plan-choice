@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-12T08:09:59+00:00",
+  "generated_at_utc": "2026-04-12T08:52:23+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -70,7 +70,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:40+00:00"
+      "updated_at_utc": "2026-04-12T08:51:58+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -136,7 +136,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:42+00:00"
+      "updated_at_utc": "2026-04-12T08:52:00+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -190,7 +190,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:43+00:00"
+      "updated_at_utc": "2026-04-12T08:52:01+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -285,7 +285,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:45+00:00"
+      "updated_at_utc": "2026-04-12T08:52:03+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
@@ -483,7 +483,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:48+00:00"
+      "updated_at_utc": "2026-04-12T08:52:06+00:00"
     },
     {
       "vendor_id": "aliyun-bailian-coding-plan",
@@ -529,7 +529,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:53+00:00"
+      "updated_at_utc": "2026-04-12T08:52:09+00:00"
     },
     {
       "vendor_id": "xiaomi-mimo-token-plan",
@@ -645,7 +645,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:54+00:00"
+      "updated_at_utc": "2026-04-12T08:52:10+00:00"
     },
     {
       "vendor_id": "trae-intl",
@@ -741,7 +741,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:57+00:00"
+      "updated_at_utc": "2026-04-12T08:52:14+00:00"
     },
     {
       "vendor_id": "openai-chatgpt",
@@ -855,7 +855,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:57+00:00"
+      "updated_at_utc": "2026-04-12T08:52:14+00:00"
     },
     {
       "vendor_id": "cursor",
@@ -1019,7 +1019,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:59+00:00"
+      "updated_at_utc": "2026-04-12T08:52:15+00:00"
     },
     {
       "vendor_id": "kimi-ai",
@@ -1094,7 +1094,344 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T08:09:59+00:00"
+      "updated_at_utc": "2026-04-12T08:52:15+00:00"
+    },
+    {
+      "vendor_id": "xfyun-xingchen-coding-plan",
+      "company_name": "科大讯飞",
+      "plan_name": "讯飞星辰Coding Plan",
+      "official_url": "https://maas.xfyun.cn/packageSubscription?from=packageSubscriptionOverlay",
+      "source_urls": [
+        "https://maas.xfyun.cn/packageSubscription?from=packageSubscriptionOverlay",
+        "https://maas.xfyun.cn/js/index-68edb439.js"
+      ],
+      "packages": [
+        {
+          "name": "Coding Plan套餐",
+          "price": "价格以登录后官方套餐页为准",
+          "discount": "",
+          "quota": "官方静态文案可确认平台赠送 500w tokens + 2QPS；启用后付费后按实际调用实时扣费",
+          "models_raw": [],
+          "tools": [
+            "HTTP API",
+            "WebSocket API"
+          ],
+          "access_method": "服务认证信息 + 接口地址（Http / WebSocket 协议）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T08:52:16+00:00"
+    },
+    {
+      "vendor_id": "infini-ai-coding-plan",
+      "company_name": "无问芯穹",
+      "plan_name": "无问芯穹Coding Plan",
+      "official_url": "https://docs.infini-ai.com/gen-studio-coding-plan/",
+      "source_urls": [
+        "https://cloud.infini-ai.com/platform/ai",
+        "https://docs.infini-ai.com/gen-studio-coding-plan/",
+        "https://docs.infini-ai.com/gen-studio-coding-plan/supported-models.html",
+        "https://docs.infini-ai.com/shared/gen-studio/coding-tools/cp-use-cursor.html",
+        "https://docs.infini-ai.com/shared/gen-studio/coding-tools/cp-use-claude-code.html"
+      ],
+      "packages": [
+        {
+          "name": "Lite套餐",
+          "price": "¥40/月",
+          "discount": "",
+          "quota": "1000次请求/5小时；6000次请求/7天；12000次请求/月",
+          "models_raw": [
+            "deepseek-v3.2",
+            "deepseek-v3.2-thinking",
+            "kimi-k2.5",
+            "minimax-m2.1",
+            "minimax-m2.5",
+            "minimax-m2.7",
+            "glm-4.7",
+            "glm-5",
+            "glm-5.1"
+          ],
+          "tools": [
+            "Claude Code",
+            "OpenClaw",
+            "VS Code Copilot",
+            "Copilot CLI",
+            "Cursor",
+            "Trae",
+            "Cline / Roo Code",
+            "OpenCode",
+            "Zed",
+            "Factory Droid"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro套餐",
+          "price": "¥200/月",
+          "discount": "",
+          "quota": "5000次请求/5小时；30000次请求/7天；60000次请求/月",
+          "models_raw": [
+            "deepseek-v3.2",
+            "deepseek-v3.2-thinking",
+            "kimi-k2.5",
+            "minimax-m2.1",
+            "minimax-m2.5",
+            "minimax-m2.7",
+            "glm-4.7",
+            "glm-5",
+            "glm-5.1"
+          ],
+          "tools": [
+            "Claude Code",
+            "OpenClaw",
+            "VS Code Copilot",
+            "Copilot CLI",
+            "Cursor",
+            "Trae",
+            "Cline / Roo Code",
+            "OpenCode",
+            "Zed",
+            "Factory Droid"
+          ],
+          "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T08:52:17+00:00"
+    },
+    {
+      "vendor_id": "github-copilot",
+      "company_name": "Microsoft",
+      "plan_name": "GitHub Copilot",
+      "official_url": "https://github.com/features/copilot/plans",
+      "source_urls": [
+        "https://github.com/features/copilot/plans",
+        "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
+        "https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot",
+        "https://docs.github.com/en/copilot/concepts/billing/copilot-requests"
+      ],
+      "packages": [
+        {
+          "name": "Free套餐",
+          "price": "$0/月",
+          "discount": "",
+          "quota": "50 premium requests/月；2000 completions/月",
+          "models_raw": [
+            "Claude Haiku 4.5",
+            "GPT-5 mini",
+            "Claude Sonnet 4.6",
+            "Gemini 2.5 Pro"
+          ],
+          "tools": [
+            "GitHub",
+            "VS Code",
+            "Visual Studio",
+            "JetBrains IDEs",
+            "CLI",
+            "GitHub Mobile",
+            "Windows Terminal"
+          ],
+          "access_method": "账号订阅（GitHub / IDE / CLI）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro套餐",
+          "price": "$10/月",
+          "discount": "",
+          "quota": "300 premium requests/月；含 GPT-5 mini / GPT-4.1 / GPT-4o 无限聊天与补全",
+          "models_raw": [
+            "GPT-5 mini",
+            "GPT-4.1",
+            "GPT-4o",
+            "Claude Sonnet 4.6",
+            "Claude Opus 4.6",
+            "Gemini 2.5 Pro",
+            "GPT-5.4"
+          ],
+          "tools": [
+            "GitHub",
+            "VS Code",
+            "Visual Studio",
+            "JetBrains IDEs",
+            "CLI",
+            "GitHub Mobile",
+            "Windows Terminal",
+            "Copilot cloud agent",
+            "Copilot code review"
+          ],
+          "access_method": "账号订阅（GitHub / IDE / CLI）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro+套餐",
+          "price": "$39/月",
+          "discount": "",
+          "quota": "1500 premium requests/月；含全部模型访问与 included models 无限聊天与补全",
+          "models_raw": [
+            "GPT-5 mini",
+            "GPT-4.1",
+            "GPT-4o",
+            "Claude Sonnet 4.6",
+            "Claude Opus 4.6",
+            "Gemini 2.5 Pro",
+            "GPT-5.4"
+          ],
+          "tools": [
+            "GitHub",
+            "VS Code",
+            "Visual Studio",
+            "JetBrains IDEs",
+            "CLI",
+            "GitHub Mobile",
+            "Windows Terminal",
+            "Copilot cloud agent",
+            "Copilot code review",
+            "GitHub Spark"
+          ],
+          "access_method": "账号订阅（GitHub / IDE / CLI）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T08:52:17+00:00"
+    },
+    {
+      "vendor_id": "claude-code",
+      "company_name": "Anthropic",
+      "plan_name": "Claude Code",
+      "official_url": "https://claude.com/pricing",
+      "source_urls": [
+        "https://claude.com/pricing",
+        "https://claude.com/pricing/max",
+        "https://claude.com/pricing/team",
+        "https://claude.com/pricing/enterprise",
+        "https://docs.anthropic.com/en/docs/claude-code/overview",
+        "https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan",
+        "https://support.claude.com/en/articles/11049741-what-is-the-max-plan"
+      ],
+      "packages": [
+        {
+          "name": "Pro套餐",
+          "price": "$20/月",
+          "discount": "",
+          "quota": "包含 Claude Code；比 Free 更多 usage",
+          "models_raw": [
+            "Opus",
+            "Sonnet",
+            "Haiku"
+          ],
+          "tools": [
+            "Terminal CLI",
+            "VS Code",
+            "JetBrains",
+            "Desktop app",
+            "Web"
+          ],
+          "access_method": "账号订阅（Claude Web / Desktop / IDE / CLI）",
+          "models_filtered": []
+        },
+        {
+          "name": "Max 5x套餐",
+          "price": "$100/月",
+          "discount": "",
+          "quota": "包含 Claude Code；较 Pro 提供 5x usage per session",
+          "models_raw": [
+            "Opus",
+            "Sonnet",
+            "Haiku"
+          ],
+          "tools": [
+            "Terminal CLI",
+            "VS Code",
+            "JetBrains",
+            "Desktop app",
+            "Web"
+          ],
+          "access_method": "账号订阅（Claude Web / Desktop / IDE / CLI）",
+          "models_filtered": []
+        },
+        {
+          "name": "Max 20x套餐",
+          "price": "$200/月",
+          "discount": "",
+          "quota": "包含 Claude Code；较 Pro 提供 20x usage per session",
+          "models_raw": [
+            "Opus",
+            "Sonnet",
+            "Haiku"
+          ],
+          "tools": [
+            "Terminal CLI",
+            "VS Code",
+            "JetBrains",
+            "Desktop app",
+            "Web"
+          ],
+          "access_method": "账号订阅（Claude Web / Desktop / IDE / CLI）",
+          "models_filtered": []
+        },
+        {
+          "name": "Team Standard Seat",
+          "price": "$20/seat/月（年付）或 $25/seat/月（月付）",
+          "discount": "",
+          "quota": "包含 Claude Code；All Claude features, plus more usage than Pro",
+          "models_raw": [
+            "Opus",
+            "Sonnet",
+            "Haiku"
+          ],
+          "tools": [
+            "Terminal CLI",
+            "VS Code",
+            "JetBrains",
+            "Desktop app",
+            "Web"
+          ],
+          "access_method": "账号订阅（Claude Web / Desktop / IDE / CLI）",
+          "models_filtered": []
+        },
+        {
+          "name": "Team Premium Seat",
+          "price": "$100/seat/月（年付）或 $125/seat/月（月付）",
+          "discount": "",
+          "quota": "包含 Claude Code；较 Team Standard 提供更多 usage",
+          "models_raw": [
+            "Opus",
+            "Sonnet",
+            "Haiku"
+          ],
+          "tools": [
+            "Terminal CLI",
+            "VS Code",
+            "JetBrains",
+            "Desktop app",
+            "Web"
+          ],
+          "access_method": "账号订阅（Claude Web / Desktop / IDE / CLI）",
+          "models_filtered": []
+        },
+        {
+          "name": "Enterprise Seat",
+          "price": "$20/seat + usage at API rates",
+          "discount": "",
+          "quota": "包含 Claude Code；组织可设置 user/org spend limits，使用量按模型与任务扩展",
+          "models_raw": [
+            "Opus",
+            "Sonnet",
+            "Haiku"
+          ],
+          "tools": [
+            "Terminal CLI",
+            "VS Code",
+            "JetBrains",
+            "Desktop app",
+            "Web"
+          ],
+          "access_method": "账号订阅（Claude Web / Desktop / IDE / CLI）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T08:52:23+00:00"
     }
   ]
 }

@@ -11,7 +11,7 @@
 ## 腾讯｜腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
-- 最后更新时间（UTC）：2026-04-12T08:09:40+00:00
+- 最后更新时间（UTC）：2026-04-12T08:51:58+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 ## 字节跳动｜火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
-- 最后更新时间（UTC）：2026-04-12T08:09:42+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:00+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -37,7 +37,7 @@
 ## 百度｜百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
-- 最后更新时间（UTC）：2026-04-12T08:09:43+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:01+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -50,7 +50,7 @@
 ## 智谱AI｜GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
-- 最后更新时间（UTC）：2026-04-12T08:09:45+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:03+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@
 ## MiniMax｜MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
-- 最后更新时间（UTC）：2026-04-12T08:09:48+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:06+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@
 ## 阿里｜阿里云百炼Coding plan
 
 - 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
-- 最后更新时间（UTC）：2026-04-12T08:09:53+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:09+00:00
 
 | 项目 | pro套餐 |
 | --- | --- |
@@ -89,7 +89,7 @@
 ## 小米｜Xiaomi MiMo Token Plan
 
 - 官方地址：https://platform.xiaomimimo.com/#/token-plan
-- 最后更新时间（UTC）：2026-04-12T08:09:54+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:10+00:00
 
 | 项目 | Lite套餐 | Standard套餐 | Pro套餐 | Max套餐 |
 | --- | --- | --- | --- | --- |
@@ -102,7 +102,7 @@
 ## 字节跳动｜TRAE国际版
 
 - 官方地址：https://trae.ai/pricing
-- 最后更新时间（UTC）：2026-04-12T08:09:57+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:14+00:00
 
 | 项目 | Lite套餐 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- | --- |
@@ -115,7 +115,7 @@
 ## OpenAI｜ChatGPT
 
 - 官方地址：https://help.openai.com/en/collections/3742473-chatgpt
-- 最后更新时间（UTC）：2026-04-12T08:09:57+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:14+00:00
 
 | 项目 | Free套餐 | Go套餐 | Plus套餐 | Pro $100套餐 | Pro $200套餐 |
 | --- | --- | --- | --- | --- | --- |
@@ -128,7 +128,7 @@
 ## Anysphere｜Cursor
 
 - 官方地址：https://cursor.com/pricing
-- 最后更新时间（UTC）：2026-04-12T08:09:59+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:15+00:00
 
 | 项目 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- |
@@ -141,7 +141,7 @@
 ## 月之暗面｜Kimi AI
 
 - 官方地址：https://www.kimi.com/membership/pricing
-- 最后更新时间（UTC）：2026-04-12T08:09:59+00:00
+- 最后更新时间（UTC）：2026-04-12T08:52:15+00:00
 
 | 项目 | Andante套餐 | Moderato套餐 | Allegretto套餐 | Allegro套餐 |
 | --- | --- | --- | --- | --- |
@@ -150,3 +150,55 @@
 | 支持模型 | Kimi | Kimi | Kimi | Kimi |
 | 支持工具 | Kimi Web；Kimi App | Kimi Web；Kimi App | Kimi Web；Kimi App | Kimi Web；Kimi App |
 | 使用方式 | 账号订阅（Kimi Web / App） | 账号订阅（Kimi Web / App） | 账号订阅（Kimi Web / App） | 账号订阅（Kimi Web / App） |
+
+## 科大讯飞｜讯飞星辰Coding Plan
+
+- 官方地址：https://maas.xfyun.cn/packageSubscription?from=packageSubscriptionOverlay
+- 最后更新时间（UTC）：2026-04-12T08:52:16+00:00
+
+| 项目 | Coding Plan套餐 |
+| --- | --- |
+| 价格 | 价格以登录后官方套餐页为准 |
+| 用量 | 官方静态文案可确认平台赠送 500w tokens + 2QPS；启用后付费后按实际调用实时扣费 |
+| 支持模型 |  |
+| 支持工具 | HTTP API；WebSocket API |
+| 使用方式 | 服务认证信息 + 接口地址（Http / WebSocket 协议） |
+
+## 无问芯穹｜无问芯穹Coding Plan
+
+- 官方地址：https://docs.infini-ai.com/gen-studio-coding-plan/
+- 最后更新时间（UTC）：2026-04-12T08:52:17+00:00
+
+| 项目 | Lite套餐 | Pro套餐 |
+| --- | --- | --- |
+| 价格 | ¥40/月 | ¥200/月 |
+| 用量 | 1000次请求/5小时；6000次请求/7天；12000次请求/月 | 5000次请求/5小时；30000次请求/7天；60000次请求/月 |
+| 支持模型 | deepseek-v3.2；deepseek-v3.2-thinking；kimi-k2.5；minimax-m2.1；minimax-m2.5；minimax-m2.7；glm-4.7；glm-5；glm-5.1 | deepseek-v3.2；deepseek-v3.2-thinking；kimi-k2.5；minimax-m2.1；minimax-m2.5；minimax-m2.7；glm-4.7；glm-5；glm-5.1 |
+| 支持工具 | Claude Code；OpenClaw；VS Code Copilot；Copilot CLI；Cursor；Trae；Cline / Roo Code；OpenCode；Zed；Factory Droid | Claude Code；OpenClaw；VS Code Copilot；Copilot CLI；Cursor；Trae；Cline / Roo Code；OpenCode；Zed；Factory Droid |
+| 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
+
+## Microsoft｜GitHub Copilot
+
+- 官方地址：https://github.com/features/copilot/plans
+- 最后更新时间（UTC）：2026-04-12T08:52:17+00:00
+
+| 项目 | Free套餐 | Pro套餐 | Pro+套餐 |
+| --- | --- | --- | --- |
+| 价格 | $0/月 | $10/月 | $39/月 |
+| 用量 | 50 premium requests/月；2000 completions/月 | 300 premium requests/月；含 GPT-5 mini / GPT-4.1 / GPT-4o 无限聊天与补全 | 1500 premium requests/月；含全部模型访问与 included models 无限聊天与补全 |
+| 支持模型 | Claude Haiku 4.5；GPT-5 mini；Claude Sonnet 4.6；Gemini 2.5 Pro | GPT-5 mini；GPT-4.1；GPT-4o；Claude Sonnet 4.6；Claude Opus 4.6；Gemini 2.5 Pro；GPT-5.4 | GPT-5 mini；GPT-4.1；GPT-4o；Claude Sonnet 4.6；Claude Opus 4.6；Gemini 2.5 Pro；GPT-5.4 |
+| 支持工具 | GitHub；VS Code；Visual Studio；JetBrains IDEs；CLI；GitHub Mobile；Windows Terminal | GitHub；VS Code；Visual Studio；JetBrains IDEs；CLI；GitHub Mobile；Windows Terminal；Copilot cloud agent；Copilot code review | GitHub；VS Code；Visual Studio；JetBrains IDEs；CLI；GitHub Mobile；Windows Terminal；Copilot cloud agent；Copilot code review；GitHub Spark |
+| 使用方式 | 账号订阅（GitHub / IDE / CLI） | 账号订阅（GitHub / IDE / CLI） | 账号订阅（GitHub / IDE / CLI） |
+
+## Anthropic｜Claude Code
+
+- 官方地址：https://claude.com/pricing
+- 最后更新时间（UTC）：2026-04-12T08:52:23+00:00
+
+| 项目 | Pro套餐 | Max 5x套餐 | Max 20x套餐 | Team Standard Seat | Team Premium Seat | Enterprise Seat |
+| --- | --- | --- | --- | --- | --- | --- |
+| 价格 | $20/月 | $100/月 | $200/月 | $20/seat/月（年付）或 $25/seat/月（月付） | $100/seat/月（年付）或 $125/seat/月（月付） | $20/seat + usage at API rates |
+| 用量 | 包含 Claude Code；比 Free 更多 usage | 包含 Claude Code；较 Pro 提供 5x usage per session | 包含 Claude Code；较 Pro 提供 20x usage per session | 包含 Claude Code；All Claude features, plus more usage than Pro | 包含 Claude Code；较 Team Standard 提供更多 usage | 包含 Claude Code；组织可设置 user/org spend limits，使用量按模型与任务扩展 |
+| 支持模型 | Opus；Sonnet；Haiku | Opus；Sonnet；Haiku | Opus；Sonnet；Haiku | Opus；Sonnet；Haiku | Opus；Sonnet；Haiku | Opus；Sonnet；Haiku |
+| 支持工具 | Terminal CLI；VS Code；JetBrains；Desktop app；Web | Terminal CLI；VS Code；JetBrains；Desktop app；Web | Terminal CLI；VS Code；JetBrains；Desktop app；Web | Terminal CLI；VS Code；JetBrains；Desktop app；Web | Terminal CLI；VS Code；JetBrains；Desktop app；Web | Terminal CLI；VS Code；JetBrains；Desktop app；Web |
+| 使用方式 | 账号订阅（Claude Web / Desktop / IDE / CLI） | 账号订阅（Claude Web / Desktop / IDE / CLI） | 账号订阅（Claude Web / Desktop / IDE / CLI） | 账号订阅（Claude Web / Desktop / IDE / CLI） | 账号订阅（Claude Web / Desktop / IDE / CLI） | 账号订阅（Claude Web / Desktop / IDE / CLI） |
