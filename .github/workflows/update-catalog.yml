@@ -1,11 +1,9 @@
-name: Update Catalog (3x Weekly)
+name: Update Catalog (Weekly)
 
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 2 * * 1"
-    - cron: "0 2 * * 3"
-    - cron: "0 2 * * 5"
+    - cron: "0 3 * * 1"
 
 permissions:
   contents: write
@@ -43,7 +41,7 @@ jobs:
             catalog/output/CATALOG_PREFLIGHT.json
             catalog/output/CATALOG_RUN.log
             catalog/output/CATALOG_DATA.json
-            CATALOG_GENERATED.md
+            README.md
 
       - name: Create pull request if changed
         uses: peter-evans/create-pull-request@v6
@@ -52,7 +50,7 @@ jobs:
           title: "chore: refresh catalog data"
           body: |
             自动定时更新：
-            - CATALOG_GENERATED.md
+            - README.md
             - catalog/output/CATALOG_DATA.json
 
             本次自动任务仅更新代码中 `AUTO_UPDATE_VENDOR_IDS` 列表内的厂商。
@@ -60,7 +58,7 @@ jobs:
           branch: "automation/update-catalog-${{ github.run_id }}"
           delete-branch: true
           add-paths: |
-            CATALOG_GENERATED.md
+            README.md
             catalog/output/CATALOG_DATA.json
             catalog/output/CATALOG_PREFLIGHT.json
             catalog/output/CATALOG_RUN.log

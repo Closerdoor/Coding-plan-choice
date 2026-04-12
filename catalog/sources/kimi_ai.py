@@ -58,6 +58,16 @@ def _format_cny(price_in_cents: str) -> str:
     return f"¥{yuan:.2f}/月"
 
 
+def _normalize_price_in_cents(value: object) -> str | None:
+    if isinstance(value, str) and value.strip():
+        return value.strip()
+    if isinstance(value, int):
+        return str(value)
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return None
+
+
 def _pick_monthly_goods(goods: List[Dict[str, object]]) -> Dict[str, Dict[str, object]]:
     monthly_by_level: Dict[str, Dict[str, object]] = {}
     for item in goods:
@@ -108,9 +118,9 @@ def _monthly_paid_goods(goods: List[Dict[str, object]]) -> List[Dict[str, object
         ):
             continue
         amount = amounts[0]
-        price_in_cents = amount.get("priceInCents")
+        price_in_cents = _normalize_price_in_cents(amount.get("priceInCents"))
         currency = amount.get("currency")
-        if currency != "CNY" or not isinstance(price_in_cents, str):
+        if currency != "CNY" or not price_in_cents:
             continue
         if item.get("membershipLevel") == "LEVEL_FREE" or price_in_cents == "0":
             continue
@@ -196,9 +206,9 @@ def fetch(config: Dict[str, object]) -> Dict[str, object]:
         ):
             raise ValueError("failed to find Kimi amount for monthly goods")
         amount = amounts[0]
-        price_in_cents = amount.get("priceInCents")
+        price_in_cents = _normalize_price_in_cents(amount.get("priceInCents"))
         currency = amount.get("currency")
-        if currency != "CNY" or not isinstance(price_in_cents, str):
+        if currency != "CNY" or not price_in_cents:
             raise ValueError("failed to parse Kimi monthly price for monthly goods")
         title = str(goods_item.get("title", "")).strip()
         if not title:

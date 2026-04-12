@@ -4,6 +4,8 @@
 
 - `catalog/output/CATALOG_DATA.json`
   - 最终结构化产物
+- `README.md`
+  - 根目录最终展示文档（自动生成）
 - `catalog/output/CATALOG_PREFLIGHT.json`
   - 预检测结果
   - 用于确认各厂商官方页面和 source URL 在当前运行环境下是否网络可达

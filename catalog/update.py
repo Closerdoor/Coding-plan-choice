@@ -1,4 +1,4 @@
-"""Entrypoint for generating CATALOG_GENERATED.md.
+"""Entrypoint for generating README.md.
 
 Run:
   python -m catalog.update
@@ -27,7 +27,7 @@ from .catalog_config import AUTO_UPDATE_VENDOR_IDS, MANUAL_UPDATE_VENDOR_IDS, VE
 REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "catalog" / "output"
 DATA_PATH = OUTPUT_DIR / "CATALOG_DATA.json"
-GENERATED_MD_PATH = REPO_ROOT / "CATALOG_GENERATED.md"
+README_PATH = REPO_ROOT / "README.md"
 LOG_PATH = OUTPUT_DIR / "CATALOG_RUN.log"
 PREFLIGHT_PATH = OUTPUT_DIR / "CATALOG_PREFLIGHT.json"
 
@@ -246,7 +246,56 @@ def _to_markdown_table(rows: List[List[str]]) -> str:
     return "\n".join(lines)
 
 
-def _render_vendor(vendor: Dict[str, object]) -> str:
+AGGREGATED_VENDOR_IDS = [
+    "cursor",
+    "github-copilot",
+    "trae-intl",
+    "tencent-cloud-coding-plan",
+    "volcengine-coding-plan",
+    "aliyun-bailian-coding-plan",
+    "baidu-qianfan-coding-plan",
+    "xfyun-xingchen-coding-plan",
+    "infini-ai-coding-plan",
+]
+
+VERTICAL_VENDOR_IDS = [
+    "openai-chatgpt",
+    "claude-code",
+    "glm-coding-plan",
+    "minimax-token-plan",
+    "kimi-ai",
+    "xiaomi-mimo-token-plan",
+]
+
+
+def _vendor_anchor(vendor: Dict[str, object]) -> str:
+    return str(vendor.get("plan_name", "")).strip().lower().replace(" ", "-")
+
+
+def _summary_price(vendor: Dict[str, object]) -> str:
+    packages = [
+        package for package in vendor.get("packages", []) if isinstance(package, dict)
+    ]
+    if not packages:
+        return ""
+    return str(packages[0].get("price", "")).strip()
+
+
+def _summary_models(vendor: Dict[str, object]) -> str:
+    packages = [
+        package for package in vendor.get("packages", []) if isinstance(package, dict)
+    ]
+    if not packages:
+        return ""
+    models = packages[0].get("models_raw") or []
+    if not isinstance(models, list):
+        return ""
+    return _join_values(
+        [str(model).strip() for model in models[:4] if str(model).strip()]
+    )
+
+
+def _render_vendor(vendor: Dict[str, object], *, heading_level: str = "###") -> str:
     company_name = str(vendor.get("company_name", "")).strip()
     plan_name = str(vendor.get("plan_name", "")).strip()
     official_url = str(vendor.get("official_url", "")).strip()
@@ -280,8 +329,9 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
     table = _to_markdown_table(rows)
     return "\n".join(
         [
-            f"## {company_name}｜{plan_name}",
+            f"{heading_level} {plan_name}",
             "",
+            f"- 厂商：{company_name}",
             *source_lines,
             f"- 最后更新时间（UTC）：{updated_at}",
             "",
@@ -290,20 +340,99 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
     )
 
 
-def _render_catalog_md(vendors: List[Dict[str, object]]) -> str:
-    parts = [
-        "# AI 模型与 Coding Plan 套餐汇总",
-        "",
-        "说明：",
-        "- 本文档用于集中展示各厂商的模型/套餐信息。",
-        "- 所有价格与用量信息以官方页面为准，并在条目中标注信息源链接。",
-        "- 币种按厂商原始币种展示（CN=CNY，US=USD）。",
-        "- 最后更新时间使用 UTC（由自动更新流程填写）。",
-        "",
-        "---",
-        "",
+def _render_vendor_nav(vendors: List[Dict[str, object]]) -> List[str]:
+    return [
+        f"- [{str(vendor.get('plan_name', '')).strip()}](#{_vendor_anchor(vendor)})"
+        for vendor in vendors
+    ]
+
+
+def _render_summary_table(vendors: List[Dict[str, object]]) -> str:
+    rows = [
+        ["厂商", "分类", "套餐数", "起步价", "接入方式", "代表模型", "更新时间(UTC)"]
     ]
     for vendor in vendors:
+        packages = [
+            package
+            for package in vendor.get("packages", [])
+            if isinstance(package, dict)
+        ]
+        rows.append(
+            [
+                str(vendor.get("plan_name", "")).strip(),
+                "聚合套餐"
+                if str(vendor.get("vendor_id", "")) in AGGREGATED_VENDOR_IDS
+                else "垂直厂商套餐",
+                str(len(packages)),
+                _summary_price(vendor),
+                str(packages[0].get("access_method", "")).strip() if packages else "",
+                _summary_models(vendor),
+                str(vendor.get("updated_at_utc", "")).strip(),
+            ]
+        )
+    return _to_markdown_table(rows)
+
+
+def _render_warning_section(warnings: List[str]) -> List[str]:
+    if not warnings:
+        return ["- 本次更新状态：无 warnings"]
+    lines = ["- 本次更新状态：存在 warnings"]
+    lines.extend(f"- Warning：{warning}" for warning in warnings)
+    return lines
+
+
+def _group_vendors(
+    vendors: List[Dict[str, object]],
+) -> tuple[List[Dict[str, object]], List[Dict[str, object]]]:
+    aggregated = [
+        vendor
+        for vendor in vendors
+        if str(vendor.get("vendor_id", "")) in AGGREGATED_VENDOR_IDS
+    ]
+    vertical = [
+        vendor
+        for vendor in vendors
+        if str(vendor.get("vendor_id", "")) in VERTICAL_VENDOR_IDS
+    ]
+    return aggregated, vertical
+
+
+def _render_catalog_md(
+    vendors: List[Dict[str, object]], warnings: List[str], generated_at: str
+) -> str:
+    aggregated_vendors, vertical_vendors = _group_vendors(vendors)
+    parts = [
+        "# Coding Plan 套餐汇总",
+        "",
+        "汇总各家 Coding Plan 套餐、价格、额度、支持模型与接入方式。自动更新公开可直接抓取的厂商，登录态厂商通过单独手动流程维护。",
+        "",
+        "## 更新状态",
+        "",
+        f"- 最新生成时间（UTC）：{generated_at}",
+        f"- 自动更新厂商数：{len(AUTO_UPDATE_VENDOR_IDS)}",
+        f"- 手动更新厂商数：{len(MANUAL_UPDATE_VENDOR_IDS)}",
+        *_render_warning_section(warnings),
+        "",
+        "## 导航",
+        "",
+        "### 聚合套餐",
+        *(_render_vendor_nav(aggregated_vendors) or ["- 暂无"]),
+        "",
+        "### 垂直厂商套餐",
+        *(_render_vendor_nav(vertical_vendors) or ["- 暂无"]),
+        "",
+        "## 总览",
+        "",
+        _render_summary_table(vendors),
+        "",
+        "## 聚合套餐",
+        "",
+    ]
+    for vendor in aggregated_vendors:
+        parts.append(_render_vendor(vendor))
+        parts.append("")
+    parts.extend(["## 垂直厂商套餐", ""])
+    for vendor in vertical_vendors:
         parts.append(_render_vendor(vendor))
         parts.append("")
     return "\n".join(parts).rstrip() + "\n"
@@ -398,12 +527,14 @@ def main() -> int:
             "generated_at_utc", payload["generated_at_utc"]
         )
     _write_json(DATA_PATH, payload)
-    GENERATED_MD_PATH.write_text(
-        _render_catalog_md(vendors), encoding="utf-8", newline="\n"
+    README_PATH.write_text(
+        _render_catalog_md(vendors, fetch_warnings, payload["generated_at_utc"]),
+        encoding="utf-8",
+        newline="\n",
     )
     LOGGER.info("Wrote preflight report to %s", PREFLIGHT_PATH)
     LOGGER.info("Wrote catalog data to %s", DATA_PATH)
-    LOGGER.info("Wrote catalog markdown to %s", GENERATED_MD_PATH)
+    LOGGER.info("Wrote catalog markdown to %s", README_PATH)
     LOGGER.info(
         "Finished catalog update with %d preflight warnings", len(preflight_warnings)
     )

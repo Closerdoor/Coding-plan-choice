@@ -47,7 +47,7 @@ jobs:
             catalog/output/CATALOG_PREFLIGHT.json
             catalog/output/CATALOG_RUN.log
             catalog/output/CATALOG_DATA.json
-            CATALOG_GENERATED.md
+            README.md
 
       - name: Create pull request if changed
         uses: peter-evans/create-pull-request@v6
@@ -56,7 +56,7 @@ jobs:
           title: "chore: refresh xfyun catalog data"
           body: |
             手动更新：
-            - CATALOG_GENERATED.md
+            - README.md
             - catalog/output/CATALOG_DATA.json
 
             本次手动任务仅更新代码中 `MANUAL_UPDATE_VENDOR_IDS` 列表内的厂商。
@@ -64,7 +64,7 @@ jobs:
           branch: "automation/update-catalog-xfyun-manual-${{ github.run_id }}"
           delete-branch: true
           add-paths: |
-            CATALOG_GENERATED.md
+            README.md
             catalog/output/CATALOG_DATA.json
             catalog/output/CATALOG_PREFLIGHT.json
             catalog/output/CATALOG_RUN.log
