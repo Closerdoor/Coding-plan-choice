@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-12T03:18:46+00:00",
+  "generated_at_utc": "2026-04-12T03:37:56+00:00",
   "warnings": [],
   "vendors": [
     {
@@ -38,11 +38,7 @@
             "Kilo Code"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "MiniMax-M2.5",
-            "Kimi-K2.5",
-            "GLM-5"
-          ]
+          "models_filtered": []
         },
         {
           "name": "pro套餐",
@@ -71,14 +67,10 @@
             "Kilo Code"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "MiniMax-M2.5",
-            "Kimi-K2.5",
-            "GLM-5"
-          ]
+          "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:17:47+00:00"
+      "updated_at_utc": "2026-04-12T03:37:40+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -114,12 +106,7 @@
             "OpenCode"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "MiniMax-M2.5",
-            "Kimi-K2.5",
-            "GLM-4.7",
-            "DeepSeek-V3.2"
-          ]
+          "models_filtered": []
         },
         {
           "name": "pro套餐",
@@ -146,15 +133,10 @@
             "OpenCode"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "MiniMax-M2.5",
-            "Kimi-K2.5",
-            "GLM-4.7",
-            "DeepSeek-V3.2"
-          ]
+          "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:18:07+00:00"
+      "updated_at_utc": "2026-04-12T03:37:52+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -184,12 +166,7 @@
             "Cursor"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "Kimi-K2.5",
-            "DeepSeek-V3.2",
-            "GLM-5",
-            "MiniMax-M2.5"
-          ]
+          "models_filtered": []
         },
         {
           "name": "pro套餐",
@@ -210,15 +187,10 @@
             "Cursor"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "Kimi-K2.5",
-            "DeepSeek-V3.2",
-            "GLM-5",
-            "MiniMax-M2.5"
-          ]
+          "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:18:26+00:00"
+      "updated_at_utc": "2026-04-12T03:37:53+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -256,9 +228,7 @@
             "CodeBuddy"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "GLM-4.7"
-          ]
+          "models_filtered": []
         },
         {
           "name": "pro套餐",
@@ -285,9 +255,7 @@
             "CodeBuddy"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "GLM-4.7"
-          ]
+          "models_filtered": []
         },
         {
           "name": "max套餐",
@@ -314,12 +282,10 @@
             "CodeBuddy"
           ],
           "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
-          "models_filtered": [
-            "GLM-4.7"
-          ]
+          "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T03:18:46+00:00"
+      "updated_at_utc": "2026-04-12T03:37:56+00:00"
     }
   ]
 }

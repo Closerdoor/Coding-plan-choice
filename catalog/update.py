@@ -12,9 +12,7 @@ import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Tuple
-
-from rankings import core as rankings_core
+from typing import Dict, List
 
 from .catalog_config import VENDORS
 
@@ -23,7 +21,6 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = REPO_ROOT / "catalog" / "output"
 DATA_PATH = OUTPUT_DIR / "CATALOG_DATA.json"
 GENERATED_MD_PATH = REPO_ROOT / "CATALOG_GENERATED.md"
-MODEL_SCORES_PATH = REPO_ROOT / "rankings" / "output" / "MODEL_SCORES.json"
 
 
 def utc_now_iso() -> str:
@@ -47,50 +44,7 @@ def _existing_vendors_by_id(payload: Dict[str, object]) -> Dict[str, Dict[str, o
     return by_id
 
 
-def _load_provider_top3_keys() -> Dict[str, set[str]]:
-    if not MODEL_SCORES_PATH.exists():
-        return {}
-
-    payload = json.loads(MODEL_SCORES_PATH.read_text(encoding="utf-8"))
-    by_provider: Dict[str, List[Tuple[str, float]]] = {}
-    for model in payload.get("models", []):
-        provider = model.get("provider")
-        model_name = model.get("model")
-        total_score = model.get("total_score_0_1")
-        if not isinstance(provider, str) or not isinstance(model_name, str):
-            continue
-        if not isinstance(total_score, (int, float)) or provider == "Unknown":
-            continue
-        by_provider.setdefault(provider, []).append((model_name, float(total_score)))
-
-    provider_top3: Dict[str, set[str]] = {}
-    for provider, rows in by_provider.items():
-        ranked = sorted(rows, key=lambda item: item[1], reverse=True)[:3]
-        provider_top3[provider] = {
-            rankings_core.model_join_key(model_name) for model_name, _score in ranked
-        }
-    return provider_top3
-
-
-def _filter_models(
-    raw_models: List[str], provider_top3: Dict[str, set[str]]
-) -> List[str]:
-    filtered: List[str] = []
-    for model in raw_models:
-        provider = rankings_core.canonical_provider("", model)
-        if provider == "Unknown":
-            continue
-        allowed = provider_top3.get(provider)
-        if not allowed:
-            continue
-        if rankings_core.model_join_key(model) in allowed:
-            filtered.append(model)
-    return filtered
-
-
-def _normalize_vendor(
-    vendor: Dict[str, object], provider_top3: Dict[str, set[str]]
-) -> Dict[str, object]:
+def _normalize_vendor(vendor: Dict[str, object]) -> Dict[str, object]:
     normalized = copy.deepcopy(vendor)
     packages = normalized.get("packages")
     if not isinstance(packages, list):
@@ -107,7 +61,7 @@ def _normalize_vendor(
             else []
         )
         package["models_raw"] = raw_list
-        package["models_filtered"] = _filter_models(raw_list, provider_top3)
+        package["models_filtered"] = []
     return normalized
 
 
@@ -170,12 +124,7 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
         ["用量", *[str(package.get("quota", "")).strip() for package in packages]],
         [
             "支持模型",
-            *[
-                _join_values(
-                    package.get("models_filtered") or package.get("models_raw") or []
-                )
-                for package in packages
-            ],
+            *[_join_values(package.get("models_raw") or []) for package in packages],
         ],
         [
             "支持工具",
@@ -231,7 +180,6 @@ def _write_json(path: Path, payload: Dict[str, object]) -> None:
 def main() -> int:
     existing_payload = _load_existing_payload()
     existing_vendors = _existing_vendors_by_id(existing_payload)
-    provider_top3 = _load_provider_top3_keys()
     warnings: List[str] = []
     vendors: List[Dict[str, object]] = []
 
@@ -240,7 +188,7 @@ def main() -> int:
         try:
             module = importlib.import_module(config["source_module"])
             fetched = module.fetch(config)
-            normalized = _normalize_vendor(fetched, provider_top3)
+            normalized = _normalize_vendor(fetched)
             normalized["updated_at_utc"] = utc_now_iso()
             vendors.append(normalized)
         except Exception as exc:

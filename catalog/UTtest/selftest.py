@@ -48,7 +48,7 @@ class TestCatalogRender(unittest.TestCase):
                             "Hunyuan-T1",
                             "Hunyuan-TurboS",
                         ],
-                        "models_filtered": ["MiniMax-M2.5", "Kimi-K2.5", "GLM-5"],
+                        "models_filtered": [],
                         "tools": [
                             "OpenClaw",
                             "CodeBuddy Code",
@@ -60,7 +60,7 @@ class TestCatalogRender(unittest.TestCase):
                             "Kilo CLI",
                             "Kilo Code",
                         ],
-                        "access_method": "API Key",
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
                     },
                     {
                         "name": "pro套餐",
@@ -77,7 +77,7 @@ class TestCatalogRender(unittest.TestCase):
                             "Hunyuan-T1",
                             "Hunyuan-TurboS",
                         ],
-                        "models_filtered": ["MiniMax-M2.5", "Kimi-K2.5", "GLM-5"],
+                        "models_filtered": [],
                         "tools": [
                             "OpenClaw",
                             "CodeBuddy Code",
@@ -89,7 +89,7 @@ class TestCatalogRender(unittest.TestCase):
                             "Kilo CLI",
                             "Kilo Code",
                         ],
-                        "access_method": "API Key",
+                        "access_method": "API Key + Base URL（OpenAI / Anthropic 协议）",
                     },
                 ],
             }
@@ -116,35 +116,14 @@ class TestCatalogRender(unittest.TestCase):
             "| --- | --- | --- |\n"
             "| 价格 | ¥40/月(优惠：首月¥7.9/月) | ¥200/月(优惠：首月¥39.9/月) |\n"
             "| 用量 | 1200次请求/5小时；9000次请求/周；18000次请求/月 | 6000次请求/5小时；45000次请求/周；90000次请求/月 |\n"
-            "| 支持模型 | MiniMax-M2.5；Kimi-K2.5；GLM-5 | MiniMax-M2.5；Kimi-K2.5；GLM-5 |\n"
+            "| 支持模型 | Auto；Tencent HY 2.0 Instruct；Tencent HY 2.0 Think；GLM-5；Kimi-K2.5；MiniMax-M2.5；Hunyuan-T1；Hunyuan-TurboS | Auto；Tencent HY 2.0 Instruct；Tencent HY 2.0 Think；GLM-5；Kimi-K2.5；MiniMax-M2.5；Hunyuan-T1；Hunyuan-TurboS |\n"
             "| 支持工具 | OpenClaw；CodeBuddy Code；Claude Code；OpenCode；Cline；Cursor；Codex；Kilo CLI；Kilo Code | OpenClaw；CodeBuddy Code；Claude Code；OpenCode；Cline；Cursor；Codex；Kilo CLI；Kilo Code |\n"
-            "| 使用方式 | API Key | API Key |\n"
+            "| 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |\n"
         )
 
         self.assertEqual(
             _normalize_timestamp(update._render_catalog_md(vendors)), expected
         )
-
-
-class TestModelFiltering(unittest.TestCase):
-    def test_filter_models_prefers_top3_matches(self) -> None:
-        provider_top3 = {
-            "Zhipu AI": {"glm5"},
-            "Moonshot AI": {"kimik25"},
-            "MiniMax": {"minimaxm25"},
-        }
-
-        filtered = update._filter_models(
-            [
-                "Tencent HY 2.0 Instruct",
-                "GLM-5",
-                "Kimi-K2.5",
-                "MiniMax-M2.5",
-            ],
-            provider_top3,
-        )
-
-        self.assertEqual(filtered, ["GLM-5", "Kimi-K2.5", "MiniMax-M2.5"])
 
 
 if __name__ == "__main__":
