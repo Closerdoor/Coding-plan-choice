@@ -152,7 +152,7 @@ def _render_vendor(vendor: Dict[str, object]) -> str:
     table = _to_markdown_table(rows)
     return "\n".join(
         [
-            f"## {company_name}|{plan_name}",
+            f"## {company_name}｜{plan_name}",
             "",
             *source_lines,
             f"- 最后更新时间（UTC）：{updated_at}",

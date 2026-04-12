@@ -10,7 +10,7 @@ from __future__ import annotations
 VENDORS = [
     {
         "vendor_id": "tencent-cloud-coding-plan",
-        "company_name": "腾讯云",
+        "company_name": "腾讯",
         "plan_name": "腾讯云大模型 Coding Plan",
         "official_url": "https://cloud.tencent.com/act/pro/codingplan",
         "source_urls": [
@@ -20,7 +20,7 @@ VENDORS = [
     },
     {
         "vendor_id": "volcengine-coding-plan",
-        "company_name": "火山方舟",
+        "company_name": "字节跳动",
         "plan_name": "火山方舟 Coding Plan",
         "official_url": "https://www.volcengine.com/activity/codingplan",
         "source_urls": [
@@ -30,7 +30,7 @@ VENDORS = [
     },
     {
         "vendor_id": "baidu-qianfan-coding-plan",
-        "company_name": "百度千帆",
+        "company_name": "百度",
         "plan_name": "百度千帆 Coding Plan",
         "official_url": "https://cloud.baidu.com/product/codingplan.html",
         "source_urls": [
