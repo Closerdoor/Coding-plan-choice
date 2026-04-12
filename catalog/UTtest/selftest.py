@@ -104,14 +104,10 @@ class TestCatalogRender(unittest.TestCase):
             update._render_catalog_md(vendors, [], "2026-04-11T00:00:00+00:00")
         )
 
-        self.assertIn("# Coding Plan 套餐汇总", rendered)
-        self.assertIn("## 更新状态", rendered)
-        self.assertIn("- 本次更新状态：无 warnings", rendered)
-        self.assertIn("## 导航", rendered)
-        self.assertIn("## 总览", rendered)
-        self.assertIn("## 聚合套餐", rendered)
+        self.assertIn("# Coding Plan", rendered)
+        self.assertNotIn("## 总览", rendered)
+        self.assertIn("Coding Plan", rendered)
         self.assertIn("### 腾讯云大模型 Coding Plan", rendered)
-        self.assertIn("- 厂商：腾讯云", rendered)
         self.assertIn(
             "- 官方地址：https://cloud.tencent.com/act/pro/codingplan", rendered
         )
@@ -226,9 +222,8 @@ class TestCatalogRender(unittest.TestCase):
             update._render_catalog_md(vendors, [], "2026-04-12T00:00:00+00:00")
         )
 
-        self.assertIn("## 垂直厂商套餐", rendered)
+        self.assertNotIn("## 总览", rendered)
         self.assertIn("### MiniMax Token Plan", rendered)
-        self.assertIn("- 厂商：MiniMax", rendered)
         self.assertIn(
             "| 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |",
             rendered,
@@ -292,8 +287,8 @@ class TestCatalogRender(unittest.TestCase):
             update._render_catalog_md(vendors, [], "2026-04-12T00:00:00+00:00")
         )
 
+        self.assertNotIn("## 总览", rendered)
         self.assertIn("### 阿里云百炼Coding plan", rendered)
-        self.assertIn("- 厂商：阿里", rendered)
         self.assertIn("| 项目 | pro套餐 |", rendered)
         self.assertIn("| 价格 | ¥200/月 |", rendered)
 

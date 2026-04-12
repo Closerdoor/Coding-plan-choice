@@ -1,13 +1,8 @@
 # Coding Plan 套餐汇总
 
-汇总各家 Coding Plan 套餐、价格、额度、支持模型与接入方式。自动更新公开可直接抓取的厂商，登录态厂商通过单独手动流程维护。
+汇总各家 Coding Plan 套餐、价格、额度、支持模型与接入方式。
 
-## 更新状态
-
-- 最新生成时间（UTC）：2026-04-12T15:45:13+00:00
-- 自动更新厂商数：14
-- 手动更新厂商数：1
-- 本次更新状态：无 warnings
+最新生成时间（UTC）：2026-04-12T15:45:13+00:00
 
 ## 导航
 
@@ -29,26 +24,6 @@
 - [MiniMax Token Plan](#minimax-token-plan)
 - [Kimi AI](#kimi-ai)
 - [Xiaomi MiMo Token Plan](#xiaomi-mimo-token-plan)
-
-## 总览
-
-| 厂商 | 分类 | 套餐数 | 起步价 | 接入方式 | 代表模型 | 更新时间(UTC) |
-| --- | --- | --- | --- | --- | --- | --- |
-| Cursor | 聚合套餐 | 3 | $20/月 | 账号订阅（Cursor 客户端 / Web） | Auto；Composer 2；Claude 4 Sonnet；Claude 4 Sonnet 1M | 2026-04-12T10:59:29+00:00 |
-| GitHub Copilot | 聚合套餐 | 3 | $0/月 | 账号订阅（GitHub / IDE / CLI） | Claude Haiku 4.5；GPT-5 mini；Claude Sonnet 4.6；Gemini 2.5 Pro | 2026-04-12T10:59:39+00:00 |
-| TRAE国际版 | 聚合套餐 | 4 | $3/月 | 账号订阅（TRAE IDE / TRAE SOLO） | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o | 2026-04-12T15:45:13+00:00 |
-| 腾讯云大模型 Coding Plan | 聚合套餐 | 2 | ¥40/月 | API Key + Base URL（OpenAI / Anthropic 协议） | Auto；Tencent HY 2.0 Instruct；Tencent HY 2.0 Think；MiniMax-M2.5 | 2026-04-12T10:56:56+00:00 |
-| 火山方舟 Coding Plan | 聚合套餐 | 2 | ¥40/月 | API Key + Base URL（OpenAI / Anthropic 协议） | Auto；Doubao-Seed-2.0-pro；Doubao-Seed-Code；MiniMax-M2.5 | 2026-04-12T10:57:45+00:00 |
-| 阿里云百炼Coding plan | 聚合套餐 | 1 | ¥200/月 | API Key + Base URL（OpenAI / Anthropic 协议） | Qwen3.6-Plus；Kimi-K2.5；GLM-5；MiniMax-M2.5 | 2026-04-12T10:59:23+00:00 |
-| 百度千帆 Coding Plan | 聚合套餐 | 2 | ¥40/月 | API Key + Base URL（OpenAI / Anthropic 协议） | Kimi-K2.5；DeepSeek-V3.2；GLM-5；MiniMax-M2.5 | 2026-04-12T10:35:58+00:00 |
-| 讯飞星辰Coding Plan | 聚合套餐 | 3 | ¥19/月 | 服务认证信息 + 接口地址（Http / WebSocket 协议） | Qwen3.5-35B-A3B；Qwen3-Coder-Next-FP8；GLM-4.7-Flash | 2026-04-12T11:06:22+00:00 |
-| 无问芯穹Coding Plan | 聚合套餐 | 2 | ¥40/月 | API Key + Base URL（OpenAI / Anthropic 协议） | deepseek-v3.2；deepseek-v3.2-thinking；kimi-k2.5；minimax-m2.1 | 2026-04-12T10:59:39+00:00 |
-| ChatGPT | 垂直厂商套餐 | 5 | $0/月 | 账号订阅（ChatGPT Web / App） | GPT-5.2 | 2026-04-12T10:59:28+00:00 |
-| Claude Code | 垂直厂商套餐 | 6 | $20/月 | 账号订阅（Claude Web / Desktop / IDE / CLI） | Opus；Sonnet；Haiku | 2026-04-12T10:59:41+00:00 |
-| GLM Coding Plan | 垂直厂商套餐 | 3 | ¥49/月 | API Key + Base URL（OpenAI / Anthropic 协议） | GLM-5.1；GLM-5-Turbo；GLM-4.7；GLM-4.5-Air | 2026-04-12T10:59:01+00:00 |
-| MiniMax Token Plan | 垂直厂商套餐 | 6 | ¥29/月 | API Key + Base URL（OpenAI / Anthropic 协议） | M2.7；Music-2.6 | 2026-04-12T10:59:11+00:00 |
-| Kimi AI | 垂直厂商套餐 | 4 | ¥49/月 | 账号订阅（Kimi Web / App） | Kimi | 2026-04-12T10:36:15+00:00 |
-| Xiaomi MiMo Token Plan | 垂直厂商套餐 | 4 | $6/月 | API Key + Base URL（OpenAI / Anthropic 协议） | MiMo-V2-Pro；MiMo-V2-Omni；MiMo-V2-TTS | 2026-04-12T10:36:10+00:00 |
 
 ## 聚合套餐
 

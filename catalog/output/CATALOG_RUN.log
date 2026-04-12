@@ -1,52 +1,52 @@
-2026-04-12 23:48:59,297Z INFO Starting catalog update mode=auto vendors=['cursor', 'github-copilot', 'trae-intl', 'tencent-cloud-coding-plan', 'volcengine-coding-plan', 'aliyun-bailian-coding-plan', 'baidu-qianfan-coding-plan', 'infini-ai-coding-plan', 'openai-chatgpt', 'claude-code', 'glm-coding-plan', 'minimax-token-plan', 'kimi-ai', 'xiaomi-mimo-token-plan']
-2026-04-12 23:48:59,727Z INFO Preflight ok for cursor in 430ms
-2026-04-12 23:49:01,285Z INFO Preflight ok for github-copilot in 1557ms
-2026-04-12 23:49:02,005Z INFO Preflight ok for trae-intl in 719ms
-2026-04-12 23:49:02,023Z INFO Preflight ok for tencent-cloud-coding-plan in 17ms
-2026-04-12 23:49:02,066Z INFO Preflight ok for volcengine-coding-plan in 44ms
-2026-04-12 23:49:02,354Z INFO Preflight ok for aliyun-bailian-coding-plan in 286ms
-2026-04-12 23:49:02,444Z INFO Preflight ok for baidu-qianfan-coding-plan in 90ms
-2026-04-12 23:49:02,842Z INFO Preflight ok for infini-ai-coding-plan in 397ms
-2026-04-12 23:49:03,616Z INFO Preflight ok for openai-chatgpt in 773ms
-2026-04-12 23:49:06,403Z INFO Preflight ok for claude-code in 2787ms
-2026-04-12 23:49:06,476Z INFO Preflight ok for glm-coding-plan in 72ms
-2026-04-12 23:49:06,745Z INFO Preflight ok for minimax-token-plan in 268ms
-2026-04-12 23:49:07,022Z INFO Preflight ok for kimi-ai in 277ms
-2026-04-12 23:49:07,367Z INFO Preflight ok for xiaomi-mimo-token-plan in 343ms
-2026-04-12 23:49:07,367Z INFO Preflight finished with 0 warnings
-2026-04-12 23:49:07,368Z INFO Fetching vendor cursor
-2026-04-12 23:49:10,953Z INFO Fetched vendor cursor successfully in 3586ms
-2026-04-12 23:49:10,954Z INFO Fetching vendor github-copilot
-2026-04-12 23:49:10,954Z INFO Fetched vendor github-copilot successfully in 0ms
-2026-04-12 23:49:10,954Z INFO Fetching vendor trae-intl
-2026-04-12 23:49:51,227Z INFO Fetched vendor trae-intl successfully in 40272ms
-2026-04-12 23:49:51,227Z INFO Fetching vendor tencent-cloud-coding-plan
-2026-04-12 23:49:51,672Z INFO Fetched vendor tencent-cloud-coding-plan successfully in 444ms
-2026-04-12 23:49:51,672Z INFO Fetching vendor volcengine-coding-plan
-2026-04-12 23:49:53,571Z INFO Fetched vendor volcengine-coding-plan successfully in 1897ms
-2026-04-12 23:49:53,571Z INFO Fetching vendor aliyun-bailian-coding-plan
-2026-04-12 23:49:58,643Z INFO Fetched vendor aliyun-bailian-coding-plan successfully in 5072ms
-2026-04-12 23:49:58,643Z INFO Fetching vendor baidu-qianfan-coding-plan
-2026-04-12 23:49:59,214Z INFO Fetched vendor baidu-qianfan-coding-plan successfully in 570ms
-2026-04-12 23:49:59,214Z INFO Fetching vendor infini-ai-coding-plan
-2026-04-12 23:50:00,583Z INFO Fetched vendor infini-ai-coding-plan successfully in 1369ms
-2026-04-12 23:50:00,583Z INFO Fetching vendor openai-chatgpt
-2026-04-12 23:50:00,584Z INFO Fetched vendor openai-chatgpt successfully in 0ms
-2026-04-12 23:50:00,584Z INFO Fetching vendor claude-code
-2026-04-12 23:50:18,088Z INFO Fetched vendor claude-code successfully in 17503ms
-2026-04-12 23:50:18,088Z INFO Fetching vendor glm-coding-plan
-2026-04-12 23:50:20,263Z INFO Fetched vendor glm-coding-plan successfully in 2174ms
-2026-04-12 23:50:20,263Z INFO Fetching vendor minimax-token-plan
-2026-04-12 23:50:24,384Z INFO Fetched vendor minimax-token-plan successfully in 4121ms
-2026-04-12 23:50:24,384Z INFO Fetching vendor kimi-ai
-2026-04-12 23:50:43,262Z INFO Kimi diagnostics: goods=9 monthly_by_level=['LEVEL_ADVANCED', 'LEVEL_BASIC', 'LEVEL_FREE', 'LEVEL_INTERMEDIATE', 'LEVEL_TRIAL'] monthly_by_title=['Adagio', 'Allegretto', 'Allegro', 'Andante', 'Moderato']
-2026-04-12 23:50:43,262Z INFO Kimi diagnostics: monthly variant sample=[{'title': 'Adagio', 'membershipLevel': 'LEVEL_FREE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Andante', 'membershipLevel': 'LEVEL_TRIAL', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Moderato', 'membershipLevel': 'LEVEL_BASIC', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegretto', 'membershipLevel': 'LEVEL_INTERMEDIATE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegro', 'membershipLevel': 'LEVEL_ADVANCED', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}]
-2026-04-12 23:50:43,262Z INFO Fetched vendor kimi-ai successfully in 18877ms
-2026-04-12 23:50:43,262Z INFO Fetching vendor xiaomi-mimo-token-plan
-2026-04-12 23:50:44,579Z INFO Fetched vendor xiaomi-mimo-token-plan successfully in 1316ms
-2026-04-12 23:50:44,582Z INFO Wrote preflight report to F:\_myProject\AI\coding-plan-choice\catalog\output\CATALOG_PREFLIGHT.json
-2026-04-12 23:50:44,582Z INFO Wrote catalog data to F:\_myProject\AI\coding-plan-choice\catalog\output\CATALOG_DATA.json
-2026-04-12 23:50:44,582Z INFO Wrote catalog markdown to F:\_myProject\AI\coding-plan-choice\README.md
-2026-04-12 23:50:44,582Z INFO Finished catalog update with 0 preflight warnings
-2026-04-12 23:50:44,582Z INFO Finished catalog update with 0 fetch warnings
-2026-04-12 23:50:44,582Z INFO Total catalog update duration: 105286ms
+2026-04-13 00:06:05,861Z INFO Starting catalog update mode=auto vendors=['cursor', 'github-copilot', 'trae-intl', 'tencent-cloud-coding-plan', 'volcengine-coding-plan', 'aliyun-bailian-coding-plan', 'baidu-qianfan-coding-plan', 'infini-ai-coding-plan', 'openai-chatgpt', 'claude-code', 'glm-coding-plan', 'minimax-token-plan', 'kimi-ai', 'xiaomi-mimo-token-plan']
+2026-04-13 00:06:06,386Z INFO Preflight ok for cursor in 525ms
+2026-04-13 00:06:07,995Z INFO Preflight ok for github-copilot in 1609ms
+2026-04-13 00:06:08,609Z INFO Preflight ok for trae-intl in 613ms
+2026-04-13 00:06:08,630Z INFO Preflight ok for tencent-cloud-coding-plan in 19ms
+2026-04-13 00:06:08,679Z INFO Preflight ok for volcengine-coding-plan in 49ms
+2026-04-13 00:06:08,903Z INFO Preflight ok for aliyun-bailian-coding-plan in 224ms
+2026-04-13 00:06:08,941Z INFO Preflight ok for baidu-qianfan-coding-plan in 36ms
+2026-04-13 00:06:09,275Z INFO Preflight ok for infini-ai-coding-plan in 335ms
+2026-04-13 00:06:09,879Z INFO Preflight ok for openai-chatgpt in 603ms
+2026-04-13 00:06:13,433Z INFO Preflight ok for claude-code in 3554ms
+2026-04-13 00:06:13,486Z INFO Preflight ok for glm-coding-plan in 51ms
+2026-04-13 00:06:13,713Z INFO Preflight ok for minimax-token-plan in 227ms
+2026-04-13 00:06:13,992Z INFO Preflight ok for kimi-ai in 278ms
+2026-04-13 00:06:14,304Z INFO Preflight ok for xiaomi-mimo-token-plan in 311ms
+2026-04-13 00:06:14,306Z INFO Preflight finished with 0 warnings
+2026-04-13 00:06:14,306Z INFO Fetching vendor cursor
+2026-04-13 00:06:18,093Z INFO Fetched vendor cursor successfully in 3786ms
+2026-04-13 00:06:18,093Z INFO Fetching vendor github-copilot
+2026-04-13 00:06:18,093Z INFO Fetched vendor github-copilot successfully in 0ms
+2026-04-13 00:06:18,093Z INFO Fetching vendor trae-intl
+2026-04-13 00:06:25,861Z INFO Fetched vendor trae-intl successfully in 7768ms
+2026-04-13 00:06:25,862Z INFO Fetching vendor tencent-cloud-coding-plan
+2026-04-13 00:06:26,367Z INFO Fetched vendor tencent-cloud-coding-plan successfully in 504ms
+2026-04-13 00:06:26,367Z INFO Fetching vendor volcengine-coding-plan
+2026-04-13 00:06:28,166Z INFO Fetched vendor volcengine-coding-plan successfully in 1798ms
+2026-04-13 00:06:28,166Z INFO Fetching vendor aliyun-bailian-coding-plan
+2026-04-13 00:06:32,440Z INFO Fetched vendor aliyun-bailian-coding-plan successfully in 4274ms
+2026-04-13 00:06:32,441Z INFO Fetching vendor baidu-qianfan-coding-plan
+2026-04-13 00:06:33,028Z INFO Fetched vendor baidu-qianfan-coding-plan successfully in 586ms
+2026-04-13 00:06:33,028Z INFO Fetching vendor infini-ai-coding-plan
+2026-04-13 00:06:34,317Z INFO Fetched vendor infini-ai-coding-plan successfully in 1289ms
+2026-04-13 00:06:34,317Z INFO Fetching vendor openai-chatgpt
+2026-04-13 00:06:34,318Z INFO Fetched vendor openai-chatgpt successfully in 0ms
+2026-04-13 00:06:34,318Z INFO Fetching vendor claude-code
+2026-04-13 00:06:51,482Z INFO Fetched vendor claude-code successfully in 17164ms
+2026-04-13 00:06:51,482Z INFO Fetching vendor glm-coding-plan
+2026-04-13 00:06:53,604Z INFO Fetched vendor glm-coding-plan successfully in 2121ms
+2026-04-13 00:06:53,604Z INFO Fetching vendor minimax-token-plan
+2026-04-13 00:06:56,761Z INFO Fetched vendor minimax-token-plan successfully in 3157ms
+2026-04-13 00:06:56,761Z INFO Fetching vendor kimi-ai
+2026-04-13 00:06:57,293Z INFO Kimi diagnostics: goods=9 monthly_by_level=['LEVEL_ADVANCED', 'LEVEL_BASIC', 'LEVEL_FREE', 'LEVEL_INTERMEDIATE', 'LEVEL_TRIAL'] monthly_by_title=['Adagio', 'Allegretto', 'Allegro', 'Andante', 'Moderato']
+2026-04-13 00:06:57,293Z INFO Kimi diagnostics: monthly variant sample=[{'title': 'Adagio', 'membershipLevel': 'LEVEL_FREE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Andante', 'membershipLevel': 'LEVEL_TRIAL', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Moderato', 'membershipLevel': 'LEVEL_BASIC', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegretto', 'membershipLevel': 'LEVEL_INTERMEDIATE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegro', 'membershipLevel': 'LEVEL_ADVANCED', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}]
+2026-04-13 00:06:57,294Z INFO Fetched vendor kimi-ai successfully in 531ms
+2026-04-13 00:06:57,294Z INFO Fetching vendor xiaomi-mimo-token-plan
+2026-04-13 00:06:58,630Z INFO Fetched vendor xiaomi-mimo-token-plan successfully in 1337ms
+2026-04-13 00:06:58,633Z INFO Wrote preflight report to F:\_myProject\AI\coding-plan-choice\catalog\output\CATALOG_PREFLIGHT.json
+2026-04-13 00:06:58,633Z INFO Wrote catalog data to F:\_myProject\AI\coding-plan-choice\catalog\output\CATALOG_DATA.json
+2026-04-13 00:06:58,633Z INFO Wrote catalog markdown to F:\_myProject\AI\coding-plan-choice\README.md
+2026-04-13 00:06:58,633Z INFO Finished catalog update with 0 preflight warnings
+2026-04-13 00:06:58,633Z INFO Finished catalog update with 0 fetch warnings
+2026-04-13 00:06:58,633Z INFO Total catalog update duration: 52773ms
