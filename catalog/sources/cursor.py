@@ -116,9 +116,9 @@ def _extract_price(pricing_text: str, package_name: str) -> str:
 
 def _extract_quota(models_text: str, package_name: str) -> str:
     quotas = {
-        "Pro": "$20 API usage/月（超出后按模型 API 价格计费）",
-        "Pro+": "$70 API usage/月（超出后按模型 API 价格计费）",
-        "Ultra": "$400 API usage/月（超出后按模型 API 价格计费）",
+        "Pro": "月含 $20 API usage；超出后按模型 Token 单价计费",
+        "Pro+": "月含 $70 API usage；超出后按模型 Token 单价计费",
+        "Ultra": "月含 $400 API usage；超出后按模型 Token 单价计费",
     }
     expected = {
         "Pro": "$20",

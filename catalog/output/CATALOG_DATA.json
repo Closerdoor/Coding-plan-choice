@@ -1,6 +1,10 @@
 {
-  "generated_at_utc": "2026-04-12T05:01:04+00:00",
-  "warnings": [],
+  "generated_at_utc": "2026-04-12T07:04:56+00:00",
+  "warnings": [
+    "vendor xiaomi-mimo-token-plan: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.xiaomi_mimo_token_plan'",
+    "vendor openai-chatgpt: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.openai_chatgpt'",
+    "vendor kimi-ai: failed with no previous data: ModuleNotFoundError: No module named 'catalog.sources.kimi_ai'"
+  ],
   "vendors": [
     {
       "vendor_id": "tencent-cloud-coding-plan",
@@ -70,7 +74,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T05:00:52+00:00"
+      "updated_at_utc": "2026-04-12T07:02:45+00:00"
     },
     {
       "vendor_id": "volcengine-coding-plan",
@@ -136,7 +140,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T05:00:53+00:00"
+      "updated_at_utc": "2026-04-12T07:03:06+00:00"
     },
     {
       "vendor_id": "baidu-qianfan-coding-plan",
@@ -190,7 +194,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T05:00:54+00:00"
+      "updated_at_utc": "2026-04-12T07:03:25+00:00"
     },
     {
       "vendor_id": "glm-coding-plan",
@@ -285,7 +289,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T05:00:56+00:00"
+      "updated_at_utc": "2026-04-12T07:03:44+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
@@ -483,7 +487,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T05:01:00+00:00"
+      "updated_at_utc": "2026-04-12T07:04:01+00:00"
     },
     {
       "vendor_id": "aliyun-bailian-coding-plan",
@@ -529,7 +533,267 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T05:01:04+00:00"
+      "updated_at_utc": "2026-04-12T07:04:15+00:00"
+    },
+    {
+      "vendor_id": "trae-intl",
+      "company_name": "字节跳动",
+      "plan_name": "TRAE国际版",
+      "official_url": "https://trae.ai/pricing",
+      "source_urls": [
+        "https://docs.trae.ai/ide/billing",
+        "https://trae.ai/terms-of-service"
+      ],
+      "packages": [
+        {
+          "name": "Lite套餐",
+          "price": "$3/月",
+          "discount": "",
+          "quota": "月含 $5 Basic Usage；超出按官方模型费率消耗",
+          "models_raw": [
+            "Gemini-2.5-Flash",
+            "Gemini-2.5-Pro",
+            "GPT-4.1",
+            "GPT-4o",
+            "DeepSeek-V3-0324",
+            "DeepSeek-V3",
+            "DeepSeek-Reasoner(R1)"
+          ],
+          "tools": [
+            "TRAE SOLO (Web/Desktop)"
+          ],
+          "access_method": "账号订阅（TRAE IDE / TRAE SOLO）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro套餐",
+          "price": "$10/月",
+          "discount": "前7天免费",
+          "quota": "月含 $20 Basic Usage；超出按官方模型费率消耗",
+          "models_raw": [
+            "Gemini-2.5-Flash",
+            "Gemini-2.5-Pro",
+            "GPT-4.1",
+            "GPT-4o",
+            "DeepSeek-V3-0324",
+            "DeepSeek-V3",
+            "DeepSeek-Reasoner(R1)"
+          ],
+          "tools": [
+            "TRAE IDE",
+            "TRAE SOLO (Web/Desktop)"
+          ],
+          "access_method": "账号订阅（TRAE IDE / TRAE SOLO）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro+套餐",
+          "price": "$30/月",
+          "discount": "",
+          "quota": "月含 $90 Basic Usage；超出按官方模型费率消耗",
+          "models_raw": [
+            "Gemini-2.5-Flash",
+            "Gemini-2.5-Pro",
+            "GPT-4.1",
+            "GPT-4o",
+            "DeepSeek-V3-0324",
+            "DeepSeek-V3",
+            "DeepSeek-Reasoner(R1)"
+          ],
+          "tools": [
+            "TRAE IDE",
+            "TRAE SOLO (Web/Desktop)"
+          ],
+          "access_method": "账号订阅（TRAE IDE / TRAE SOLO）",
+          "models_filtered": []
+        },
+        {
+          "name": "Ultra套餐",
+          "price": "$100/月",
+          "discount": "",
+          "quota": "月含 $400 Basic Usage；超出按官方模型费率消耗",
+          "models_raw": [
+            "Gemini-2.5-Flash",
+            "Gemini-2.5-Pro",
+            "GPT-4.1",
+            "GPT-4o",
+            "DeepSeek-V3-0324",
+            "DeepSeek-V3",
+            "DeepSeek-Reasoner(R1)"
+          ],
+          "tools": [
+            "TRAE IDE",
+            "TRAE SOLO (Web/Desktop)"
+          ],
+          "access_method": "账号订阅（TRAE IDE / TRAE SOLO）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T07:04:46+00:00"
+    },
+    {
+      "vendor_id": "cursor",
+      "company_name": "Anysphere",
+      "plan_name": "Cursor",
+      "official_url": "https://cursor.com/pricing",
+      "source_urls": [
+        "https://cursor.com/docs/models-and-pricing",
+        "https://cursor.com/docs/account/teams/dashboard",
+        "https://cursor.com/docs/cloud-agent"
+      ],
+      "packages": [
+        {
+          "name": "Pro套餐",
+          "price": "$20/月",
+          "discount": "",
+          "quota": "月含 $20 API usage；超出后按模型 Token 单价计费",
+          "models_raw": [
+            "Auto",
+            "Composer 2",
+            "Claude 4 Sonnet",
+            "Claude 4 Sonnet 1M",
+            "Claude 4.5 Haiku",
+            "Claude 4.5 Opus",
+            "Claude 4.5 Sonnet",
+            "Claude 4.6 Opus",
+            "Claude 4.6 Opus (Fast mode)",
+            "Claude 4.6 Sonnet",
+            "Composer 1",
+            "Composer 1.5",
+            "Gemini 2.5 Flash",
+            "Gemini 3 Flash",
+            "Gemini 3 Pro",
+            "Gemini 3 Pro Image Preview",
+            "Gemini 3.1 Pro",
+            "GPT-5",
+            "GPT-5 Fast",
+            "GPT-5 Mini",
+            "GPT-5-Codex",
+            "GPT-5.1 Codex",
+            "GPT-5.1 Codex Max",
+            "GPT-5.1 Codex Mini",
+            "GPT-5.2",
+            "GPT-5.2 Codex",
+            "GPT-5.3 Codex",
+            "GPT-5.4",
+            "GPT-5.4 Mini",
+            "GPT-5.4 Nano",
+            "Grok 4.20",
+            "Kimi K2.5"
+          ],
+          "tools": [
+            "Cursor Desktop",
+            "Cursor Web",
+            "Slack",
+            "GitHub",
+            "Linear",
+            "API"
+          ],
+          "access_method": "账号订阅（Cursor 客户端 / Web）",
+          "models_filtered": []
+        },
+        {
+          "name": "Pro+套餐",
+          "price": "$60/月",
+          "discount": "",
+          "quota": "月含 $70 API usage；超出后按模型 Token 单价计费",
+          "models_raw": [
+            "Auto",
+            "Composer 2",
+            "Claude 4 Sonnet",
+            "Claude 4 Sonnet 1M",
+            "Claude 4.5 Haiku",
+            "Claude 4.5 Opus",
+            "Claude 4.5 Sonnet",
+            "Claude 4.6 Opus",
+            "Claude 4.6 Opus (Fast mode)",
+            "Claude 4.6 Sonnet",
+            "Composer 1",
+            "Composer 1.5",
+            "Gemini 2.5 Flash",
+            "Gemini 3 Flash",
+            "Gemini 3 Pro",
+            "Gemini 3 Pro Image Preview",
+            "Gemini 3.1 Pro",
+            "GPT-5",
+            "GPT-5 Fast",
+            "GPT-5 Mini",
+            "GPT-5-Codex",
+            "GPT-5.1 Codex",
+            "GPT-5.1 Codex Max",
+            "GPT-5.1 Codex Mini",
+            "GPT-5.2",
+            "GPT-5.2 Codex",
+            "GPT-5.3 Codex",
+            "GPT-5.4",
+            "GPT-5.4 Mini",
+            "GPT-5.4 Nano",
+            "Grok 4.20",
+            "Kimi K2.5"
+          ],
+          "tools": [
+            "Cursor Desktop",
+            "Cursor Web",
+            "Slack",
+            "GitHub",
+            "Linear",
+            "API"
+          ],
+          "access_method": "账号订阅（Cursor 客户端 / Web）",
+          "models_filtered": []
+        },
+        {
+          "name": "Ultra套餐",
+          "price": "$200/月",
+          "discount": "",
+          "quota": "月含 $400 API usage；超出后按模型 Token 单价计费",
+          "models_raw": [
+            "Auto",
+            "Composer 2",
+            "Claude 4 Sonnet",
+            "Claude 4 Sonnet 1M",
+            "Claude 4.5 Haiku",
+            "Claude 4.5 Opus",
+            "Claude 4.5 Sonnet",
+            "Claude 4.6 Opus",
+            "Claude 4.6 Opus (Fast mode)",
+            "Claude 4.6 Sonnet",
+            "Composer 1",
+            "Composer 1.5",
+            "Gemini 2.5 Flash",
+            "Gemini 3 Flash",
+            "Gemini 3 Pro",
+            "Gemini 3 Pro Image Preview",
+            "Gemini 3.1 Pro",
+            "GPT-5",
+            "GPT-5 Fast",
+            "GPT-5 Mini",
+            "GPT-5-Codex",
+            "GPT-5.1 Codex",
+            "GPT-5.1 Codex Max",
+            "GPT-5.1 Codex Mini",
+            "GPT-5.2",
+            "GPT-5.2 Codex",
+            "GPT-5.3 Codex",
+            "GPT-5.4",
+            "GPT-5.4 Mini",
+            "GPT-5.4 Nano",
+            "Grok 4.20",
+            "Kimi K2.5"
+          ],
+          "tools": [
+            "Cursor Desktop",
+            "Cursor Web",
+            "Slack",
+            "GitHub",
+            "Linear",
+            "API"
+          ],
+          "access_method": "账号订阅（Cursor 客户端 / Web）",
+          "models_filtered": []
+        }
+      ],
+      "updated_at_utc": "2026-04-12T07:04:56+00:00"
     }
   ]
 }

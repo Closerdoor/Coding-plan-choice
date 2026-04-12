@@ -11,7 +11,7 @@
 ## 腾讯｜腾讯云大模型 Coding Plan
 
 - 官方地址：https://cloud.tencent.com/act/pro/codingplan
-- 最后更新时间（UTC）：2026-04-12T05:00:52+00:00
+- 最后更新时间（UTC）：2026-04-12T07:02:45+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@
 ## 字节跳动｜火山方舟 Coding Plan
 
 - 官方地址：https://www.volcengine.com/activity/codingplan
-- 最后更新时间（UTC）：2026-04-12T05:00:53+00:00
+- 最后更新时间（UTC）：2026-04-12T07:03:06+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -37,7 +37,7 @@
 ## 百度｜百度千帆 Coding Plan
 
 - 官方地址：https://cloud.baidu.com/product/codingplan.html
-- 最后更新时间（UTC）：2026-04-12T05:00:54+00:00
+- 最后更新时间（UTC）：2026-04-12T07:03:25+00:00
 
 | 项目 | lite套餐 | pro套餐 |
 | --- | --- | --- |
@@ -50,7 +50,7 @@
 ## 智谱AI｜GLM Coding Plan
 
 - 官方地址：https://bigmodel.cn/glm-coding
-- 最后更新时间（UTC）：2026-04-12T05:00:56+00:00
+- 最后更新时间（UTC）：2026-04-12T07:03:44+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@
 ## MiniMax｜MiniMax Token Plan
 
 - 官方地址：https://platform.minimaxi.com/subscribe/token-plan
-- 最后更新时间（UTC）：2026-04-12T05:01:00+00:00
+- 最后更新时间（UTC）：2026-04-12T07:04:01+00:00
 
 | 项目 | starter套餐 | plus套餐 | max套餐 | plus-极速版 | max-极速版 | ultra-极速版 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@
 ## 阿里｜阿里云百炼Coding plan
 
 - 官方地址：https://help.aliyun.com/zh/model-studio/coding-plan
-- 最后更新时间（UTC）：2026-04-12T05:01:04+00:00
+- 最后更新时间（UTC）：2026-04-12T07:04:15+00:00
 
 | 项目 | pro套餐 |
 | --- | --- |
@@ -85,3 +85,29 @@
 | 支持模型 | Qwen3.6-Plus；Kimi-K2.5；GLM-5；MiniMax-M2.5；Qwen3.5-Plus；Qwen3-Max-2026-01-23；Qwen3-Coder-Next；Qwen3-Coder-Plus；GLM-4.7 |
 | 支持工具 | OpenClaw；OpenCode；Claude Code；Cline；Cursor；Qwen Code；Qoder；Lingma；Kilo Code；Kilo CLI；Codex |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） |
+
+## 字节跳动｜TRAE国际版
+
+- 官方地址：https://trae.ai/pricing
+- 最后更新时间（UTC）：2026-04-12T07:04:46+00:00
+
+| 项目 | Lite套餐 | Pro套餐 | Pro+套餐 | Ultra套餐 |
+| --- | --- | --- | --- | --- |
+| 价格 | $3/月 | $10/月(优惠：前7天免费) | $30/月 | $100/月 |
+| 用量 | 月含 $5 Basic Usage；超出按官方模型费率消耗 | 月含 $20 Basic Usage；超出按官方模型费率消耗 | 月含 $90 Basic Usage；超出按官方模型费率消耗 | 月含 $400 Basic Usage；超出按官方模型费率消耗 |
+| 支持模型 | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) |
+| 支持工具 | TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) |
+| 使用方式 | 账号订阅（TRAE IDE / TRAE SOLO） | 账号订阅（TRAE IDE / TRAE SOLO） | 账号订阅（TRAE IDE / TRAE SOLO） | 账号订阅（TRAE IDE / TRAE SOLO） |
+
+## Anysphere｜Cursor
+
+- 官方地址：https://cursor.com/pricing
+- 最后更新时间（UTC）：2026-04-12T07:04:56+00:00
+
+| 项目 | Pro套餐 | Pro+套餐 | Ultra套餐 |
+| --- | --- | --- | --- |
+| 价格 | $20/月 | $60/月 | $200/月 |
+| 用量 | 月含 $20 API usage；超出后按模型 Token 单价计费 | 月含 $70 API usage；超出后按模型 Token 单价计费 | 月含 $400 API usage；超出后按模型 Token 单价计费 |
+| 支持模型 | Auto；Composer 2；Claude 4 Sonnet；Claude 4 Sonnet 1M；Claude 4.5 Haiku；Claude 4.5 Opus；Claude 4.5 Sonnet；Claude 4.6 Opus；Claude 4.6 Opus (Fast mode)；Claude 4.6 Sonnet；Composer 1；Composer 1.5；Gemini 2.5 Flash；Gemini 3 Flash；Gemini 3 Pro；Gemini 3 Pro Image Preview；Gemini 3.1 Pro；GPT-5；GPT-5 Fast；GPT-5 Mini；GPT-5-Codex；GPT-5.1 Codex；GPT-5.1 Codex Max；GPT-5.1 Codex Mini；GPT-5.2；GPT-5.2 Codex；GPT-5.3 Codex；GPT-5.4；GPT-5.4 Mini；GPT-5.4 Nano；Grok 4.20；Kimi K2.5 | Auto；Composer 2；Claude 4 Sonnet；Claude 4 Sonnet 1M；Claude 4.5 Haiku；Claude 4.5 Opus；Claude 4.5 Sonnet；Claude 4.6 Opus；Claude 4.6 Opus (Fast mode)；Claude 4.6 Sonnet；Composer 1；Composer 1.5；Gemini 2.5 Flash；Gemini 3 Flash；Gemini 3 Pro；Gemini 3 Pro Image Preview；Gemini 3.1 Pro；GPT-5；GPT-5 Fast；GPT-5 Mini；GPT-5-Codex；GPT-5.1 Codex；GPT-5.1 Codex Max；GPT-5.1 Codex Mini；GPT-5.2；GPT-5.2 Codex；GPT-5.3 Codex；GPT-5.4；GPT-5.4 Mini；GPT-5.4 Nano；Grok 4.20；Kimi K2.5 | Auto；Composer 2；Claude 4 Sonnet；Claude 4 Sonnet 1M；Claude 4.5 Haiku；Claude 4.5 Opus；Claude 4.5 Sonnet；Claude 4.6 Opus；Claude 4.6 Opus (Fast mode)；Claude 4.6 Sonnet；Composer 1；Composer 1.5；Gemini 2.5 Flash；Gemini 3 Flash；Gemini 3 Pro；Gemini 3 Pro Image Preview；Gemini 3.1 Pro；GPT-5；GPT-5 Fast；GPT-5 Mini；GPT-5-Codex；GPT-5.1 Codex；GPT-5.1 Codex Max；GPT-5.1 Codex Mini；GPT-5.2；GPT-5.2 Codex；GPT-5.3 Codex；GPT-5.4；GPT-5.4 Mini；GPT-5.4 Nano；Grok 4.20；Kimi K2.5 |
+| 支持工具 | Cursor Desktop；Cursor Web；Slack；GitHub；Linear；API | Cursor Desktop；Cursor Web；Slack；GitHub；Linear；API | Cursor Desktop；Cursor Web；Slack；GitHub；Linear；API |
+| 使用方式 | 账号订阅（Cursor 客户端 / Web） | 账号订阅（Cursor 客户端 / Web） | 账号订阅（Cursor 客户端 / Web） |

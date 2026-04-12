@@ -90,7 +90,7 @@ VENDORS = [
     {
         "vendor_id": "trae-intl",
         "company_name": "字节跳动",
-        "plan_name": "TRAE INTL",
+        "plan_name": "TRAE国际版",
         "official_url": "https://trae.ai/pricing",
         "source_urls": [
             "https://docs.trae.ai/ide/billing",
