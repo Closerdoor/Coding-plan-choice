@@ -1,6 +1,9 @@
 {
-  "generated_at_utc": "2026-04-12T15:45:13+00:00",
-  "warnings": [],
+  "generated_at_utc": "2026-04-13T05:48:11+00:00",
+  "warnings": [
+    "vendor volcengine-coding-plan: failed, kept previous data: ValueError: failed to extract Volcengine quota for pro套餐",
+    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods"
+  ],
   "vendors": [
     {
       "vendor_id": "cursor",
@@ -294,7 +297,7 @@
         {
           "name": "Pro套餐",
           "price": "$10/月",
-          "discount": "前7天免费",
+          "discount": "",
           "quota": "月含 $20 Basic Usage；超出按官方模型费率消耗",
           "models_raw": [
             "Gemini-2.5-Flash",
@@ -355,7 +358,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T15:45:13+00:00"
+      "updated_at_utc": "2026-04-13T05:48:11+00:00"
     },
     {
       "vendor_id": "tencent-cloud-coding-plan",
