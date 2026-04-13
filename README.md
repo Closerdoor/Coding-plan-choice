@@ -2,7 +2,7 @@
 
 汇总各家 Coding Plan 套餐、价格、额度、支持模型与接入方式。
 
-最新生成时间（UTC）：2026-04-12T15:45:13+00:00
+最新生成时间（UTC）：2026-04-13T05:48:11+00:00
 
 ## 导航
 
@@ -59,11 +59,11 @@
 
 - 厂商：字节跳动
 - 官方地址：https://trae.ai/pricing
-- 最后更新时间（UTC）：2026-04-12T15:45:13+00:00
+- 最后更新时间（UTC）：2026-04-13T05:48:11+00:00
 
 | 项目 | Lite套餐 | Pro套餐 | Pro+套餐 | Ultra套餐 |
 | --- | --- | --- | --- | --- |
-| 价格 | $3/月 | $10/月(优惠：前7天免费) | $30/月 | $100/月 |
+| 价格 | $3/月 | $10/月 | $30/月 | $100/月 |
 | 用量 | 月含 $5 Basic Usage；超出按官方模型费率消耗 | 月含 $20 Basic Usage；超出按官方模型费率消耗 | 月含 $90 Basic Usage；超出按官方模型费率消耗 | 月含 $400 Basic Usage；超出按官方模型费率消耗 |
 | 支持模型 | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) | Gemini-2.5-Flash；Gemini-2.5-Pro；GPT-4.1；GPT-4o；DeepSeek-V3-0324；DeepSeek-V3；DeepSeek-Reasoner(R1) |
 | 支持工具 | TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) | TRAE IDE；TRAE SOLO (Web/Desktop) |
