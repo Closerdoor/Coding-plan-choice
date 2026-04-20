@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-13T05:45:35+00:00",
+  "generated_at_utc": "2026-04-20T05:44:55+00:00",
   "weights": {
     "swebench": 0.3,
     "livecodebench": 0.3,
@@ -272,22 +272,32 @@
       }
     },
     {
-      "provider": "Google",
-      "model": "gemini-3-pro",
-      "model_join_key": "gemini3pro",
-      "total_score_0_1": 0.7250632911392405,
-      "per_source_unit_scores": {
-        "swebench": 0.6075949367088608,
-        "arena": 0.96
-      }
-    },
-    {
       "provider": "OpenAI",
       "model": "openai/gpt-5-2025-08-07",
       "model_join_key": "openaigpt520250807",
       "total_score_0_1": 0.7215189873417722,
       "per_source_unit_scores": {
         "swebench": 0.7215189873417722
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-3-pro",
+      "model_join_key": "gemini3pro",
+      "total_score_0_1": 0.7117299578059072,
+      "per_source_unit_scores": {
+        "swebench": 0.6075949367088608,
+        "arena": 0.92
+      }
+    },
+    {
+      "provider": "Zhipu AI",
+      "model": "GLM-4.7",
+      "model_join_key": "glm47",
+      "total_score_0_1": 0.7093333333333334,
+      "per_source_unit_scores": {
+        "arena": 0.96,
+        "opencompass": 0.33333333333333337
       }
     },
     {
@@ -327,16 +337,6 @@
       "per_source_unit_scores": {
         "swebench": 0.9240506329113924,
         "arena": 0.24
-      }
-    },
-    {
-      "provider": "Zhipu AI",
-      "model": "GLM-4.7",
-      "model_join_key": "glm47",
-      "total_score_0_1": 0.6853333333333333,
-      "per_source_unit_scores": {
-        "arena": 0.92,
-        "opencompass": 0.33333333333333337
       }
     },
     {
