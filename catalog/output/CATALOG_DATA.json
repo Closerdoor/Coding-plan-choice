@@ -1,7 +1,9 @@
 {
   "generated_at_utc": "2026-04-13T05:48:11+00:00",
   "warnings": [
-    "vendor volcengine-coding-plan: failed, kept previous data: ValueError: failed to extract Volcengine quota for pro套餐",
+    "vendor tencent-cloud-coding-plan: failed, kept previous data: HTTPError: HTTP Error 404: Not Found",
+    "vendor volcengine-coding-plan: failed, kept previous data: ValueError: failed to extract Volcengine quota for lite套餐",
+    "vendor baidu-qianfan-coding-plan: failed, kept previous data: ValueError: failed to locate Baidu doc section: <h3 id=\"支持的模型\">",
     "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods"
   ],
   "vendors": [
