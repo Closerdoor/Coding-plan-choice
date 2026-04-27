@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-13T05:45:35+00:00",
+  "generated_at_utc": "2026-04-27T05:57:40+00:00",
   "weights": {
     "swebench": 0.3,
     "livecodebench": 0.3,
@@ -88,10 +88,10 @@
       "provider": "Anthropic",
       "model": "claude-opus-4-5-20251101",
       "model_join_key": "claudeopus4520251101",
-      "total_score_0_1": 0.9466666666666668,
+      "total_score_0_1": 0.9444444444444445,
       "per_source_unit_scores": {
         "swebench": 1.0,
-        "arena": 0.84
+        "arena": 0.8333333333333334
       }
     },
     {
@@ -186,6 +186,16 @@
       }
     },
     {
+      "provider": "Google",
+      "model": "gemini-3-flash",
+      "model_join_key": "gemini3flash",
+      "total_score_0_1": 0.8173347398030943,
+      "per_source_unit_scores": {
+        "swebench": 0.7468354430379747,
+        "arena": 0.9583333333333334
+      }
+    },
+    {
       "provider": "OpenAI",
       "model": "gpt-5-2025-08-07",
       "model_join_key": "gpt520250807",
@@ -198,10 +208,10 @@
       "provider": "Zhipu AI",
       "model": "GLM-5",
       "model_join_key": "glm5",
-      "total_score_0_1": 0.8009717427438948,
+      "total_score_0_1": 0.7986990154711675,
       "per_source_unit_scores": {
         "swebench": 0.7721518987341772,
-        "arena": 0.8,
+        "arena": 0.7916666666666666,
         "opencompass": 0.8888888888888888
       }
     },
@@ -212,16 +222,6 @@
       "total_score_0_1": 0.7974683544303798,
       "per_source_unit_scores": {
         "swebench": 0.7974683544303798
-      }
-    },
-    {
-      "provider": "Google",
-      "model": "gemini-3-flash",
-      "model_join_key": "gemini3flash",
-      "total_score_0_1": 0.7912236286919831,
-      "per_source_unit_scores": {
-        "swebench": 0.7468354430379747,
-        "arena": 0.88
       }
     },
     {
@@ -246,10 +246,10 @@
       "provider": "OpenAI",
       "model": "gpt-5-2-codex",
       "model_join_key": "gpt52codex",
-      "total_score_0_1": 0.7498734177215189,
+      "total_score_0_1": 0.7454289732770747,
       "per_source_unit_scores": {
         "swebench": 0.7848101265822784,
-        "arena": 0.6799999999999999
+        "arena": 0.6666666666666667
       }
     },
     {
@@ -265,20 +265,10 @@
       "provider": "Anthropic",
       "model": "claude-sonnet-4-5-20250929",
       "model_join_key": "claudesonnet4520250929",
-      "total_score_0_1": 0.7259071729957807,
+      "total_score_0_1": 0.7225738396624473,
       "per_source_unit_scores": {
         "swebench": 0.7088607594936709,
-        "arena": 0.76
-      }
-    },
-    {
-      "provider": "Google",
-      "model": "gemini-3-pro",
-      "model_join_key": "gemini3pro",
-      "total_score_0_1": 0.7250632911392405,
-      "per_source_unit_scores": {
-        "swebench": 0.6075949367088608,
-        "arena": 0.96
+        "arena": 0.75
       }
     },
     {
@@ -291,23 +281,43 @@
       }
     },
     {
-      "provider": "OpenAI",
-      "model": "gpt-5-2",
-      "model_join_key": "gpt52",
-      "total_score_0_1": 0.7063291139240506,
-      "per_source_unit_scores": {
-        "swebench": 0.759493670886076,
-        "arena": 0.6
-      }
-    },
-    {
       "provider": "MiniMax",
       "model": "minimax-m2.5",
       "model_join_key": "minimaxm25",
-      "total_score_0_1": 0.6973839662447259,
+      "total_score_0_1": 0.7018284106891703,
       "per_source_unit_scores": {
         "swebench": 0.8860759493670887,
-        "arena": 0.31999999999999995
+        "arena": 0.33333333333333337
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5-2",
+      "model_join_key": "gpt52",
+      "total_score_0_1": 0.7007735583684951,
+      "per_source_unit_scores": {
+        "swebench": 0.759493670886076,
+        "arena": 0.5833333333333333
+      }
+    },
+    {
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "model_join_key": "claudesonnet420250514",
+      "total_score_0_1": 0.6993670886075949,
+      "per_source_unit_scores": {
+        "swebench": 0.9240506329113924,
+        "arena": 0.25
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-3-pro",
+      "model_join_key": "gemini3pro",
+      "total_score_0_1": 0.6967299578059073,
+      "per_source_unit_scores": {
+        "swebench": 0.6075949367088608,
+        "arena": 0.875
       }
     },
     {
@@ -320,33 +330,13 @@
       }
     },
     {
-      "provider": "Anthropic",
-      "model": "claude-sonnet-4-20250514",
-      "model_join_key": "claudesonnet420250514",
-      "total_score_0_1": 0.6960337552742616,
-      "per_source_unit_scores": {
-        "swebench": 0.9240506329113924,
-        "arena": 0.24
-      }
-    },
-    {
       "provider": "Zhipu AI",
       "model": "GLM-4.7",
       "model_join_key": "glm47",
-      "total_score_0_1": 0.6853333333333333,
+      "total_score_0_1": 0.6833333333333333,
       "per_source_unit_scores": {
-        "arena": 0.92,
+        "arena": 0.9166666666666666,
         "opencompass": 0.33333333333333337
-      }
-    },
-    {
-      "provider": "Google",
-      "model": "gemini-2.5-pro",
-      "model_join_key": "gemini25pro",
-      "total_score_0_1": 0.6703797468354431,
-      "per_source_unit_scores": {
-        "swebench": 0.6455696202531646,
-        "arena": 0.72
       }
     },
     {
@@ -356,6 +346,16 @@
       "total_score_0_1": 0.6666666666666667,
       "per_source_unit_scores": {
         "opencompass": 0.6666666666666667
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.5-pro",
+      "model_join_key": "gemini25pro",
+      "total_score_0_1": 0.6664908579465542,
+      "per_source_unit_scores": {
+        "swebench": 0.6455696202531646,
+        "arena": 0.7083333333333333
       }
     },
     {
@@ -378,6 +378,16 @@
       }
     },
     {
+      "provider": "Moonshot AI",
+      "model": "kimi-k2-0905-preview",
+      "model_join_key": "kimik20905preview",
+      "total_score_0_1": 0.6223628691983123,
+      "per_source_unit_scores": {
+        "swebench": 0.6835443037974683,
+        "arena": 0.5
+      }
+    },
+    {
       "provider": "Alibaba",
       "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
       "model_join_key": "qwenqwen3coder480ba35binstruct",
@@ -387,13 +397,13 @@
       }
     },
     {
-      "provider": "Moonshot AI",
-      "model": "kimi-k2-0905-preview",
-      "model_join_key": "kimik20905preview",
-      "total_score_0_1": 0.6156962025316456,
+      "provider": "OpenAI",
+      "model": "gpt-4.1-2025-04-14",
+      "model_join_key": "gpt4120250414",
+      "total_score_0_1": 0.6000351617440226,
       "per_source_unit_scores": {
-        "swebench": 0.6835443037974683,
-        "arena": 0.48
+        "swebench": 0.6708860759493671,
+        "arena": 0.45833333333333337
       }
     },
     {
@@ -403,16 +413,6 @@
       "total_score_0_1": 0.5949367088607596,
       "per_source_unit_scores": {
         "swebench": 0.5949367088607596
-      }
-    },
-    {
-      "provider": "OpenAI",
-      "model": "gpt-4.1-2025-04-14",
-      "model_join_key": "gpt4120250414",
-      "total_score_0_1": 0.5939240506329114,
-      "per_source_unit_scores": {
-        "swebench": 0.6708860759493671,
-        "arena": 0.43999999999999995
       }
     },
     {
@@ -437,10 +437,10 @@
       "provider": "OpenAI",
       "model": "gpt-5.1-codex",
       "model_join_key": "gpt51codex",
-      "total_score_0_1": 0.5677637130801688,
+      "total_score_0_1": 0.5627637130801687,
       "per_source_unit_scores": {
         "swebench": 0.5316455696202531,
-        "arena": 0.64
+        "arena": 0.625
       }
     },
     {
@@ -463,23 +463,22 @@
       }
     },
     {
-      "provider": "DeepSeek",
-      "model": "DeepSeek-V3.2",
-      "model_join_key": "deepseekv32",
-      "total_score_0_1": 0.5072445978775094,
-      "per_source_unit_scores": {
-        "swebench": 0.6329113924050633,
-        "arena": 0.52,
-        "opencompass": 0.11111111111111116
-      }
-    },
-    {
       "provider": "Moonshot AI",
       "model": "moonshot/kimi-k2-0711-preview",
       "model_join_key": "moonshotkimik20711preview",
       "total_score_0_1": 0.5063291139240507,
       "per_source_unit_scores": {
         "swebench": 0.5063291139240507
+      }
+    },
+    {
+      "provider": "DeepSeek",
+      "model": "DeepSeek-V3.2",
+      "model_join_key": "deepseekv32",
+      "total_score_0_1": 0.5024613220815752,
+      "per_source_unit_scores": {
+        "swebench": 0.6329113924050633,
+        "opencompass": 0.11111111111111116
       }
     },
     {
@@ -502,22 +501,22 @@
       }
     },
     {
+      "provider": "Anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "model_join_key": "claudehaiku4520251001",
+      "total_score_0_1": 0.49630801687763726,
+      "per_source_unit_scores": {
+        "swebench": 0.5569620253164558,
+        "arena": 0.375
+      }
+    },
+    {
       "provider": "OpenAI",
       "model": "o1-preview",
       "model_join_key": "o1preview",
       "total_score_0_1": 0.49367088607594933,
       "per_source_unit_scores": {
         "swebench": 0.49367088607594933
-      }
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-haiku-4-5-20251001",
-      "model_join_key": "claudehaiku4520251001",
-      "total_score_0_1": 0.49130801687763725,
-      "per_source_unit_scores": {
-        "swebench": 0.5569620253164558,
-        "arena": 0.36
       }
     },
     {
@@ -533,10 +532,10 @@
       "provider": "OpenAI",
       "model": "o3-2025-04-16",
       "model_join_key": "o320250416",
-      "total_score_0_1": 0.45670886075949374,
+      "total_score_0_1": 0.4505977496483827,
       "per_source_unit_scores": {
         "swebench": 0.40506329113924056,
-        "arena": 0.56
+        "arena": 0.5416666666666667
       }
     },
     {
@@ -561,11 +560,11 @@
       "provider": "Anthropic",
       "model": "Claude-3.5-Sonnet-20241022",
       "model_join_key": "claude35sonnet20241022",
-      "total_score_0_1": 0.4312784810126582,
+      "total_score_0_1": 0.43227848101265814,
       "per_source_unit_scores": {
         "livecodebench": 0.5625,
         "swebench": 0.45569620253164556,
-        "arena": 0.12
+        "arena": 0.125
       }
     },
     {
@@ -590,10 +589,10 @@
       "provider": "Anthropic",
       "model": "claude-3-7-sonnet-20250219",
       "model_join_key": "claude37sonnet20250219",
-      "total_score_0_1": 0.38953586497890297,
+      "total_score_0_1": 0.39064697609001414,
       "per_source_unit_scores": {
         "swebench": 0.5443037974683544,
-        "arena": 0.07999999999999996
+        "arena": 0.08333333333333337
       }
     },
     {
@@ -655,10 +654,10 @@
       "provider": "Alibaba",
       "model": "Qwen3-Coder-480B-A35B-Instruct",
       "model_join_key": "qwen3coder480ba35binstruct",
-      "total_score_0_1": 0.319831223628692,
+      "total_score_0_1": 0.3226090014064698,
       "per_source_unit_scores": {
         "swebench": 0.379746835443038,
-        "arena": 0.19999999999999996
+        "arena": 0.20833333333333337
       }
     },
     {
@@ -729,9 +728,9 @@
       "provider": "StepFun",
       "model": "Step-3.5-Flash",
       "model_join_key": "step35flash",
-      "total_score_0_1": 0.2568888888888889,
+      "total_score_0_1": 0.26388888888888884,
       "per_source_unit_scores": {
-        "arena": 0.28,
+        "arena": 0.29166666666666663,
         "opencompass": 0.2222222222222222
       }
     },
@@ -763,22 +762,22 @@
       }
     },
     {
+      "provider": "Google",
+      "model": "gemini-2.5-flash",
+      "model_join_key": "gemini25flash",
+      "total_score_0_1": 0.23171589310829813,
+      "per_source_unit_scores": {
+        "swebench": 0.1392405063291139,
+        "arena": 0.41666666666666663
+      }
+    },
+    {
       "provider": "Alibaba",
       "model": "Qwen 2.5",
       "model_join_key": "qwen25",
       "total_score_0_1": 0.22784810126582275,
       "per_source_unit_scores": {
         "swebench": 0.22784810126582278
-      }
-    },
-    {
-      "provider": "Google",
-      "model": "gemini-2.5-flash",
-      "model_join_key": "gemini25flash",
-      "total_score_0_1": 0.2261603375527426,
-      "per_source_unit_scores": {
-        "swebench": 0.1392405063291139,
-        "arena": 0.4
       }
     },
     {
@@ -866,20 +865,20 @@
       "provider": "Alibaba",
       "model": "Qwen3-235B-A22B",
       "model_join_key": "qwen3235ba22b",
-      "total_score_0_1": 0.09500000000000001,
+      "total_score_0_1": 0.09722222222222222,
       "per_source_unit_scores": {
         "livecodebench": 0.0625,
-        "arena": 0.16000000000000003
+        "arena": 0.16666666666666663
       }
     },
     {
       "provider": "OpenAI",
       "model": "gpt-oss-120b",
       "model_join_key": "gptoss120b",
-      "total_score_0_1": 0.08928270042194099,
+      "total_score_0_1": 0.0898382559774965,
       "per_source_unit_scores": {
         "swebench": 0.11392405063291144,
-        "arena": 0.040000000000000036
+        "arena": 0.04166666666666663
       }
     },
     {
