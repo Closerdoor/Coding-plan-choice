@@ -1,10 +1,14 @@
 {
   "generated_at_utc": "2026-04-13T05:48:11+00:00",
   "warnings": [
+    "vendor cursor: failed, kept previous data: ValueError: failed to extract Cursor price for Pro",
     "vendor tencent-cloud-coding-plan: failed, kept previous data: HTTPError: HTTP Error 404: Not Found",
     "vendor volcengine-coding-plan: failed, kept previous data: ValueError: failed to extract Volcengine quota for lite套餐",
+    "vendor aliyun-bailian-coding-plan: failed, kept previous data: ValueError: failed to validate Aliyun Coding Plan models against model list",
     "vendor baidu-qianfan-coding-plan: failed, kept previous data: ValueError: failed to locate Baidu doc section: <h3 id=\"支持的模型\">",
-    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods"
+    "vendor minimax-token-plan: failed, kept previous data: ValueError: failed to confirm MiniMax access method",
+    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods",
+    "vendor xiaomi-mimo-token-plan: failed, kept previous data: ValueError: failed to confirm Xiaomi token plan bundle"
   ],
   "vendors": [
     {
