@@ -7,7 +7,6 @@
     "vendor aliyun-bailian-coding-plan: failed, kept previous data: ValueError: failed to validate Aliyun Coding Plan models against model list",
     "vendor baidu-qianfan-coding-plan: failed, kept previous data: ValueError: failed to locate Baidu doc section: <h3 id=\"支持的模型\">",
     "vendor minimax-token-plan: failed, kept previous data: ValueError: failed to confirm MiniMax access method",
-    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods",
     "vendor xiaomi-mimo-token-plan: failed, kept previous data: ValueError: failed to confirm Xiaomi token plan bundle"
   ],
   "vendors": [
