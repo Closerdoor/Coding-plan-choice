@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-01T08:37:01+00:00",
+  "generated_at_utc": "2026-06-08T08:12:36+00:00",
   "weights": {
     "swebench": 0.3,
     "livecodebench": 0.3,
@@ -292,21 +292,21 @@
     },
     {
       "provider": "OpenAI",
+      "model": "gpt-5-2",
+      "model_join_key": "gpt52",
+      "total_score_0_1": 0.7032988108937477,
+      "per_source_unit_scores": {
+        "swebench": 0.759493670886076,
+        "arena": 0.5909090909090908
+      }
+    },
+    {
+      "provider": "OpenAI",
       "model": "gpt-4o",
       "model_join_key": "gpt4o",
       "total_score_0_1": 0.6962025316455696,
       "per_source_unit_scores": {
         "swebench": 0.6962025316455696
-      }
-    },
-    {
-      "provider": "OpenAI",
-      "model": "gpt-5-2",
-      "model_join_key": "gpt52",
-      "total_score_0_1": 0.6881472957422324,
-      "per_source_unit_scores": {
-        "swebench": 0.759493670886076,
-        "arena": 0.5454545454545454
       }
     },
     {
@@ -424,16 +424,6 @@
       }
     },
     {
-      "provider": "OpenAI",
-      "model": "gpt-5.1-codex",
-      "model_join_key": "gpt51codex",
-      "total_score_0_1": 0.5514000767165325,
-      "per_source_unit_scores": {
-        "swebench": 0.5316455696202531,
-        "arena": 0.5909090909090908
-      }
-    },
-    {
       "provider": "Anthropic",
       "model": "claude-3-7-sonnet-20250219",
       "model_join_key": "claude37sonnet20250219",
@@ -460,6 +450,16 @@
       "per_source_unit_scores": {
         "livecodebench": 0.6875,
         "swebench": 0.3924050632911392
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-5.1-codex",
+      "model_join_key": "gpt51codex",
+      "total_score_0_1": 0.5362485615650173,
+      "per_source_unit_scores": {
+        "swebench": 0.5316455696202531,
+        "arena": 0.5454545454545454
       }
     },
     {
@@ -529,22 +529,22 @@
       }
     },
     {
+      "provider": "Anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "model_join_key": "claudehaiku4520251001",
+      "total_score_0_1": 0.4925201380897584,
+      "per_source_unit_scores": {
+        "swebench": 0.5569620253164558,
+        "arena": 0.36363636363636365
+      }
+    },
+    {
       "provider": "Zhipu AI",
       "model": "zai-org/GLM-4.5",
       "model_join_key": "zaiorgglm45",
       "total_score_0_1": 0.4810126582278481,
       "per_source_unit_scores": {
         "swebench": 0.4810126582278481
-      }
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-haiku-4-5-20251001",
-      "model_join_key": "claudehaiku4520251001",
-      "total_score_0_1": 0.47736862293824334,
-      "per_source_unit_scores": {
-        "swebench": 0.5569620253164558,
-        "arena": 0.31818181818181823
       }
     },
     {
@@ -778,22 +778,22 @@
       }
     },
     {
-      "provider": "Google",
-      "model": "gemini-2.5-flash",
-      "model_join_key": "gemini25flash",
-      "total_score_0_1": 0.2140391254315305,
-      "per_source_unit_scores": {
-        "swebench": 0.1392405063291139,
-        "arena": 0.36363636363636365
-      }
-    },
-    {
       "provider": "OpenAI",
       "model": "gpt-4o-2024-05-13",
       "model_join_key": "gpt4o20240513",
       "total_score_0_1": 0.20253164556962022,
       "per_source_unit_scores": {
         "swebench": 0.20253164556962022
+      }
+    },
+    {
+      "provider": "Google",
+      "model": "gemini-2.5-flash",
+      "model_join_key": "gemini25flash",
+      "total_score_0_1": 0.19888761028001536,
+      "per_source_unit_scores": {
+        "swebench": 0.1392405063291139,
+        "arena": 0.31818181818181823
       }
     },
     {

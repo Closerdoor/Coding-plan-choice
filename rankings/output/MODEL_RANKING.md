@@ -1,6 +1,6 @@
 # 模型能力榜单（自动生成）
 
-- 生成时间（UTC）：2026-06-01T08:37:01+00:00
+- 生成时间（UTC）：2026-06-08T08:12:36+00:00
 - 说明：按 5 个榜单（代码优先）做分位数标准化后加权平均；缺失榜单不计入分母。
 - 权重：SWE-bench 0.30、LiveCodeBench 0.30、Arena 0.15、HELM 0.15、OpenCompass 0.10。
 - 过滤规则（Top3 输出用）：排除 distill/quant/int4/int8/gguf/awq/gptq 以及 mini/small/lite/tiny 等小模型。
@@ -35,8 +35,8 @@
 | 25   | Anthropic   | claude-sonnet-4-5-20250929          | 0.7301      | 0.709 |       | 0.773 |      |       |
 | 26   | Google      | gemini-3-pro                        | 0.7232      | 0.608 |       | 0.955 |      |       |
 | 27   | OpenAI      | openai/gpt-5-2025-08-07             | 0.7215      | 0.722 |       |       |      |       |
-| 28   | OpenAI      | gpt-4o                              | 0.6962      | 0.696 |       |       |      |       |
-| 29   | OpenAI      | gpt-5-2                             | 0.6881      | 0.759 |       | 0.545 |      |       |
+| 28   | OpenAI      | gpt-5-2                             | 0.7033      | 0.759 |       | 0.591 |      |       |
+| 29   | OpenAI      | gpt-4o                              | 0.6962      | 0.696 |       |       |      |       |
 | 30   | Anthropic   | claude-sonnet-4-20250514            | 0.6766      | 0.924 |       | 0.182 |      |       |
 | 31   | Google      | gemini-2.5-pro                      | 0.6728      | 0.646 |       | 0.727 |      |       |
 | 32   | Alibaba     | Qwen3.5-397B-A17B                   | 0.6667      |       |       |       |      | 0.667 |
@@ -49,10 +49,10 @@
 | 39   | OpenAI      | gpt-4.1-2025-04-14                  | 0.5836      | 0.671 |       | 0.409 |      |       |
 | 40   | Meta        | meta-llama/Llama-3.3-70B-Instruct   | 0.5823      | 0.582 |       |       |      |       |
 | 41   | Zhipu AI    | zai-org/GLM-4.6                     | 0.5696      | 0.570 |       |       |      |       |
-| 42   | OpenAI      | gpt-5.1-codex                       | 0.5514      | 0.532 |       | 0.591 |      |       |
-| 43   | Anthropic   | claude-3-7-sonnet-20250219          | 0.5443      | 0.544 |       |       |      |       |
-| 44   | Zhipu AI    | GLM-4.7                             | 0.5424      |       |       | 0.682 |      | 0.333 |
-| 45   | OpenAI      | GPT-4O-2024-08-06                   | 0.5400      | 0.392 | 0.688 |       |      |       |
+| 42   | Anthropic   | claude-3-7-sonnet-20250219          | 0.5443      | 0.544 |       |       |      |       |
+| 43   | Zhipu AI    | GLM-4.7                             | 0.5424      |       |       | 0.682 |      | 0.333 |
+| 44   | OpenAI      | GPT-4O-2024-08-06                   | 0.5400      | 0.392 | 0.688 |       |      |       |
+| 45   | OpenAI      | gpt-5.1-codex                       | 0.5362      | 0.532 |       | 0.545 |      |       |
 | 46   | OpenAI      | gpt-5.1-2025-11-13                  | 0.5190      | 0.519 |       |       |      |       |
 | 47   | Anthropic   | Claude-3.5-Sonnet-20241022          | 0.5091      | 0.456 | 0.562 |       |      |       |
 | 48   | Moonshot AI | moonshot/kimi-k2-0711-preview       | 0.5063      | 0.506 |       |       |      |       |
@@ -60,8 +60,8 @@
 | 50   | DeepSeek    | DeepSeek-V3                         | 0.5012      | 0.190 | 0.812 |       |      |       |
 | 51   | Anthropic   | Claude-3-Haiku                      | 0.5000      |       | 0.500 |       |      |       |
 | 52   | OpenAI      | o1-preview                          | 0.4937      | 0.494 |       |       |      |       |
-| 53   | Zhipu AI    | zai-org/GLM-4.5                     | 0.4810      | 0.481 |       |       |      |       |
-| 54   | Anthropic   | claude-haiku-4-5-20251001           | 0.4774      | 0.557 |       | 0.318 |      |       |
+| 53   | Anthropic   | claude-haiku-4-5-20251001           | 0.4925      | 0.557 |       | 0.364 |      |       |
+| 54   | Zhipu AI    | zai-org/GLM-4.5                     | 0.4810      | 0.481 |       |       |      |       |
 | 55   | DeepSeek    | DeepSeek-V3.2-Speciale              | 0.4444      |       |       |       |      | 0.444 |
 | 56   | Anthropic   | Claude-Sonnet-4 (Thinking)          | 0.4375      |       | 0.438 |       |      |       |
 | 57   | OpenAI      | o3-2025-04-16                       | 0.4367      | 0.405 |       | 0.500 |      |       |
@@ -87,8 +87,8 @@
 | 77   | Meta        | Llama3-SWE-RL-70B                   | 0.2405      | 0.241 |       |       |      |       |
 | 78   | Alibaba     | Qwen 2.5                            | 0.2278      | 0.228 |       |       |      |       |
 | 79   | Anthropic   | claude-3-haiku-20240307             | 0.2152      | 0.215 |       |       |      |       |
-| 80   | Google      | gemini-2.5-flash                    | 0.2140      | 0.139 |       | 0.364 |      |       |
-| 81   | OpenAI      | gpt-4o-2024-05-13                   | 0.2025      | 0.203 |       |       |      |       |
+| 80   | OpenAI      | gpt-4o-2024-05-13                   | 0.2025      | 0.203 |       |       |      |       |
+| 81   | Google      | gemini-2.5-flash                    | 0.1989      | 0.139 |       | 0.318 |      |       |
 | 82   | Google      | Gemini-2.5-Pro-05-06                | 0.1875      |       | 0.188 |       |      |       |
 | 83   | Anthropic   | claude-4-sonnet                     | 0.1772      | 0.177 |       |       |      |       |
 | 84   | OpenAI      | gpt-5-nano-2025-08-07               | 0.1646      | 0.165 |       |       |      |       |
