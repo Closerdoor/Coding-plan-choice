@@ -1,12 +1,15 @@
 {
-  "generated_at_utc": "2026-04-13T05:48:11+00:00",
+  "generated_at_utc": "2026-06-15T09:31:48+00:00",
   "warnings": [
     "vendor cursor: failed, kept previous data: ValueError: failed to extract Cursor price for Pro",
+    "vendor trae-intl: failed, kept previous data: ValueError: failed to confirm TRAE pricing page",
     "vendor tencent-cloud-coding-plan: failed, kept previous data: HTTPError: HTTP Error 404: Not Found",
     "vendor volcengine-coding-plan: failed, kept previous data: ValueError: failed to extract Volcengine quota for lite套餐",
     "vendor aliyun-bailian-coding-plan: failed, kept previous data: ValueError: failed to validate Aliyun Coding Plan models against model list",
     "vendor baidu-qianfan-coding-plan: failed, kept previous data: ValueError: failed to locate Baidu doc section: <h3 id=\"支持的模型\">",
+    "vendor claude-code: failed, kept previous data: ValueError: failed to confirm Claude Code overview",
     "vendor minimax-token-plan: failed, kept previous data: ValueError: failed to confirm MiniMax access method",
+    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods",
     "vendor xiaomi-mimo-token-plan: failed, kept previous data: ValueError: failed to confirm Xiaomi token plan bundle"
   ],
   "vendors": [
@@ -1025,7 +1028,6 @@
           "discount": "首月¥49/月",
           "quota": "80次prompts/5小时；400次prompts/周",
           "models_raw": [
-            "GLM-5.1",
             "GLM-5-Turbo",
             "GLM-4.7",
             "GLM-4.5-Air"
@@ -1052,7 +1054,6 @@
           "discount": "首月¥149/月",
           "quota": "400次prompts/5小时；2000次prompts/周",
           "models_raw": [
-            "GLM-5.1",
             "GLM-5-Turbo",
             "GLM-4.7",
             "GLM-4.5-Air"
@@ -1079,7 +1080,6 @@
           "discount": "首月¥469/月",
           "quota": "1600次prompts/5小时；8000次prompts/周",
           "models_raw": [
-            "GLM-5.1",
             "GLM-5-Turbo",
             "GLM-4.7",
             "GLM-4.5-Air"
@@ -1101,7 +1101,7 @@
           "models_filtered": []
         }
       ],
-      "updated_at_utc": "2026-04-12T10:59:01+00:00"
+      "updated_at_utc": "2026-06-15T09:31:48+00:00"
     },
     {
       "vendor_id": "minimax-token-plan",
