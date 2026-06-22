@@ -2,7 +2,7 @@
 
 汇总各家 Coding Plan 套餐、价格、额度、支持模型与接入方式。
 
-最新生成时间（UTC）：2026-06-15T09:31:48+00:00
+最新生成时间（UTC）：2026-06-22T04:40:57+00:00
 
 ## 导航
 
@@ -187,13 +187,13 @@
 
 - 厂商：智谱AI
 - 官方地址：https://bigmodel.cn/glm-coding
-- 最后更新时间（UTC）：2026-06-15T09:31:48+00:00
+- 最后更新时间（UTC）：2026-06-22T04:40:57+00:00
 
 | 项目 | lite套餐 | pro套餐 | max套餐 |
 | --- | --- | --- | --- |
 | 价格 | ¥49/月 | ¥149/月 | ¥469/月 |
 | 用量 | 80次prompts/5小时；400次prompts/周 | 400次prompts/5小时；2000次prompts/周 | 1600次prompts/5小时；8000次prompts/周 |
-| 支持模型 | GLM-5-Turbo；GLM-4.7；GLM-4.5-Air | GLM-5-Turbo；GLM-4.7；GLM-4.5-Air | GLM-5-Turbo；GLM-4.7；GLM-4.5-Air |
+| 支持模型 | GLM-5.1；GLM-5-Turbo；GLM-4.7 | GLM-5.1；GLM-5-Turbo；GLM-4.7 | GLM-5.1；GLM-5-Turbo；GLM-4.7 |
 | 支持工具 | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy | Claude Code；OpenClaw；OpenCode；Cline；Roo Code；Kilo Code；Cursor；Crush；Goose；TRAE；CodeBuddy |
 | 使用方式 | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） | API Key + Base URL（OpenAI / Anthropic 协议） |
 
