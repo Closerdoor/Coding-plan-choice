@@ -5,9 +5,10 @@
     "vendor tencent-cloud-coding-plan: failed, kept previous data: HTTPError: HTTP Error 404: Not Found",
     "vendor volcengine-coding-plan: failed, kept previous data: ValueError: failed to extract Volcengine quota for lite套餐",
     "vendor aliyun-bailian-coding-plan: failed, kept previous data: ValueError: failed to validate Aliyun Coding Plan models against model list",
-    "vendor baidu-qianfan-coding-plan: failed, kept previous data: ValueError: failed to locate Baidu doc section: <h3 id=\"支持的模型\">",
+    "vendor baidu-qianfan-coding-plan: failed, kept previous data: ValueError: failed to locate Baidu activity module: V6G022",
     "vendor infini-ai-coding-plan: failed, kept previous data: HTTPError: HTTP Error 404: Not Found",
-    "vendor claude-code: failed, kept previous data: ValueError: failed to confirm Claude Code overview",
+    "vendor claude-code: failed, kept previous data: ValueError: failed to confirm Claude Enterprise pricing",
+    "vendor glm-coding-plan: failed, kept previous data: ValueError: failed to locate GLM runtime script",
     "vendor minimax-token-plan: failed, kept previous data: ValueError: failed to confirm MiniMax access method",
     "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods",
     "vendor xiaomi-mimo-token-plan: failed, kept previous data: ValueError: failed to confirm Xiaomi token plan bundle"
