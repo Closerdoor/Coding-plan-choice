@@ -10,7 +10,7 @@
     "vendor claude-code: failed, kept previous data: ValueError: failed to confirm Claude Enterprise pricing",
     "vendor glm-coding-plan: failed, kept previous data: ValueError: failed to locate GLM runtime script",
     "vendor minimax-token-plan: failed, kept previous data: ValueError: failed to confirm MiniMax access method",
-    "vendor kimi-ai: failed, kept previous data: ValueError: failed to find Kimi paid monthly goods",
+    "vendor kimi-ai: failed, kept previous data: TimeoutError: The read operation timed out",
     "vendor xiaomi-mimo-token-plan: failed, kept previous data: ValueError: failed to confirm Xiaomi token plan bundle"
   ],
   "vendors": [
