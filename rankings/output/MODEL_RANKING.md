@@ -1,6 +1,6 @@
 # 模型能力榜单（自动生成）
 
-- 生成时间（UTC）：2026-08-24T03:55:30+00:00
+- 生成时间（UTC）：2026-08-31T09:27:44+00:00
 - 说明：按 5 个榜单（代码优先）做分位数标准化后加权平均；缺失榜单不计入分母。
 - 权重：SWE-bench 0.30、LiveCodeBench 0.30、Arena 0.15、HELM 0.15、OpenCompass 0.10。
 - 过滤规则（Top3 输出用）：排除 distill/quant/int4/int8/gguf/awq/gptq 以及 mini/small/lite/tiny 等小模型。
@@ -52,7 +52,7 @@
 | 42   | Anthropic   | claude-3-7-sonnet-20250219          | 0.5443      | 0.544 |       |       |      |       |
 | 43   | Zhipu AI    | GLM-4.7                             | 0.5424      |       |       | 0.682 |      | 0.333 |
 | 44   | OpenAI      | GPT-4O-2024-08-06                   | 0.5400      | 0.392 | 0.688 |       |      |       |
-| 45   | OpenAI      | gpt-5.1-codex                       | 0.5362      | 0.532 |       | 0.545 |      |       |
+| 45   | OpenAI      | gpt-5.1-codex                       | 0.5211      | 0.532 |       | 0.500 |      |       |
 | 46   | OpenAI      | gpt-5.1-2025-11-13                  | 0.5190      | 0.519 |       |       |      |       |
 | 47   | Anthropic   | Claude-3.5-Sonnet-20241022          | 0.5091      | 0.456 | 0.562 |       |      |       |
 | 48   | Moonshot AI | moonshot/kimi-k2-0711-preview       | 0.5063      | 0.506 |       |       |      |       |
@@ -62,9 +62,9 @@
 | 52   | OpenAI      | o1-preview                          | 0.4937      | 0.494 |       |       |      |       |
 | 53   | Anthropic   | claude-haiku-4-5-20251001           | 0.4925      | 0.557 |       | 0.364 |      |       |
 | 54   | Zhipu AI    | zai-org/GLM-4.5                     | 0.4810      | 0.481 |       |       |      |       |
-| 55   | DeepSeek    | DeepSeek-V3.2-Speciale              | 0.4444      |       |       |       |      | 0.444 |
-| 56   | Anthropic   | Claude-Sonnet-4 (Thinking)          | 0.4375      |       | 0.438 |       |      |       |
-| 57   | OpenAI      | o3-2025-04-16                       | 0.4367      | 0.405 |       | 0.500 |      |       |
+| 55   | OpenAI      | o3-2025-04-16                       | 0.4519      | 0.405 |       | 0.545 |      |       |
+| 56   | DeepSeek    | DeepSeek-V3.2-Speciale              | 0.4444      |       |       |       |      | 0.444 |
+| 57   | Anthropic   | Claude-Sonnet-4 (Thinking)          | 0.4375      |       | 0.438 |       |      |       |
 | 58   | DeepSeek    | deepseek-v3.2-reasoner              | 0.4304      | 0.430 |       |       |      |       |
 | 59   | Unknown     | agentica-org/DeepSWE-Preview        | 0.4177      | 0.418 |       |       |      |       |
 | 60   | Anthropic   | Claude-Opus-4 (Thinking)            | 0.3750      |       | 0.375 |       |      |       |
