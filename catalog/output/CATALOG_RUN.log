@@ -1,21 +1,21 @@
-2026-09-07 08:09:38,156Z INFO Starting catalog update mode=auto vendors=['cursor', 'github-copilot', 'trae-intl', 'tencent-cloud-coding-plan', 'volcengine-coding-plan', 'aliyun-bailian-coding-plan', 'baidu-qianfan-coding-plan', 'infini-ai-coding-plan', 'openai-chatgpt', 'claude-code', 'glm-coding-plan', 'minimax-token-plan', 'kimi-ai', 'xiaomi-mimo-token-plan']
-2026-09-07 08:09:38,312Z INFO Preflight ok for cursor in 156ms
-2026-09-07 08:09:38,403Z INFO Preflight ok for github-copilot in 91ms
-2026-09-07 08:09:38,541Z INFO Preflight ok for trae-intl in 137ms
-2026-09-07 08:09:39,163Z INFO Preflight ok for tencent-cloud-coding-plan in 621ms
-2026-09-07 08:09:40,773Z INFO Preflight ok for volcengine-coding-plan in 1609ms
-2026-09-07 08:09:42,348Z INFO Preflight ok for aliyun-bailian-coding-plan in 1574ms
-2026-09-07 08:09:45,407Z INFO Preflight ok for baidu-qianfan-coding-plan in 3059ms
-2026-09-07 08:09:48,688Z INFO Preflight ok for infini-ai-coding-plan in 3280ms
-2026-09-07 08:09:48,723Z INFO Preflight ok for openai-chatgpt in 35ms
-2026-09-07 08:09:48,766Z INFO Preflight ok for claude-code in 42ms
-2026-09-07 08:09:50,007Z INFO Preflight ok for glm-coding-plan in 1240ms
-2026-09-07 08:09:53,505Z INFO Preflight ok for minimax-token-plan in 3497ms
-2026-09-07 08:09:53,800Z INFO Preflight ok for kimi-ai in 294ms
-2026-09-07 08:09:55,490Z INFO Preflight ok for xiaomi-mimo-token-plan in 1690ms
-2026-09-07 08:09:55,491Z INFO Preflight finished with 0 warnings
-2026-09-07 08:09:55,491Z INFO Fetching vendor cursor
-2026-09-07 08:09:56,018Z ERROR Fetch failed for vendor cursor in 527ms
+2026-09-14 08:47:04,651Z INFO Starting catalog update mode=auto vendors=['cursor', 'github-copilot', 'trae-intl', 'tencent-cloud-coding-plan', 'volcengine-coding-plan', 'aliyun-bailian-coding-plan', 'baidu-qianfan-coding-plan', 'infini-ai-coding-plan', 'openai-chatgpt', 'claude-code', 'glm-coding-plan', 'minimax-token-plan', 'kimi-ai', 'xiaomi-mimo-token-plan']
+2026-09-14 08:47:04,771Z INFO Preflight ok for cursor in 119ms
+2026-09-14 08:47:04,900Z INFO Preflight ok for github-copilot in 128ms
+2026-09-14 08:47:05,085Z INFO Preflight ok for trae-intl in 185ms
+2026-09-14 08:47:05,629Z INFO Preflight ok for tencent-cloud-coding-plan in 542ms
+2026-09-14 08:47:07,361Z INFO Preflight ok for volcengine-coding-plan in 1731ms
+2026-09-14 08:47:08,734Z INFO Preflight ok for aliyun-bailian-coding-plan in 1372ms
+2026-09-14 08:47:11,086Z INFO Preflight ok for baidu-qianfan-coding-plan in 2352ms
+2026-09-14 08:47:13,351Z INFO Preflight ok for infini-ai-coding-plan in 2264ms
+2026-09-14 08:47:13,428Z INFO Preflight ok for openai-chatgpt in 76ms
+2026-09-14 08:47:13,582Z INFO Preflight ok for claude-code in 153ms
+2026-09-14 08:47:14,767Z INFO Preflight ok for glm-coding-plan in 1184ms
+2026-09-14 08:47:16,343Z INFO Preflight ok for minimax-token-plan in 1576ms
+2026-09-14 08:47:16,809Z INFO Preflight ok for kimi-ai in 466ms
+2026-09-14 08:47:18,290Z INFO Preflight ok for xiaomi-mimo-token-plan in 1480ms
+2026-09-14 08:47:18,291Z INFO Preflight finished with 0 warnings
+2026-09-14 08:47:18,291Z INFO Fetching vendor cursor
+2026-09-14 08:47:19,206Z ERROR Fetch failed for vendor cursor in 914ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -23,19 +23,19 @@ Traceback (most recent call last):
     "price": _extract_price(pricing_text, package_name),
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/cursor.py", line 114, in _extract_price
     raise ValueError(f"failed to extract Cursor price for {package_name}")
-ValueError: failed to extract Cursor price for Pro
-2026-09-07 08:09:56,019Z INFO Fetching vendor github-copilot
-2026-09-07 08:09:56,020Z INFO Fetched vendor github-copilot successfully in 1ms
-2026-09-07 08:09:56,020Z INFO Fetching vendor trae-intl
-2026-09-07 08:09:58,713Z ERROR Fetch failed for vendor trae-intl in 2692ms
+ValueError: failed to extract Cursor price for Pro+
+2026-09-14 08:47:19,206Z INFO Fetching vendor github-copilot
+2026-09-14 08:47:19,207Z INFO Fetched vendor github-copilot successfully in 1ms
+2026-09-14 08:47:19,207Z INFO Fetching vendor trae-intl
+2026-09-14 08:47:22,418Z ERROR Fetch failed for vendor trae-intl in 3210ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/trae_intl.py", line 120, in fetch
     raise ValueError("failed to confirm TRAE pricing page")
 ValueError: failed to confirm TRAE pricing page
-2026-09-07 08:09:58,714Z INFO Fetching vendor tencent-cloud-coding-plan
-2026-09-07 08:09:59,907Z ERROR Fetch failed for vendor tencent-cloud-coding-plan in 1193ms
+2026-09-14 08:47:22,418Z INFO Fetching vendor tencent-cloud-coding-plan
+2026-09-14 08:47:23,892Z ERROR Fetch failed for vendor tencent-cloud-coding-plan in 1473ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -66,18 +66,18 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/urllib/request.py", line 643, in http_error_default
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
-2026-09-07 08:09:59,927Z INFO Fetching vendor volcengine-coding-plan
-2026-09-07 08:10:09,802Z ERROR Fetch failed for vendor volcengine-coding-plan in 9875ms
+2026-09-14 08:47:23,913Z INFO Fetching vendor volcengine-coding-plan
+2026-09-14 08:47:29,007Z ERROR Fetch failed for vendor volcengine-coding-plan in 5093ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
-  File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/volcengine_coding_plan.py", line 195, in fetch
-    "quota": _extract_doc_usage(doc_html, "lite套餐"),
-  File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/volcengine_coding_plan.py", line 134, in _extract_doc_usage
-    raise ValueError(f"failed to extract Volcengine quota for {package_name}")
-ValueError: failed to extract Volcengine quota for lite套餐
-2026-09-07 08:10:09,803Z INFO Fetching vendor aliyun-bailian-coding-plan
-2026-09-07 08:10:18,666Z ERROR Fetch failed for vendor aliyun-bailian-coding-plan in 8863ms
+  File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/volcengine_coding_plan.py", line 179, in fetch
+    bundle_url = _extract_bundle_url(activity_html)
+  File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/volcengine_coding_plan.py", line 66, in _extract_bundle_url
+    raise ValueError("failed to locate Volcengine coding plan bundle URL")
+ValueError: failed to locate Volcengine coding plan bundle URL
+2026-09-14 08:47:29,007Z INFO Fetching vendor aliyun-bailian-coding-plan
+2026-09-14 08:47:36,402Z ERROR Fetch failed for vendor aliyun-bailian-coding-plan in 7395ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -86,8 +86,8 @@ Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/aliyun_bailian_coding_plan.py", line 139, in _validate_access_method
     raise ValueError("failed to confirm Aliyun Coding Plan access method")
 ValueError: failed to confirm Aliyun Coding Plan access method
-2026-09-07 08:10:18,666Z INFO Fetching vendor baidu-qianfan-coding-plan
-2026-09-07 08:10:23,851Z ERROR Fetch failed for vendor baidu-qianfan-coding-plan in 5185ms
+2026-09-14 08:47:36,403Z INFO Fetching vendor baidu-qianfan-coding-plan
+2026-09-14 08:47:41,086Z ERROR Fetch failed for vendor baidu-qianfan-coding-plan in 4683ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -98,8 +98,8 @@ Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/baidu_qianfan_coding_plan.py", line 73, in _find_activity_module
     raise ValueError(f"failed to locate Baidu activity module: {module_type}")
 ValueError: failed to locate Baidu activity module: V6G022
-2026-09-07 08:10:23,852Z INFO Fetching vendor infini-ai-coding-plan
-2026-09-07 08:10:25,160Z ERROR Fetch failed for vendor infini-ai-coding-plan in 1307ms
+2026-09-14 08:47:41,086Z INFO Fetching vendor infini-ai-coding-plan
+2026-09-14 08:47:42,243Z ERROR Fetch failed for vendor infini-ai-coding-plan in 1157ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -120,10 +120,10 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.10.21/x64/lib/python3.10/urllib/request.py", line 643, in http_error_default
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 404: Not Found
-2026-09-07 08:10:25,162Z INFO Fetching vendor openai-chatgpt
-2026-09-07 08:10:25,163Z INFO Fetched vendor openai-chatgpt successfully in 1ms
-2026-09-07 08:10:25,163Z INFO Fetching vendor claude-code
-2026-09-07 08:10:27,002Z ERROR Fetch failed for vendor claude-code in 1838ms
+2026-09-14 08:47:42,244Z INFO Fetching vendor openai-chatgpt
+2026-09-14 08:47:42,246Z INFO Fetched vendor openai-chatgpt successfully in 1ms
+2026-09-14 08:47:42,246Z INFO Fetching vendor claude-code
+2026-09-14 08:47:45,412Z ERROR Fetch failed for vendor claude-code in 3165ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -132,8 +132,8 @@ Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/claude_code.py", line 97, in _validate_sources
     raise ValueError("failed to confirm Claude Enterprise pricing")
 ValueError: failed to confirm Claude Enterprise pricing
-2026-09-07 08:10:27,002Z INFO Fetching vendor glm-coding-plan
-2026-09-07 08:10:31,129Z ERROR Fetch failed for vendor glm-coding-plan in 4126ms
+2026-09-14 08:47:45,413Z INFO Fetching vendor glm-coding-plan
+2026-09-14 08:47:48,536Z ERROR Fetch failed for vendor glm-coding-plan in 3122ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -144,8 +144,8 @@ Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/glm_coding_plan.py", line 83, in _extract_runtime_url
     raise ValueError("failed to locate GLM runtime script")
 ValueError: failed to locate GLM runtime script
-2026-09-07 08:10:31,129Z INFO Fetching vendor minimax-token-plan
-2026-09-07 08:10:42,026Z ERROR Fetch failed for vendor minimax-token-plan in 10896ms
+2026-09-14 08:47:48,536Z INFO Fetching vendor minimax-token-plan
+2026-09-14 08:48:03,585Z ERROR Fetch failed for vendor minimax-token-plan in 15048ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -154,19 +154,19 @@ Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/minimax_token_plan.py", line 257, in _validate_access_method
     raise ValueError("failed to confirm MiniMax access method")
 ValueError: failed to confirm MiniMax access method
-2026-09-07 08:10:42,026Z INFO Fetching vendor kimi-ai
-2026-09-07 08:10:44,272Z INFO Kimi diagnostics: goods=9 monthly_by_level=['LEVEL_ADVANCED', 'LEVEL_BASIC', 'LEVEL_FREE', 'LEVEL_INTERMEDIATE', 'LEVEL_STANDARD'] monthly_by_title=['Adagio', 'Allegretto', 'Allegro', 'Moderato', 'Vivace']
-2026-09-07 08:10:44,273Z INFO Kimi diagnostics: monthly variant sample=[{'title': 'Adagio', 'membershipLevel': 'LEVEL_FREE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Moderato', 'membershipLevel': 'LEVEL_BASIC', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegretto', 'membershipLevel': 'LEVEL_INTERMEDIATE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegro', 'membershipLevel': 'LEVEL_ADVANCED', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Vivace', 'membershipLevel': 'LEVEL_STANDARD', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}]
-2026-09-07 08:10:44,273Z WARNING Kimi diagnostics: failed to find paid monthly goods; available levels=['LEVEL_ADVANCED', 'LEVEL_BASIC', 'LEVEL_FREE', 'LEVEL_INTERMEDIATE', 'LEVEL_STANDARD'] titles=['Adagio', 'Allegretto', 'Allegro', 'Moderato', 'Vivace']
-2026-09-07 08:10:44,273Z ERROR Fetch failed for vendor kimi-ai in 2246ms
+2026-09-14 08:48:03,586Z INFO Fetching vendor kimi-ai
+2026-09-14 08:48:06,291Z INFO Kimi diagnostics: goods=9 monthly_by_level=['LEVEL_ADVANCED', 'LEVEL_BASIC', 'LEVEL_FREE', 'LEVEL_INTERMEDIATE', 'LEVEL_STANDARD'] monthly_by_title=['Allegretto', 'Allegro', 'Free', 'Moderato', 'Vivace']
+2026-09-14 08:48:06,291Z INFO Kimi diagnostics: monthly variant sample=[{'title': 'Free', 'membershipLevel': 'LEVEL_FREE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Moderato', 'membershipLevel': 'LEVEL_BASIC', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegretto', 'membershipLevel': 'LEVEL_INTERMEDIATE', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Allegro', 'membershipLevel': 'LEVEL_ADVANCED', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}, {'title': 'Vivace', 'membershipLevel': 'LEVEL_STANDARD', 'billingCycle': {'duration': 1, 'timeUnit': 'TIME_UNIT_MONTH'}}]
+2026-09-14 08:48:06,291Z WARNING Kimi diagnostics: failed to find paid monthly goods; available levels=['LEVEL_ADVANCED', 'LEVEL_BASIC', 'LEVEL_FREE', 'LEVEL_INTERMEDIATE', 'LEVEL_STANDARD'] titles=['Allegretto', 'Allegro', 'Free', 'Moderato', 'Vivace']
+2026-09-14 08:48:06,291Z ERROR Fetch failed for vendor kimi-ai in 2705ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/kimi_ai.py", line 197, in fetch
     raise ValueError("failed to find Kimi paid monthly goods")
 ValueError: failed to find Kimi paid monthly goods
-2026-09-07 08:10:44,273Z INFO Fetching vendor xiaomi-mimo-token-plan
-2026-09-07 08:10:51,663Z ERROR Fetch failed for vendor xiaomi-mimo-token-plan in 7390ms
+2026-09-14 08:48:06,291Z INFO Fetching vendor xiaomi-mimo-token-plan
+2026-09-14 08:48:12,487Z ERROR Fetch failed for vendor xiaomi-mimo-token-plan in 6195ms
 Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/update.py", line 421, in main
     fetched = module.fetch(config)
@@ -175,9 +175,9 @@ Traceback (most recent call last):
   File "/home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/sources/xiaomi_mimo_token_plan.py", line 94, in _validate_bundle
     raise ValueError("failed to confirm Xiaomi token plan bundle")
 ValueError: failed to confirm Xiaomi token plan bundle
-2026-09-07 08:10:51,668Z INFO Wrote preflight report to /home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/output/CATALOG_PREFLIGHT.json
-2026-09-07 08:10:51,668Z INFO Wrote catalog data to /home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/output/CATALOG_DATA.json
-2026-09-07 08:10:51,668Z INFO Wrote catalog markdown to /home/runner/work/Coding-plan-choice/Coding-plan-choice/README.md
-2026-09-07 08:10:51,668Z INFO Finished catalog update with 0 preflight warnings
-2026-09-07 08:10:51,668Z INFO Finished catalog update with 12 fetch warnings
-2026-09-07 08:10:51,668Z INFO Total catalog update duration: 73514ms
+2026-09-14 08:48:12,491Z INFO Wrote preflight report to /home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/output/CATALOG_PREFLIGHT.json
+2026-09-14 08:48:12,491Z INFO Wrote catalog data to /home/runner/work/Coding-plan-choice/Coding-plan-choice/catalog/output/CATALOG_DATA.json
+2026-09-14 08:48:12,491Z INFO Wrote catalog markdown to /home/runner/work/Coding-plan-choice/Coding-plan-choice/README.md
+2026-09-14 08:48:12,492Z INFO Finished catalog update with 0 preflight warnings
+2026-09-14 08:48:12,492Z INFO Finished catalog update with 12 fetch warnings
+2026-09-14 08:48:12,492Z INFO Total catalog update duration: 67842ms
