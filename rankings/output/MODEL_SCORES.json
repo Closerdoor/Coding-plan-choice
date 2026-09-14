@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-07T08:02:12+00:00",
+  "generated_at_utc": "2026-09-14T08:39:50+00:00",
   "weights": {
     "swebench": 0.3,
     "livecodebench": 0.3,
@@ -291,6 +291,16 @@
       }
     },
     {
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-20250514",
+      "model_join_key": "claudesonnet420250514",
+      "total_score_0_1": 0.7002301495972383,
+      "per_source_unit_scores": {
+        "swebench": 0.9367088607594937,
+        "arena": 0.2272727272727273
+      }
+    },
+    {
       "provider": "OpenAI",
       "model": "gpt-5-2-codex",
       "model_join_key": "gpt52codex",
@@ -307,16 +317,6 @@
       "total_score_0_1": 0.6962025316455696,
       "per_source_unit_scores": {
         "swebench": 0.6962025316455696
-      }
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-sonnet-4-20250514",
-      "model_join_key": "claudesonnet420250514",
-      "total_score_0_1": 0.6850786344457231,
-      "per_source_unit_scores": {
-        "swebench": 0.9367088607594937,
-        "arena": 0.18181818181818177
       }
     },
     {
@@ -342,10 +342,10 @@
       "provider": "MiniMax",
       "model": "minimax-m2.5",
       "model_join_key": "minimaxm25",
-      "total_score_0_1": 0.666474875335635,
+      "total_score_0_1": 0.6513233601841198,
       "per_source_unit_scores": {
         "swebench": 0.8860759493670887,
-        "arena": 0.2272727272727273
+        "arena": 0.18181818181818177
       }
     },
     {
@@ -396,16 +396,6 @@
       }
     },
     {
-      "provider": "OpenAI",
-      "model": "gpt-4.1-2025-04-14",
-      "model_join_key": "gpt4120250414",
-      "total_score_0_1": 0.5836210203298812,
-      "per_source_unit_scores": {
-        "swebench": 0.6708860759493671,
-        "arena": 0.40909090909090906
-      }
-    },
-    {
       "provider": "Meta",
       "model": "meta-llama/Llama-3.3-70B-Instruct",
       "model_join_key": "metallamallama3370binstruct",
@@ -421,6 +411,16 @@
       "total_score_0_1": 0.5696202531645569,
       "per_source_unit_scores": {
         "swebench": 0.5696202531645569
+      }
+    },
+    {
+      "provider": "OpenAI",
+      "model": "gpt-4.1-2025-04-14",
+      "model_join_key": "gpt4120250414",
+      "total_score_0_1": 0.5684695051783659,
+      "per_source_unit_scores": {
+        "swebench": 0.6708860759493671,
+        "arena": 0.36363636363636365
       }
     },
     {
@@ -482,6 +482,16 @@
       }
     },
     {
+      "provider": "Anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "model_join_key": "claudehaiku4520251001",
+      "total_score_0_1": 0.5076716532412736,
+      "per_source_unit_scores": {
+        "swebench": 0.5569620253164558,
+        "arena": 0.40909090909090906
+      }
+    },
+    {
       "provider": "Moonshot AI",
       "model": "moonshot/kimi-k2-0711-preview",
       "model_join_key": "moonshotkimik20711preview",
@@ -526,16 +536,6 @@
       "total_score_0_1": 0.49367088607594933,
       "per_source_unit_scores": {
         "swebench": 0.49367088607594933
-      }
-    },
-    {
-      "provider": "Anthropic",
-      "model": "claude-haiku-4-5-20251001",
-      "model_join_key": "claudehaiku4520251001",
-      "total_score_0_1": 0.4925201380897584,
-      "per_source_unit_scores": {
-        "swebench": 0.5569620253164558,
-        "arena": 0.36363636363636365
       }
     },
     {
