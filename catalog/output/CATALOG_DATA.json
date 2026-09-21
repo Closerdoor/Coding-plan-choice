@@ -1,7 +1,7 @@
 {
   "generated_at_utc": "2026-06-22T04:40:57+00:00",
   "warnings": [
-    "vendor cursor: failed, kept previous data: ValueError: failed to extract Cursor price for Pro+",
+    "vendor cursor: failed, kept previous data: ValueError: failed to extract Cursor price for Pro",
     "vendor trae-intl: failed, kept previous data: ValueError: failed to confirm TRAE pricing page",
     "vendor tencent-cloud-coding-plan: failed, kept previous data: HTTPError: HTTP Error 404: Not Found",
     "vendor volcengine-coding-plan: failed, kept previous data: ValueError: failed to locate Volcengine coding plan bundle URL",
