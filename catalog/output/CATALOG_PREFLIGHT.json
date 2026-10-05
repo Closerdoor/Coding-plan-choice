@@ -4,25 +4,25 @@
       "url": "https://cursor.com/pricing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 60
+      "duration_ms": 48
     },
     {
       "url": "https://cursor.com/docs/models-and-pricing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 3
+      "duration_ms": 4
     },
     {
       "url": "https://cursor.com/docs/account/teams/dashboard",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 2
+      "duration_ms": 23
     },
     {
       "url": "https://cursor.com/docs/cloud-agent",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 19
+      "duration_ms": 23
     }
   ],
   "github-copilot": [
@@ -30,31 +30,31 @@
       "url": "https://github.com/features/copilot/plans",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 51
+      "duration_ms": 17
     },
     {
       "url": "https://github.com/features/copilot/plans",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 52
+      "duration_ms": 20
     },
     {
       "url": "https://docs.github.com/en/copilot/about-github-copilot/plans-for-github-copilot",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 27
+      "duration_ms": 4
     },
     {
       "url": "https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 1
     },
     {
       "url": "https://docs.github.com/en/copilot/concepts/billing/copilot-requests",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 10
+      "duration_ms": 1
     }
   ],
   "trae-intl": [
@@ -62,19 +62,19 @@
       "url": "https://trae.ai/pricing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 55
+      "duration_ms": 14
     },
     {
       "url": "https://docs.trae.ai/ide/billing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 107
+      "duration_ms": 165
     },
     {
       "url": "https://trae.ai/terms-of-service",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 19
+      "duration_ms": 17
     }
   ],
   "tencent-cloud-coding-plan": [
@@ -82,13 +82,13 @@
       "url": "https://cloud.tencent.com/act/pro/codingplan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 844
+      "duration_ms": 181
     },
     {
       "url": "https://cloud.tencent.com/document/product/1823/130092",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 62
+      "duration_ms": 67
     }
   ],
   "volcengine-coding-plan": [
@@ -96,13 +96,13 @@
       "url": "https://www.volcengine.com/activity/codingplan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 927
+      "duration_ms": 536
     },
     {
       "url": "https://www.volcengine.com/docs/82379/1925114?lang=zh",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 274
+      "duration_ms": 811
     }
   ],
   "aliyun-bailian-coding-plan": [
@@ -110,25 +110,25 @@
       "url": "https://help.aliyun.com/zh/model-studio/coding-plan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 385
+      "duration_ms": 384
     },
     {
       "url": "https://help.aliyun.com/zh/model-studio/getting-started/what-is-model-studio",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 370
+      "duration_ms": 210
     },
     {
       "url": "https://help.aliyun.com/zh/model-studio/use-chat-client-or-development-tool/",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 353
+      "duration_ms": 356
     },
     {
       "url": "https://help.aliyun.com/zh/model-studio/models",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 366
+      "duration_ms": 211
     }
   ],
   "baidu-qianfan-coding-plan": [
@@ -136,13 +136,13 @@
       "url": "https://cloud.baidu.com/product/codingplan.html",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 763
+      "duration_ms": 754
     },
     {
       "url": "https://cloud.baidu.com/doc/qianfan/s/imlg0beiu",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 207
+      "duration_ms": 397
     }
   ],
   "infini-ai-coding-plan": [
@@ -150,37 +150,37 @@
       "url": "https://docs.infini-ai.com/gen-studio-coding-plan/",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 973
+      "duration_ms": 612
     },
     {
       "url": "https://cloud.infini-ai.com/platform/ai",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 259
+      "duration_ms": 324
     },
     {
       "url": "https://docs.infini-ai.com/gen-studio-coding-plan/",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 456
+      "duration_ms": 564
     },
     {
       "url": "https://docs.infini-ai.com/gen-studio-coding-plan/supported-models.html",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 237
+      "duration_ms": 204
     },
     {
       "url": "https://docs.infini-ai.com/shared/gen-studio/coding-tools/cp-use-cursor.html",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 564
+      "duration_ms": 255
     },
     {
       "url": "https://docs.infini-ai.com/shared/gen-studio/coding-tools/cp-use-claude-code.html",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 656
+      "duration_ms": 206
     }
   ],
   "openai-chatgpt": [
@@ -188,37 +188,37 @@
       "url": "https://help.openai.com/en/collections/3742473-chatgpt",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 29
+      "duration_ms": 8
     },
     {
       "url": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     },
     {
       "url": "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     },
     {
       "url": "https://help.openai.com/en/articles/11989085-what-is-chatgpt-go",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     },
     {
       "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     },
     {
       "url": "https://help.openai.com/en/articles/12642688-using-credits-for-flexible-usage-in-chatgpt-freegopluspro-sora",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     }
   ],
   "claude-code": [
@@ -226,49 +226,49 @@
       "url": "https://claude.com/pricing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 27
+      "duration_ms": 6
     },
     {
       "url": "https://claude.com/pricing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     },
     {
       "url": "https://claude.com/pricing/max",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 8
+      "duration_ms": 2
     },
     {
       "url": "https://claude.com/pricing/team",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     },
     {
       "url": "https://claude.com/pricing/enterprise",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 8
+      "duration_ms": 2
     },
     {
       "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 45
+      "duration_ms": 6
     },
     {
       "url": "https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 27
+      "duration_ms": 7
     },
     {
       "url": "https://support.claude.com/en/articles/11049741-what-is-the-max-plan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     }
   ],
   "glm-coding-plan": [
@@ -276,25 +276,25 @@
       "url": "https://bigmodel.cn/glm-coding",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 614
+      "duration_ms": 634
     },
     {
       "url": "https://docs.bigmodel.cn/cn/coding-plan/overview",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 371
+      "duration_ms": 264
     },
     {
       "url": "https://docs.bigmodel.cn/cn/coding-plan/faq",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 55
+      "duration_ms": 73
     },
     {
       "url": "https://docs.bigmodel.cn/cn/coding-plan/quick-start",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 55
+      "duration_ms": 73
     }
   ],
   "minimax-token-plan": [
@@ -302,25 +302,25 @@
       "url": "https://platform.minimaxi.com/subscribe/token-plan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 679
+      "duration_ms": 1234
     },
     {
       "url": "https://platform.minimaxi.com/docs/token-plan/intro",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 683
+      "duration_ms": 386
     },
     {
       "url": "https://platform.minimaxi.com/docs/guides/pricing-token-plan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 224
+      "duration_ms": 358
     },
     {
       "url": "https://platform.minimaxi.com/docs/guides/text-ai-coding-tools",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 219
+      "duration_ms": 209
     }
   ],
   "kimi-ai": [
@@ -328,31 +328,31 @@
       "url": "https://www.kimi.com/membership/pricing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 101
+      "duration_ms": 183
     },
     {
       "url": "https://www.kimi.com/membership/pricing",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 17
+      "duration_ms": 2
     },
     {
       "url": "https://www.kimi.com/robots.txt",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     },
     {
       "url": "https://statics.moonshot.cn/kimi-web-seo/assets/Pricing-1vnxNQVp.js",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 554
+      "duration_ms": 553
     },
     {
       "url": "https://www.kimi.com/apiv2/kimi.gateway.order.v1.GoodsService/ListGoods",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 9
+      "duration_ms": 2
     }
   ],
   "xiaomi-mimo-token-plan": [
@@ -360,13 +360,13 @@
       "url": "https://platform.xiaomimimo.com/#/token-plan",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 245
+      "duration_ms": 281
     },
     {
       "url": "https://platform.xiaomimimo.com/llms.txt",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 204
+      "duration_ms": 249
     },
     {
       "url": "https://platform.xiaomimimo.com/main.3b886aad.chunk.js",
@@ -378,19 +378,19 @@
       "url": "https://platform.xiaomimimo.com/docs/pricing.md",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 203
+      "duration_ms": 170
     },
     {
       "url": "https://platform.xiaomimimo.com/docs/api/chat/openai-api.md",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 185
+      "duration_ms": 310
     },
     {
       "url": "https://platform.xiaomimimo.com/docs/faq.md",
       "ok": true,
       "status": "tcp-ok",
-      "duration_ms": 199
+      "duration_ms": 262
     }
   ]
 }
