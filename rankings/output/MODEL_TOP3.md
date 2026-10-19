@@ -1,6 +1,6 @@
 # 模型提供商 Top3（自动生成）
 
-- 生成时间（UTC）：2026-10-12T10:25:18+00:00
+- 生成时间（UTC）：2026-10-19T08:35:31+00:00
 - 说明：从全局榜单中按提供商分组，排除小模型后取 Top3。
 
 ## Anthropic
@@ -101,4 +101,4 @@
 
 ## 抓取/解析告警
 
-- source arena: no observations
+- source arena: failed: HTTPError: HTTP Error 403: Forbidden

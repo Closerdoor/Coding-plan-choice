@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-12T10:25:18+00:00",
+  "generated_at_utc": "2026-10-19T08:35:31+00:00",
   "weights": {
     "swebench": 0.3,
     "livecodebench": 0.3,
@@ -37,7 +37,7 @@
     "small_params_lt_b": 70.0
   },
   "warnings": [
-    "source arena: no observations"
+    "source arena: failed: HTTPError: HTTP Error 403: Forbidden"
   ],
   "models": [
     {
